@@ -200,7 +200,7 @@ body {
     <div class="container">
         <div class="product-card">
             <div class="product-image">
-               <img src="Images/DarkPink2.png" alt="سگ با موی صورتی">
+               <img src="DarkPink2.png" alt="سگ با موی صورتی">
 
             </div>
             <div class="product-content">
@@ -318,4 +318,5 @@ gsap.from("#about-importer .importer-card", {
 </script>
 
 </body>
+
 </html>
