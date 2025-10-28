@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+
+<style>
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'IRANSans', sans-serif;
+}
+
+/* سکشن محصول */
+#product-section {
+    background: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#product-section .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: 1000px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.product-image {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+
+.product-image img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    filter: brightness(1.05) drop-shadow(0 0 20px rgba(0,0,0,0.2));
+}
+
+.product-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #d63384;
+    background: linear-gradient(45deg, #d63384, #ff6b81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.product-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-content ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+#importer-section, #about-importer {
+    background: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#importer-section .container, #about-importer .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.importer-card {
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    padding: 50px 45px;
+    max-width: 1000px;
+    transition: .4s;
+}
+
+.importer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.importer-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #d63384, #ff6b81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.importer-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+.importer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.importer-content ul li {
+    background: #f8f8f8;
+    padding: 12px 18px;
+    border-radius: 15px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: .3s;
+}
+
+.importer-content ul li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* شماره تماس */
+.contact-box {
+    margin-top: 35px;
+    padding: 18px 25px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.25);
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-box a {
+    color: #d63384;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-box a:hover {
+    color: #ff2e99;
+}
+
+</style>
+</head>
+<body><section id="product-section" class="section">
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">
+               <img src="Images/DarkPink2.png" alt="سگ با موی صورتی">
+
+            </div>
+            <div class="product-content">
+                <h2>اولین رنگ موی ایمن سگ در ایران</h2>
+                <p>
+                    برای اولین بار در ایران، محصولی حرفه‌ای و کاملاً ایمن برای رنگ‌آمیزی موهای سگ ارائه شد. 
+                    Brooklyn Pet Dye بدون آمونیاک و پراکسید، با ترکیبات غیرسمی و نرم‌کننده‌های مخصوص حیوانات، 
+                    تجربه‌ای خلاقانه و ایمن برای آرایشگران حرفه‌ای و صاحبان حیوانات فراهم می‌کند. 
+                    این رنگ‌ها نه تنها ظاهری فانتزی و زنده ایجاد می‌کنند، بلکه سلامت و راحتی دوستان پشمالوی شما را تضمین می‌کنند.
+                </p>
+                <ul>
+                    <li>✨ رنگ‌های زنده و چشم‌گیر</li>
+                    <li>🛡️ کاملاً ایمن و بدون ضرر</li>
+                    <li>🎨 خلاقیت حرفه‌ای بدون محدودیت</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about-importer" class="section">
+    <div class="container">
+        <div class="importer-card">
+
+            <div class="importer-content">
+                <h2>واردکننده رسمی و تأمین‌کننده مستقیم: سهند رنجبری‌پور</h2>
+
+                <p>
+                    تمامی رنگ‌ موهای تخصصی حیوانات خانگی بروکلین توسط سهند رنجبری‌پور، واردکننده مستقیم از چین، 
+                    به صورت اصلی و بدون واسطه به بازار ایران ارائه می‌شود. من با سال‌ها تجربه در زمینه واردات محصولات گرومینگ و تجهیزات پت‌شاپی، 
+                    این اطمینان را می‌دهم که محصولات ارائه‌شده اورجینال، دارای استانداردهای بین‌المللی و مطابق با نیاز بازار ایران هستند.
+                </p>
+
+                <p>
+                    اگر به دنبال واردات یا تأمین محصولات خاص و اختصاصی در حوزه پت هستید، می‌توانید با من در ارتباط باشید. 
+                    من قادر هستم هر نوع محصول مرتبط با گرومینگ، پت‌شاپ و لوازم حیوانات خانگی را با:
+                </p>
+
+                <ul>
+                    <li>💰 بهترین قیمت ممکن</li>
+                    <li>⏱ زمان تحویل بهینه</li>
+                    <li>✅ کنترل کیفیت و سلامت کالا</li>
+                    <li>🛡️ تضمین اصالت</li>
+                </ul>
+
+                <p>
+                    من، سهند رنجبری‌پور، اینجا هستم تا تجربه‌ای مطمئن، حرفه‌ای و سودآور را برای فروشگاه‌ها، گرومرها و صاحبان پت‌ها فراهم کنم.  
+                    برای مشاوره و ثبت سفارش واردات اختصاصی، کافیست با من تماس بگیرید.  
+                    اعتماد شما، سرمایه کاری من است.
+                </p>
+
+                <div class="contact-box">
+                    <span> تماس مستقیم:</span>
+                    <a href="tel:09384958682">682 4958 0938📞</a>
+                    <a href="tel:09928292995">2995 829 0992📞</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script>// GSAP Animation for Product Section
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#product-section",
+        start: "top 80%",
+    }
+}).from("#product-section .product-image img", {
+    y: 50,
+    opacity: 0,
+    scale: 0.8,
+    duration: 1,
+    ease: "power2.out"
+});
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#product-section",
+        start: "top 80%",
+    }
+}).from("#product-section .product-content h2", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+});
+
+gsap.from("#product-section .product-content p, #product-section ul li", {
+    scrollTrigger: {
+        trigger: "#product-section",
+        start: "top 85%",
+    },
+    y: 20,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+    ease: "power2.out"
+});
+gsap.from("#about-importer .importer-card", {
+  scrollTrigger: {
+    trigger: "#about-importer",
+    start: "top 80%"
+  },
+  y: 60,
+  opacity: 0,
+  duration: 1.3,
+  ease: "power3.out"
+});
+
+</script>
+
+</body>
+</html>
