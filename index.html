@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link href="https://cdn.fontcdn.ir/Font/Persian/IRANSans.css" rel="stylesheet">
 
 <style>
-body {ّ
+body {
+    color: #4a4a4a; /* خاکستری تیره */
+    font-family: 'IRANSans', sans-serif;
     direction: rtl;
     text-align: right;
-    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
 }
-
 /* سکشن محصول */
 #product-section {
     background: #ffffff;
-    padding: 80px 20px;َ
+    padding: 80px 20px;
     display: flex;
     justify-content: center;
 }
@@ -217,20 +221,28 @@ body {ّ
 
 @media (max-width: 768px) {
   .product-image img {
-    width: 95%;      /* تصویر بزرگ‌تر شود */
-    max-width: none; /* محدودیت برداشته شود */
+    width: 95%;
+    max-width: 100%;
     height: auto;
-    margin-bottom: 20px; /* فاصله بین تصویر و متن */
+    margin-bottom: 20px;
+  }
+
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-content {
+    padding: 20px 10px;  /* کاهش padding برای موبایل */
   }
 }
 
-@media (max-width: 768px) {
+
+
 
   /* افزایش اندازه فونت‌ها برای موبایل */
-  body {
-    font-size: 16px;
-    line-height: 1.8;
-  }
+
 
   .product-content h2,
   .importer-content h2 {
@@ -281,20 +293,18 @@ body {ّ
 
 /* فاصله بین کارت‌ها */
 .product-card, .importer-card {
-    margin: 40px 0; /* فاصله بالا و پایین کارت‌ها */
+    width: 100%;      /* اطمینان از پر شدن container */
+    flex-direction: column;
+    align-items: center;
 }
+
 .section-separator {
     width: 60px;
     height: 3px;
     background: linear-gradient(90deg, #d63384, #ff6b81);
     margin: 60px auto;  /* فاصله بالا و پایین */
     border-radius: 2px;
-}body {
-    color: #4a4a4a; /* خاکستری تیره، ملایم و خوانا */
-    font-family: 'IRANSans', sans-serif;
-    direction: rtl;
-    text-align: right;
-}
+
 
 /* عناوین */
 .product-content h2, .importer-content h2 {
