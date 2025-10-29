@@ -196,11 +196,15 @@ body {
 .contact-box a:hover {
     color: #ff2e99;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .product-image img {
-    max-width: 400px; /* در دسکتاپ اندازه محدود بشه */
+    width: 95%;      /* تصویر بزرگ‌تر شود */
+    max-width: none; /* محدودیت برداشته شود */
+    height: auto;
+    margin-bottom: 20px; /* فاصله بین تصویر و متن */
   }
 }
+
 @media (max-width: 768px) {
 
   /* افزایش اندازه فونت‌ها برای موبایل */
@@ -245,8 +249,9 @@ body {
   }
 
   /* تصویر بالا و متن پایین (چینش ستونی در موبایل) */
+  
   .product-card {
-    flex-direction: column;
+    flex-direction: column; /* تصویر بالا، متن پایین */
     align-items: center;
   }
 }
@@ -376,6 +381,7 @@ gsap.from("#about-importer .importer-card", {
 </body>
 
 </html>
+
 
 
 
