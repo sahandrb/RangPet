@@ -47,11 +47,14 @@ body {
 }
 
 .product-image img {
-    max-width: 400px;
+    width: 100%;
+    height: auto;
+    max-width: none; /* محدودیت اندازه حذف شد */
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     transition: transform 0.6s ease, filter 0.6s ease;
 }
+
 
 .product-image img:hover {
     transform: scale(1.05) rotate(-2deg);
@@ -193,6 +196,60 @@ body {
 .contact-box a:hover {
     color: #ff2e99;
 }
+@media (min-width: 768px) {
+  .product-image img {
+    max-width: 400px; /* در دسکتاپ اندازه محدود بشه */
+  }
+}
+@media (max-width: 768px) {
+
+  /* افزایش اندازه فونت‌ها برای موبایل */
+  body {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .product-content h2,
+  .importer-content h2 {
+    font-size: 22px;
+  }
+
+  .product-content p,
+  .importer-content p {
+    font-size: 15.5px;
+  }
+
+  .product-content ul li,
+  .importer-content ul li {
+    font-size: 15px;
+  }
+
+  /* افزایش فاصله و فضای خالی در موبایل */
+  .product-card, 
+  .importer-card {
+    padding: 25px 18px;
+  }
+
+  #product-section, 
+  #about-importer {
+    padding: 50px 16px;
+  }
+
+  .product-content, 
+  .importer-content {
+    padding: 20px 10px;
+  }
+
+  .product-image {
+    padding: 20px 10px;
+  }
+
+  /* تصویر بالا و متن پایین (چینش ستونی در موبایل) */
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 </style>
 </head>
@@ -319,4 +376,5 @@ gsap.from("#about-importer .importer-card", {
 </body>
 
 </html>
+
 
