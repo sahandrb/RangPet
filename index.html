@@ -230,62 +230,74 @@ body {
 /* ============================
    ریسپانسیو موبایل
 ============================ */
-@media (max-width: 768px) {
 
+
+   @media (max-width: 768px) {
+
+    /* تصاویر محصولات */
     .product-image img {
-        width: 95%;
+        width: 95%;          /* تصویر کمی بزرگتر نسبت به container */
         max-width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 2vw;  /* فاصله نسبی به عرض صفحه */
     }
 
+    /* کارت‌های محصول و واردکننده */
     .product-card,
     .importer-card {
-        flex-direction: column;
+        flex-direction: column; /* چینش ستونی */
         align-items: center;
         width: 100%;
-        padding: 20px;
+        padding: 3vw;           /* padding نسبی */
     }
 
+    /* محتوای داخل کارت */
     .product-content,
     .importer-content {
-        padding: 15px 10px;
+        padding: 2.5vw 2vw;     /* padding بالا/پایین و چپ/راست نسبی */
     }
 
+    /* تیترها */
     .product-content h2,
     .importer-content h2 {
-        font-size: 24px;
+        font-size: 5vw;          /* اندازه فونت نسبی به عرض صفحه */
         line-height: 1.4;
     }
 
+    /* پاراگراف‌ها */
     .product-content p,
     .importer-content p {
-        font-size: 16px;
+        font-size: 4vw;          /* متن اصلی */
         line-height: 1.6;
     }
 
+    /* آیتم‌های لیست */
     .product-content ul li,
     .importer-content ul li {
-        font-size: 15px;
-        padding: 10px 12px;
+        font-size: 3.8vw;        /* فونت آیتم‌ها */
+        padding: 2vw 2.5vw;      /* فاصله داخلی نسبی */
     }
 
+    /* سکشن‌ها */
     #product-section,
     #about-importer {
-        padding: 40px 15px;
+        padding: 6vw 3vw;        /* فاصله بالا/پایین و چپ/راست */
     }
 
+    /* شماره تماس */
     .contact-box {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        gap: 2.5vw;              /* فاصله بین شماره‌ها */
+        padding: 3vw;             /* فاصله داخلی */
     }
 
     .contact-box a {
-        font-size: 18px;
-        padding: 8px 12px;
+        font-size: 4vw;           /* فونت شماره‌ها */
+        padding: 1.5vw 2vw;       /* فاصله داخلی نسبی */
     }
 }
+
+
 </style>
 </head>
 <body><section id="product-image-section" class="section">
@@ -439,6 +451,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
