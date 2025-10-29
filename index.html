@@ -5,33 +5,53 @@
 <link href="https://cdn.fontcdn.ir/Font/Persian/IRANSans.css" rel="stylesheet">
 
 <style>
+/* ============================
+   استایل کلی بدن و فونت‌ها
+============================ */
 body {
-    color: #4a4a4a; /* خاکستری تیره */
+    color: #4a4a4a;
     font-family: 'IRANSans', sans-serif;
     direction: rtl;
     text-align: right;
     font-size: 16px;
     line-height: 1.8;
+    margin: 0;
+    padding: 0;
 }
-/* سکشن محصول */
-#product-section {
-    background: #ffffff;
-    padding: 80px 20px;
+
+/* ============================
+   سکشن‌ها و container
+============================ */
+.section {
+    padding: 100px 20px;
+    position: relative;
     display: flex;
     justify-content: center;
 }
 
-#product-section .container {
+.section .container {
     max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
+.section-separator {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d63384, #ff6b81);
+    margin: 60px auto;
+    border-radius: 2px;
+}
+
+/* ============================
+   کارت محصول
+============================ */
 .product-card {
     display: flex;
     flex-wrap: wrap;
-    background: #ffffff;
+    background: #fff;
     border-radius: 25px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     overflow: hidden;
@@ -53,12 +73,10 @@ body {
 .product-image img {
     width: 100%;
     height: auto;
-    max-width: none; /* محدودیت اندازه حذف شد */
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     transition: transform 0.6s ease, filter 0.6s ease;
 }
-
 
 .product-image img:hover {
     transform: scale(1.05) rotate(-2deg);
@@ -76,11 +94,10 @@ body {
 .product-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #d63384;
+    font-weight: 700;
     background: linear-gradient(45deg, #d63384, #ff6b81);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 700;
 }
 
 .product-content p {
@@ -109,27 +126,17 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-#importer-section, #about-importer {
-    background: #ffffff;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-}
 
-#importer-section .container, #about-importer .container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
+/* ============================
+   کارت واردکننده
+============================ */
 .importer-card {
-    background: #ffffff;
+    background: #fff;
     border-radius: 25px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     padding: 50px 45px;
     max-width: 1000px;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .importer-card:hover {
@@ -160,227 +167,125 @@ body {
 }
 
 .importer-content ul li {
-    background: #f8f8f8;
-    padding: 12px 18px;
-    border-radius: 15px;
     font-size: 16px;
     margin-bottom: 12px;
+    padding: 12px 18px;
+    border-radius: 15px;
+    background: #f8f8f8;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: .3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .importer-content ul li:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-/* شماره تماس */
+
+/* ============================
+   شماره تماس
+============================ */
 .contact-box {
     margin-top: 50px;
-    padding: 30px 40px;       
-    background: linear-gradient(135deg, #ffd6e8, #ffe0f0); 
-    border-radius: 25px;      
-    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3); 
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #ffd6e8, #ffe0f0);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3);
     display: flex;
-    gap: 30px;                
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #d63384; /* رنگ متن داخل باکس */
+    color: #d63384;
 }
 
 .contact-box:hover {
-    transform: translateY(-5px);             
+    transform: translateY(-5px);
     box-shadow: 0 15px 45px rgba(214, 51, 132, 0.35);
 }
 
 .contact-box span {
-    font-size: 26px;      
-    color: #d63384;
+    font-size: 26px;
     font-weight: 800;
 }
 
 .contact-box a {
-    color: #d63384;           /* رنگ شماره هماهنگ با کارت */
+    font-size: 28px;
     font-weight: 800;
-    font-size: 28px;          /* فونت شماره‌ها بزرگ */
-    padding: 12px 20px;       /* فاصله داخلی */
-    border-radius: 15px;      /* گوشه گرد */
+    color: #d63384;
+    padding: 12px 20px;
+    border-radius: 15px;
     text-decoration: none;
+    background: #fff0f5;
     transition: all 0.3s ease;
-    background: #fff0f5;      /* پس‌زمینه ملایم برای برجسته‌تر شدن */
 }
 
 .contact-box a:hover {
-    color: #ff2e99;           /* صورتی روشن روی هاور */
-    background: #ffd6e8;      /* پس‌زمینه روی هاور */
-    transform: scale(1.05);   /* کمی بزرگ شدن روی هاور */
+    color: #ff2e99;
+    background: #ffd6e8;
+    transform: scale(1.05);
 }
 
-
+/* ============================
+   ریسپانسیو موبایل
+============================ */
 @media (max-width: 768px) {
 
-  /* تصاویر محصولات */
-  .product-image img {
-    width: 95%;        /* تصویر کمی بزرگ‌تر شود */
-    max-width: 100%;   /* محدودیت تصویر به container */
-    height: auto;      /* حفظ نسبت ابعاد */
-    margin-bottom: 20px; /* فاصله بین تصویر و متن */
-  }
+    .product-image img {
+        width: 95%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 
-  /* کارت‌های محصول و واردکننده */
-  .product-card,
-  .importer-card {
-    flex-direction: column; /* تصویر بالا، متن پایین */
-    align-items: center;
-    width: 100%;            /* پر شدن کامل container */
-    padding: 25px 18px;     /* کاهش padding */
-  }
+    .product-card,
+    .importer-card {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
 
-  /* محتوای داخل کارت */
-  .product-content,
-  .importer-content {
-    padding: 20px 10px;     /* کاهش padding برای موبایل */
-  }
+    .product-content,
+    .importer-content {
+        padding: 15px 10px;
+    }
 
-  /* تیترها */
-  .product-content h2,
-  .importer-content h2 {
-    font-size: 42px;        /* اندازه مناسب تیتر موبایل */
-    line-height: 1.3;
-  }
+    .product-content h2,
+    .importer-content h2 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
 
-  /* پاراگراف‌ها */
-  .product-content p,
-  .importer-content p {
-    font-size: 42px;        /* اندازه متن موبایل */
-    line-height: 1.6;
-  }
+    .product-content p,
+    .importer-content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 
-  /* آیتم‌های لیست */
-  .product-content ul li,
-  .importer-content ul li {
-    font-size: 15px;        /* خوانایی مناسب آیتم‌ها */
-    padding: 10px 12px;
-  }
+    .product-content ul li,
+    .importer-content ul li {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
 
-  /* سکشن‌ها */
-  #product-section,
-  #about-importer {
-    padding: 50px 16px;     /* فاصله مناسب بالا و پایین */
-  }
+    #product-section,
+    #about-importer {
+        padding: 40px 15px;
+    }
 
-  /* تصاویر و متن‌ها داخل کارت‌ها */
-  .product-image,
-  .importer-card .importer-content {
-    padding: 20px 10px;     /* کاهش padding داخلی */
-  }
+    .contact-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
 
-  /* شماره تماس */
-  .contact-box {
-    flex-direction: column; /* شماره‌ها ستونی شوند */
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .contact-box a {
-    font-size: 34px;        /* فونت شماره‌ها موبایل */
-    padding: 10px 15px;
-  }
-
+    .contact-box a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
 }
-
-
-
-
-
-  /* افزایش اندازه فونت‌ها برای موبایل */
-
-
-  .product-content h2,
-  .importer-content h2 {
-    font-size: 42px;
-  }
-
-  .product-content p,
-  .importer-content p {
-    font-size: 15.5px;
-  }
-
-  .product-content ul li,
-  .importer-content ul li {
-    font-size: 15px;
-  }
-
-  /* افزایش فاصله و فضای خالی در موبایل */
-  .product-card, 
-  .importer-card {
-    padding: 25px 18px;
-  }
-
-  #product-section, 
-  #about-importer {
-    padding: 50px 16px;
-  }
-
-  .product-content, 
-  .importer-content {
-    padding: 20px 10px;
-  }
-
-  .product-image {
-    padding: 20px 10px;
-  }
-
-  /* تصویر بالا و متن پایین (چینش ستونی در موبایل) */
-  
-  .product-card {
-    flex-direction: column; /* تصویر بالا، متن پایین */
-    align-items: center;
-  }
-}
-.section {
-    padding: 100px 20px;  /* فاصله بالا و پایین هر سکشن */
-    position: relative;
-}
-
-/* فاصله بین کارت‌ها */
-.product-card, .importer-card {
-    width: 100%;      /* اطمینان از پر شدن container */
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-separator {
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #d63384, #ff6b81);
-    margin: 60px auto;  /* فاصله بالا و پایین */
-    border-radius: 2px;
-
-
-/* عناوین */
-.product-content h2, .importer-content h2 {
-    background: linear-gradient(45deg, #d63384, #ff6b81);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
-
-/* پاراگراف‌ها */
-.product-content p, .importer-content p {
-    color: #7b3f61; /* بنفش ملایم که با صورتی هماهنگ باشد و خوانا باشد */
-}
-
-/* آیتم‌های لیست */
-.product-content ul li, .importer-content ul li {
-    color: #5a2e4d; /* تیره‌تر از متن پاراگراف، برای کنتراست مناسب */
-    background: #fff0f5; /* صورتی خیلی ملایم پشت متن */
-}
-
-
-
 </style>
 </head>
 <body><section id="product-image-section" class="section">
@@ -534,6 +439,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
