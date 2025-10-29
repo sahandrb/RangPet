@@ -255,6 +255,42 @@ body {ّ
     align-items: center;
   }
 }
+.section {
+    padding: 100px 20px;  /* فاصله بالا و پایین هر سکشن */
+    position: relative;
+}
+
+/* فاصله بین کارت‌ها */
+.product-card, .importer-card {
+    margin: 40px 0; /* فاصله بالا و پایین کارت‌ها */
+}
+.section-separator {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #d63384, #ff6b81);
+    margin: 60px auto;  /* فاصله بالا و پایین */
+    border-radius: 2px;
+}
+body {
+    font-size: 18px;  /* فونت پایه بزرگ‌تر */
+    line-height: 1.9; /* فاصله خطوط بیشتر */
+}
+
+.product-content h2, .importer-content h2 {
+    font-size: 38px; /* عنوان بزرگ‌تر */
+}
+
+.product-content p, .importer-content p {
+    font-size: 18px; /* پاراگراف بزرگ‌تر */
+}
+
+.product-content ul li, .importer-content ul li {
+    font-size: 17px; /* آیتم‌های لیست بزرگ‌تر */
+}
+
+.contact-box {
+    font-size: 20px; /* شماره تماس بزرگ‌تر */
+}
 
 </style>
 </head>
@@ -272,13 +308,21 @@ body {ّ
     <div class="container">
         <div class="product-card">
             <div class="product-content">
+                <!-- بعد از هر سکشن می‌توان اضافه کرد -->
+                <div class="section-separator"></div>
+
                 <h2>اولین رنگ موی ایمن سگ در ایران</h2>
+                <!-- بعد از هر سکشن می‌توان اضافه کرد -->
+                <div class="section-separator"></div>
+
                 <p>
                     برای اولین بار در ایران، محصولی حرفه‌ای و کاملاً ایمن برای رنگ‌آمیزی موهای سگ ارائه شد. 
                     Brooklyn Pet Dye بدون آمونیاک و پراکسید، با ترکیبات غیرسمی و نرم‌کننده‌های مخصوص حیوانات، 
                     تجربه‌ای خلاقانه و ایمن برای آرایشگران حرفه‌ای و صاحبان حیوانات فراهم می‌کند. 
                     این رنگ‌ها نه تنها ظاهری فانتزی و زنده ایجاد می‌کنند، بلکه سلامت و راحتی دوستان پشمالوی شما را تضمین می‌کنند.
                 </p>
+                 <div class="section-separator"></div>
+
                 <ul>
                     <li>✨ رنگ‌های زنده و چشم‌گیر</li>
                     <li>🛡️ کاملاً ایمن و بدون ضرر</li>
@@ -288,6 +332,7 @@ body {ّ
         </div>
     </div>
 </section>
+ <div class="section-separator"></div>
 
 <section id="about-importer" class="section">
     <div class="container">
@@ -401,6 +446,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
