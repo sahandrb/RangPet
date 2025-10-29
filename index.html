@@ -169,45 +169,51 @@ body {ّ
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-/* شماره تماس */.contact-box {
+/* شماره تماس */
+.contact-box {
     margin-top: 50px;
-    padding: 25px 35px;       /* فضای داخلی بیشتر */
-    background: linear-gradient(135deg, #ffd6e8, #ffe0f0); /* پس‌زمینه صورتی ملایم */
-    border-radius: 25px;      /* گوشه‌های گرد */
-    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3); /* سایه نرم */
+    padding: 30px 40px;       
+    background: linear-gradient(135deg, #ffd6e8, #ffe0f0); 
+    border-radius: 25px;      
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3); 
     display: flex;
-    gap: 25px;                /* فاصله بین شماره‌ها */
+    gap: 30px;                
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 22px;          /* فونت بزرگ‌تر */
-    font-weight: 700;         /* ضخیم و خوانا */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #d63384; /* رنگ متن داخل باکس */
 }
 
 .contact-box:hover {
-    transform: translateY(-5px);             /* افکت hover */
+    transform: translateY(-5px);             
     box-shadow: 0 15px 45px rgba(214, 51, 132, 0.35);
 }
 
 .contact-box span {
-    font-size: 24px;      /* فونت عنوان بزرگ‌تر */
+    font-size: 26px;      
     color: #d63384;
     font-weight: 800;
 }
 
 .contact-box a {
-    color: #d63384;
-    font-weight: 700;
+    color: #d63384;           /* رنگ شماره هماهنگ با کارت */
+    font-weight: 800;
+    font-size: 28px;          /* فونت شماره‌ها بزرگ */
+    padding: 12px 20px;       /* فاصله داخلی */
+    border-radius: 15px;      /* گوشه گرد */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    background: #fff0f5;      /* پس‌زمینه ملایم برای برجسته‌تر شدن */
 }
 
 .contact-box a:hover {
-    color: #ff2e99;       /* صورتی روشن‌تر روی هاور */
+    color: #ff2e99;           /* صورتی روشن روی هاور */
+    background: #ffd6e8;      /* پس‌زمینه روی هاور */
+    transform: scale(1.05);   /* کمی بزرگ شدن روی هاور */
 }
+
 
 @media (max-width: 768px) {
   .product-image img {
@@ -309,18 +315,7 @@ body {ّ
     background: #fff0f5; /* صورتی خیلی ملایم پشت متن */
 }
 
-/* شماره تماس */
-.contact-box {
-    color: #d63384; /* صورتی هماهنگ با گرادیان کارت */
-}
 
-.contact-box a {
-    color: #d63384;
-}
-
-.contact-box a:hover {
-    color: #ff2e99;
-}
 
 </style>
 </head>
@@ -475,6 +470,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
