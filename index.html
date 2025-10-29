@@ -170,32 +170,45 @@ body {ّ
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* شماره تماس */
-.contact-box {
-    margin-top: 35px;
-    padding: 18px 25px;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.25);
+/* شماره تماس */.contact-box {
+    margin-top: 50px;
+    padding: 25px 35px;       /* فضای داخلی بیشتر */
+    background: linear-gradient(135deg, #ffd6e8, #ffe0f0); /* پس‌زمینه صورتی ملایم */
+    border-radius: 25px;      /* گوشه‌های گرد */
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3); /* سایه نرم */
     display: flex;
-    gap: 18px;
+    gap: 25px;                /* فاصله بین شماره‌ها */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 22px;          /* فونت بزرگ‌تر */
+    font-weight: 700;         /* ضخیم و خوانا */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);             /* افکت hover */
+    box-shadow: 0 15px 45px rgba(214, 51, 132, 0.35);
+}
+
+.contact-box span {
+    font-size: 24px;      /* فونت عنوان بزرگ‌تر */
+    color: #d63384;
+    font-weight: 800;
 }
 
 .contact-box a {
     color: #d63384;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .contact-box a:hover {
-    color: #ff2e99;
+    color: #ff2e99;       /* صورتی روشن‌تر روی هاور */
 }
+
 @media (max-width: 768px) {
   .product-image img {
     width: 95%;      /* تصویر بزرگ‌تر شود */
@@ -329,8 +342,7 @@ body {ّ
                 <div class="section-separator"></div>
 
                 <h2>اولین رنگ موی ایمن سگ در ایران</h2>
-                <!-- بعد از هر سکشن می‌توان اضافه کرد -->
-                <div class="section-separator"></div>
+              
 
                 <p>
                     برای اولین بار در ایران، محصولی حرفه‌ای و کاملاً ایمن برای رنگ‌آمیزی موهای سگ ارائه شد. 
@@ -338,7 +350,7 @@ body {ّ
                     تجربه‌ای خلاقانه و ایمن برای آرایشگران حرفه‌ای و صاحبان حیوانات فراهم می‌کند. 
                     این رنگ‌ها نه تنها ظاهری فانتزی و زنده ایجاد می‌کنند، بلکه سلامت و راحتی دوستان پشمالوی شما را تضمین می‌کنند.
                 </p>
-                 <div class="section-separator"></div>
+              
 
                 <ul>
                     <li>✨ رنگ‌های زنده و چشم‌گیر</li>
@@ -381,7 +393,7 @@ body {ّ
                     برای مشاوره و ثبت سفارش واردات اختصاصی، کافیست با من تماس بگیرید.  
                     اعتماد شما، سرمایه کاری من است.
                 </p>
-
+<div class="section-separator"></div>
                 <div class="contact-box">
                     <span> تماس مستقیم:</span>
                     <a href="tel:09384958682">682 4958 0938📞</a>
@@ -463,6 +475,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
