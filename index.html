@@ -3,7 +3,7 @@
 <head>
 
 <style>
-body {
+body {ّ
     direction: rtl;
     text-align: right;
     font-family: 'IRANSans', sans-serif;
@@ -12,7 +12,7 @@ body {
 /* سکشن محصول */
 #product-section {
     background: #ffffff;
-    padding: 80px 20px;
+    padding: 80px 20px;َ
     display: flex;
     justify-content: center;
 }
@@ -361,10 +361,32 @@ gsap.timeline({
     duration: 1,
     ease: "power2.out"
 });
-
-gsap.from("#product-section .product-content p, #product-section ul li", {
+gsap.from("#product-image-section .product-image img", {
     scrollTrigger: {
-        trigger: "#product-section",
+        trigger: "#product-image-section",
+        start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    scale: 0.8,
+    duration: 1,
+    ease: "power2.out"
+});
+
+gsap.from("#product-text-section .product-content h2", {
+    scrollTrigger: {
+        trigger: "#product-text-section",
+        start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+});
+
+gsap.from("#product-text-section .product-content p, #product-text-section ul li", {
+    scrollTrigger: {
+        trigger: "#product-text-section",
         start: "top 85%",
     },
     y: 20,
@@ -373,22 +395,13 @@ gsap.from("#product-section .product-content p, #product-section ul li", {
     stagger: 0.1,
     ease: "power2.out"
 });
-gsap.from("#about-importer .importer-card", {
-  scrollTrigger: {
-    trigger: "#about-importer",
-    start: "top 80%"
-  },
-  y: 60,
-  opacity: 0,
-  duration: 1.3,
-  ease: "power3.out"
-});
-
+
 </script>
 
 </body>
 
 </html>
+
 
 
 
