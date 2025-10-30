@@ -234,75 +234,24 @@ body {
 ============================ */
 
 @media (max-width: 768px) {
-
-    /* تصاویر محصولات */
-    #product-image-section .product-image img {
-        width: 95%;          /* تصویر کمی بزرگتر نسبت به container */
-        height: auto;
-        margin-bottom: 1.5rem;  /* فاصله پایین تصویر */
+    .product-card,
+    .importer-card {
+        width: 100%;            /* کارت کل عرض صفحه */
+        max-width: 100%;        /* حداکثر عرض هم 100% */
+        flex-direction: column; /* چینش ستونی */
+        align-items: stretch;   /* محتوا تمام عرض */
+        padding: 20px;          /* padding داخلی مناسب */
+        margin: 0;              /* فاصله خارجی صفر */
+        border-radius: 0;       /* گوشه‌ها صاف */
+        box-shadow: none;       /* سایه‌ها حذف */
+        background: transparent; /* زمینه کارت بدون رنگ */
     }
 
-/* کارت‌ها */
-#product-image-section .product-card,
-#product-text-section .product-card,
-#about-importer .importer-card {
-    flex-direction: column; /* چینش ستونی */
-    align-items: center;
-
-    /* تغییرات اضافه برای تمام عرض */
-    width: 100% !important;      /* کارت کل عرض صفحه */
-    max-width: 100%;             /* حداکثر عرض هم 100% */
-    padding: 20px;               /* padding داخلی مناسب */
-    margin: 0;                   /* فاصله اطراف صفر */
+    .product-content,
+    .importer-content {
+        padding: 0; /* محتوای داخل کارت هم به لبه‌ها بچسبه */
+    }
 }
-
-
-    /* محتوای داخل کارت */
-    #product-text-section .product-content,
-    #about-importer .importer-content {
-        padding: 1rem;          /* padding داخل کارت */
-    }
-
-    /* تیترها */
-    #product-text-section .product-content h2,
-    #about-importer .importer-content h2 {
-        font-size: clamp(1.5rem, 5vw, 2rem); /* اندازه نسبی */
-        line-height: 1.4;
-        text-align: center; /* وسط‌چین برای موبایل */
-    }
-
-    /* پاراگراف‌ها */
-    #product-text-section .product-content p,
-    #about-importer .importer-content p {
-        font-size: clamp(1rem, 4vw, 1.2rem);
-        line-height: 1.6;
-        text-align: justify; /* متن مناسب موبایل */
-    }
-
-    /* آیتم‌های لیست */
-    #product-text-section .product-content ul li,
-    #about-importer .importer-content ul li {
-        font-size: clamp(0.9rem, 3.5vw, 1rem);
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    /* شماره تماس */
-    .contact-box {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .contact-box a {
-        font-size: clamp(1rem, 4vw, 1.2rem);
-        padding: 0.5rem 1rem;
-    }
-
-}
-
-
 
 </style>
 </head>
@@ -479,6 +428,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
