@@ -242,15 +242,20 @@ body {
         margin-bottom: 1.5rem;  /* فاصله پایین تصویر */
     }
 
-    /* کارت‌ها */
-    #product-image-section .product-card,
-    #product-text-section .product-card,
-    #about-importer .importer-card {
-        flex-direction: column; /* چینش ستونی */
-        align-items: center;
-        width: 100%;
-        padding: 1.5rem;       /* padding داخلی کارت */
-    }
+/* کارت‌ها */
+#product-image-section .product-card,
+#product-text-section .product-card,
+#about-importer .importer-card {
+    flex-direction: column; /* چینش ستونی */
+    align-items: center;
+
+    /* تغییرات اضافه برای تمام عرض */
+    width: 100% !important;      /* کارت کل عرض صفحه */
+    max-width: 100%;             /* حداکثر عرض هم 100% */
+    padding: 20px;               /* padding داخلی مناسب */
+    margin: 0;                   /* فاصله اطراف صفر */
+}
+
 
     /* محتوای داخل کارت */
     #product-text-section .product-content,
@@ -474,6 +479,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
