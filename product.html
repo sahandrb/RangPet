@@ -75,117 +75,7 @@
   </div>
 </section>
 
-<style>/* ====== Mobile-First Enhancements for Hero & Product Sections ====== */
-
-/* فونت و خوانایی بهتر */
-body, #product, .hero {
-  font-family: 'Yekan Bakh', 'Tahoma', sans-serif;
-  color: #333;
-}
-
-/* افزایش فاصله خطوط برای متن طولانی */
-#product .product-card p,
-#product .scientific-note p,
-#product .section-intro {
-  line-height: 2;
-}
-
-/* تصاویر کارت‌ها بزرگ‌تر و مناسب موبایل */
-@media (max-width: 480px) {
-  #product .product-card img {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-/* کارت‌ها و padding بهتر روی موبایل */
-@media (max-width: 500px) {
-  #product .product-card {
-    padding: 28px 20px;
-  }
-  #product .scientific-note {
-    padding: 22px 20px;
-  }
-  #product .product-card h3 {
-    font-size: 18px;
-  }
-  #product .product-card p {
-    font-size: 15px;
-  }
-  #product .section-intro {
-    font-size: 16px;
-    line-height: 1.9;
-  }
-  .hero-title {
-    font-size: 30px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-}
-
-/* هرو و تصاویر هرو روی موبایل */
-@media (max-width: 900px) {
-  .hero {
-    padding: 40px 16px;
-  }
-  .hero-image {
-    max-width: 90%;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-}
-
-/* کارت‌ها و گرید روی تبلت */
-@media (max-width: 768px) {
-  #product {
-    padding: 70px 20px;
-  }
-  #product .product-card {
-    padding: 28px 20px;
-  }
-  #product .product-card h3 {
-    font-size: 17px;
-  }
-  #product .product-card p {
-    font-size: 14.8px;
-  }
-  #product .section-title {
-    font-size: 24px;
-  }
-  #product .section-intro {
-    font-size: 15.5px;
-  }
-}
-
-/* دسکتاپ بزرگ و استاندارد */
-@media (min-width: 1025px) {
-  #product {
-    padding: 100px 0;
-  }
-  #product .section-title {
-    font-size: 30px;
-  }
-  #product .section-intro {
-    font-size: 17px;
-    max-width: 850px;
-  }
-  #product .product-card p {
-    font-size: 15.5px;
-  }
-  .hero-title {
-    font-size: 42px;
-  }
-  .hero-subtitle {
-    font-size: 20px;
-  }
-}
-
-/* Hero Section */
+<style>/* ====== Hero Section ====== */
 .hero {
   display: flex;
   justify-content: center;
@@ -194,86 +84,6 @@ body, #product, .hero {
   text-align: center;
   padding: 60px 20px;
   background-color: #F9F9FB;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 900px; /* حداکثر عرض برای تعادل */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* تصویر با گوشه گرد و shadow */
-.hero-image {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 24px; /* گوشه گرد */
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15); /* حالت برجسته */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 24px;
-}
-
-.hero-image:hover {
-  transform: scale(1.02);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
-}
-
-/* عنوان */
-.hero-title {
-  font-family: 'Yekan-Bakh', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: #1159FC;
-  margin-bottom: 12px;
-}
-
-/* زیرعنوان */
-.hero-subtitle {
-  font-family: 'Yekan-Bakh', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #45474A;
-  margin: 0;
-}
-
-/* ریسپانسیو برای تبلت و موبایل */
-@media (max-width: 900px) {
-  .hero {
-    padding: 40px 16px;
-  }
-  .hero-image {
-    max-width: 90%;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 500px) {
-  .hero-title {
-    font-size: 28px;
-  }
-  .hero-subtitle {
-    font-size: 14px;
-  }
-}
-    /* ====== Hero Section ====== */
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #F9F9FB;
-  overflow: hidden;
 }
 
 .hero-content {
@@ -312,36 +122,53 @@ body, #product, .hero {
   color: #45474A;
   margin: 0;
 }
-/* ====== Product Cards Modern Style ====== */
+
+/* ====== Product Section ====== */
+#product {
+  padding: 100px 20px;
+  background: #FAFBFF;
+  font-family: 'Yekan Bakh', 'Tahoma', sans-serif;
+}
+
+#product .section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F49E8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#product .section-intro {
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* ====== Product Cards ====== */
 #product .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  padding: 0 20px;
 }
 
 #product .product-card {
   background: #fff;
-  border-radius: 20px; /* گوشه‌های گرد */
+  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  overflow: hidden; /* تصویر گوشه‌ها را هم گرد می‌کند */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #product .product-card img {
-  width: 100%; /* تصویر تمام عرض کارت */
-  height: 200px; /* ارتفاع مناسب */
-  object-fit: cover; /* تصویر کامل کارت را پر کند */
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  transition: transform 0.4s ease;
-}
-
-#product .product-card:hover img {
-  transform: scale(1.05);
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 #product .product-card h3 {
@@ -353,12 +180,12 @@ body, #product, .hero {
 
 #product .product-card p {
   font-size: 16px;
-  line-height: 1.85;
   color: #444;
+  line-height: 1.85;
   margin: 0 12px 16px 12px;
 }
 
-/* Scientific Note */
+/* ====== Scientific Note ====== */
 #product .scientific-note {
   background: #EDF3FF;
   border-radius: 16px;
@@ -394,6 +221,18 @@ body, #product, .hero {
   #product .product-card p {
     font-size: 15px;
   }
+  #product .section-title {
+    font-size: 26px;
+  }
+  #product .section-intro {
+    font-size: 15px;
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
 }
 
 /* تبلت */
@@ -412,7 +251,7 @@ body, #product, .hero {
 /* دسکتاپ */
 @media (min-width: 1025px) {
   #product .product-card img {
-    height: 200px;
+    height: 220px;
   }
 }
 
