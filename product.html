@@ -2,14 +2,12 @@
 <section class="hero">
   <div class="hero-content">
     <img src="unnamed (1).jpg" alt="رنگ مخصوص حیوانات" class="hero-image">
-    <h1 class="hero-title">رنگ مخصوص حیوانات</h1>
-    <p class="hero-subtitle">با کیفیت بالا و تنوع رنگ بی‌نظیر برای حیوانات شما</p>
   </div>
 </section>
 
 <section id="product" class="section container">
-  <h2 class="section-title">رنگ موی مخصوص سگ و حیوانات | ساختار و ایمنی علمی</h2>
-  <p class="section-intro">
+  <h2 class="section-title">  رنگ موی مخصوص سگ و حیوانات Brooklyn</h2>
+  <p class="section-intro"
     انتخاب <strong>رنگ موی حیوانات</strong> باید بر اساس اصول علمی و ایمنی پوست انجام شود. 
     تفاوت‌های فیزیولوژیکی بین حیوانات و انسان باعث می‌شود استفاده از رنگ‌های معمولی برای حیوانات خطرناک باشد. 
     در این بخش با پشتوانه علمی محصولات تخصصی مانند <strong>Brooklyn Pet Dye</strong> آشنا می‌شوید.
@@ -266,4 +264,217 @@ body, #product, .hero {
     font-size: 14px;
   }
 }
+    /* ====== Hero Section ====== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #F9F9FB;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1159FC;
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #45474A;
+  margin: 0;
+}
+
+/* ====== Product Section ====== */
+#product {
+  padding: 100px 20px;
+  background: #FAFBFF;
+  font-family: 'Yekan Bakh', 'Tahoma', sans-serif;
+}
+
+#product .section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F49E8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#product .section-intro {
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* Grid Cards */
+#product .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 0 20px;
+}
+
+/* Card Styles */
+#product .product-card {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 32px 28px;
+  text-align: center;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#product .product-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+#product .product-card:hover img {
+  transform: scale(1.05);
+}
+
+#product .product-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0F49E8;
+  margin-bottom: 12px;
+}
+
+#product .product-card p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444;
+}
+
+/* Scientific Note */
+#product .scientific-note {
+  background: #EDF3FF;
+  border-right: 5px solid #0F49E8;
+  border-radius: 16px;
+  padding: 28px 30px;
+  max-width: 860px;
+  margin: 70px auto 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+#product .scientific-note h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F49E8;
+  margin-bottom: 10px;
+}
+
+#product .scientific-note p {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* ====== Responsive ====== */
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  #product .product-card {
+    padding: 24px 16px;
+  }
+  #product .product-card img {
+    width: 100px;
+    height: 100px;
+  }
+  #product .product-card h3 {
+    font-size: 18px;
+  }
+  #product .product-card p {
+    font-size: 15px;
+  }
+  #product .section-title {
+    font-size: 26px;
+  }
+  #product .section-intro {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* تبلت */
+@media (max-width: 768px) {
+  #product {
+    padding: 70px 16px;
+  }
+  #product .product-card {
+    padding: 28px 20px;
+  }
+  #product .product-card img {
+    width: 110px;
+    height: 110px;
+  }
+  #product .product-card h3 {
+    font-size: 19px;
+  }
+  #product .product-card p {
+    font-size: 15.5px;
+  }
+  #product .section-title {
+    font-size: 28px;
+  }
+  #product .section-intro {
+    font-size: 16px;
+  }
+}
+
+/* دسکتاپ */
+@media (min-width: 1025px) {
+  #product .product-card img {
+    width: 120px;
+    height: 120px;
+  }
+  #product .product-card h3 {
+    font-size: 20px;
+  }
+  #product .product-card p {
+    font-size: 16px;
+  }
+}
+
 </style>
