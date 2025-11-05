@@ -8,7 +8,7 @@
     </a>
 
     <!-- منوی ناوبری -->
-    <nav class="nav">
+    <nav class="nav" id="navMenu">
       <a href="#hero">خانه</a>
       <a href="#product">ساختار و ایمنی</a>
       <a href="#about">تحقیقات علمی</a>
@@ -17,11 +17,18 @@
 
     <!-- دکمه تماس سریع -->
     <a href="tel:09384958682" class="btn-contact">تماس فوری</a>
+
+    <!-- آیکون منو موبایل -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
 <style>
-  /* ساختار پایه هدر */
+  /* ساختار پایه */
   .header {
     background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -31,8 +38,14 @@
     padding: 14px 0;
   }
 
+  .container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
   .logo {
-    height: 40px;
+    height: 42px;
     width: auto;
     margin-left: 10px;
   }
@@ -69,15 +82,89 @@
     background-color: #0d47d8;
   }
 
-  /* ریسپانسیو */
-  @media (max-width: 768px) {
+  /* آیکون منو موبایل */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 26px;
+    height: 22px;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    margin: 3px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  /* حالت باز */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* ریسپانسیو برای تبلت و موبایل */
+  @media (max-width: 900px) {
     .nav {
-      display: none;
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      width: 70%;
+      height: calc(100vh - 60px);
+      background-color: #fff;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 40px;
+      transition: right 0.3s ease;
+    }
+
+    .nav a {
+      display: block;
+      margin: 16px 0;
+      font-size: 16px;
+    }
+
+    .nav.active {
+      right: 0;
+    }
+
+    .menu-toggle {
+      display: flex;
     }
 
     .btn-contact {
-      font-size: 13px;
-      padding: 6px 12px;
+      display: none;
     }
   }
 </style>
+
+<script>
+  // کنترل باز و بسته شدن منو موبایل
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // بستن منو بعد از کلیک روی لینک
+  document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
+  });
+</script>
