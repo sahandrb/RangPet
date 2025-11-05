@@ -1,24 +1,28 @@
 <header class="header">
   <div class="container d-flex justify-content-space-between align-items-center">
     
-    <!-- لوگو برند -->
+    <!-- لوگو و برند -->
     <a href="#" class="logo-area d-flex align-items-center">
-      <img src="wallpaper.png" alt="رنگ مخصوص سگ " class="logo">
-      <span class="brand-name">رنگ مخصوص سگ</span>
+      <img src="wallpaper.png" alt="رنگ مخصوص حیوانات" class="logo">
+      <span class="brand-name">رنگ مخصوص حیوانات</span>
     </a>
-
+    <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="Multi3del.png" alt="رنگ مخصوص حیوانات" class="hero-image">
+    <h1 class="hero-title">رنگ مخصوص حیوانات</h1>
+    <p class="hero-subtitle">با کیفیت بالا و تنوع رنگ بی‌نظیر برای حیوانات شما</p>
+  </div>
+</section>
     <!-- منوی ناوبری -->
     <nav class="nav" id="navMenu">
       <a href="#hero">خانه</a>
-      <a href="#product">ساختار و ایمنی</a>
+      <a href="#product">محصولات</a>
       <a href="#about">تحقیقات علمی</a>
-      <a href="#contact">تماس و مشاوره</a>
+      <a href="#contact">تماس</a>
     </nav>
 
-    <!-- دکمه تماس سریع -->
-    <a href="tel:09384958682" class="btn-contact">تماس فوری</a>
-
-    <!-- آیکون منو موبایل -->
+    <!-- آیکون منوی موبایل -->
     <div class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
@@ -28,143 +32,221 @@
 </header>
 
 <style>
-  /* ساختار پایه */
-  .header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 0;
-  }
+/* پایه هدر */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 28px 0; /* افزایش ارتفاع برای حس لوکس */
+  transition: all 0.3s ease;
+}
 
-  .container {
-    width: 92%;
-    max-width: 1200px;
-    margin: auto;
-  }
+/* کانتینر */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .logo {
-    height: 42px;
-    width: auto;
-    margin-left: 10px;
-  }
+/* لوگو و برند */
+.logo {
+  height: 55px;
+  margin-left: 15px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: drop-shadow(0 2px 6px rgba(17, 89, 252, 0.5));
+}
+.logo-area:hover .logo {
+  transform: scale(1.05);
+}
+.brand-name {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  background: linear-gradient(90deg, #1159FC, #0D47D8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 12px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.logo-area:hover .brand-name {
+  transform: scale(1.05);
+}
 
-  .brand-name {
-    font-family: 'Yekan-Bakh', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #1159FC;
-  }
+/* منو */
+.nav a {
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #45474A; /* خاکستری ملایم برای حس حرفه‌ای */
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: #1159FC;
+  border-radius: 2px;
+  opacity: 0.2; /* underline subtle همیشه فعال */
+  transition: opacity 0.3s;
+}
+.nav a:hover {
+  color: #1159FC;
+}
+.nav a:hover::after {
+  opacity: 1;
+}
 
-  .nav a {
-    margin: 0 14px;
-    color: #333;
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.3s;
-  }
+/* منوی موبایل */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  margin: 3px 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
-  .nav a:hover {
-    color: #1159FC;
-  }
-
-  .btn-contact {
-    background-color: #1159FC;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn-contact:hover {
-    background-color: #0d47d8;
-  }
-
-  /* آیکون منو موبایل */
-  .menu-toggle {
-    display: none;
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.1);
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    width: 26px;
-    height: 22px;
+    align-items: center;
+    padding-top: 60px;
+    transition: right 0.3s ease;
   }
-
-  .menu-toggle span {
-    height: 3px;
-    width: 100%;
-    background-color: #333;
-    margin: 3px 0;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+  .nav a {
+    display: block;
+    margin: 18px 0;
+    font-size: 17px;
   }
-
-  /* حالت باز */
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+  .nav.active {
+    right: 0;
   }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
+  .menu-toggle {
+    display: flex;
   }
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
-  /* ریسپانسیو برای تبلت و موبایل */
-  @media (max-width: 900px) {
-    .nav {
-      position: fixed;
-      top: 60px;
-      right: -100%;
-      width: 70%;
-      height: calc(100vh - 60px);
-      background-color: #fff;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 40px;
-      transition: right 0.3s ease;
-    }
-
-    .nav a {
-      display: block;
-      margin: 16px 0;
-      font-size: 16px;
-    }
-
-    .nav.active {
-      right: 0;
-    }
-
-    .menu-toggle {
-      display: flex;
-    }
-
-    .btn-contact {
-      display: none;
-    }
-  }
+}
 </style>
 
 <script>
-  // کنترل باز و بسته شدن منو موبایل
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
 
-  // بستن منو بعد از کلیک روی لینک
-  document.querySelectorAll('#navMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      menuToggle.classList.remove('active');
-    });
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
   });
+});
+  
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #F9F9FB;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.hero-title {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+  color: #1159FC;
+}
+
+.hero-subtitle {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #45474A;
+  margin: 0;
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 16px;
+  }
+  .hero-image {
+    max-width: 90%;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+  }
+}
 </script>
