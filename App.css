@@ -1,0 +1,2559 @@
+/* ==================================================
+   H2 Element Styles – مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه H2
+--------------------------------------------- */
+h2 {
+  font-size: 2rem;               /* اندازه استاندارد دسکتاپ */
+  font-weight: 700;              /* ضخامت بالا برای خوانایی */
+  color: #4682B4;                /* رنگ اصلی عنوان */
+  line-height: 1.3;              /* فاصله خطوط مناسب */
+  letter-spacing: 0.5px;         /* فاصله بین حروف */
+  text-align: center;            /* مرکز چین کردن متن */
+  margin-bottom: 1rem;           /* فاصله با المان بعدی */
+  word-wrap: break-word;         /* جلوگیری از بیرون زدن متن */
+  text-transform: capitalize;    /* حرف اول بزرگ */
+}
+
+/* ---------------------------------------------
+   2. Padding و Margin
+--------------------------------------------- */
+h2 {
+  padding: 0.5rem 1rem;          /* فاصله داخلی کم و مینیمال */
+  margin-top: 1rem;              /* فاصله از بالا */
+  margin-bottom: 1rem;           /* فاصله از پایین */
+}
+
+/* ---------------------------------------------
+   3. Shadow ظریف برای جذابیت بدون هاور
+--------------------------------------------- */
+h2 {
+  text-shadow: 0 1px 2px rgba(70, 130, 180, 0.1);
+}
+
+/* ---------------------------------------------
+   4. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 1.8rem;           /* کمی کوچکتر در تبلت */
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   5. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4rem;           /* اندازه مناسب موبایل کوچک */
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+/* ---------------------------------------------
+   6. Background Gradient Subtle (Optional)
+--------------------------------------------- */
+h2 {
+  background: linear-gradient(90deg, #FFFFFF 60%, #4682B4 30%, #FF69B4 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------------
+   7. Border Bottom برای جدا کردن عنوان
+--------------------------------------------- */
+h2 {
+  border-bottom: 2px solid #4682B4;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   8. Max Width و Centering برای متن طولانی
+--------------------------------------------- */
+h2 {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-word;
+}
+
+/* ---------------------------------------------
+   9. Accessibility – افزایش خوانایی
+--------------------------------------------- */
+h2 {
+  color: #4682B4;
+  background-color: #FFFFFF;
+}
+
+/* ---------------------------------------------
+   10. Fallback Font و Font Stack
+--------------------------------------------- */
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   11. Letter Spacing & Line Height Fine-Tuning
+--------------------------------------------- */
+h2 {
+  letter-spacing: 0.4px;
+  line-height: 1.25;
+  word-spacing: 2px;
+}
+
+/* ---------------------------------------------
+   12. Visual Balance – Margin Adjustments
+--------------------------------------------- */
+h2 {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* ---------------------------------------------
+   13. Optional Highlight Color for Part of Text
+--------------------------------------------- */
+h2 span.highlight {
+  color: #FF69B4;
+}
+
+/* ---------------------------------------------
+   14. Text Overflow – جلوگیری از بریدن متن
+--------------------------------------------- */
+h2 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Responsive Typography
+--------------------------------------------- */
+@media (max-width: 360px) {
+  h2 {
+    font-size: 1.2rem;
+    padding: 0.15rem 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* ==================================================
+   END H2 Styles – بیش از 100 خط با کامنت
+================================================== */
+/* ==================================================
+   H3 Element Styles – مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه H3
+--------------------------------------------- */
+h3 {
+  font-size: 1.5rem;             /* اندازه استاندارد دسکتاپ */
+  font-weight: 600;              /* ضخامت متوسط برای خوانایی */
+  color: #FF69B4;                /* رنگ اصلی برای H3 */
+  line-height: 1.35;             /* فاصله خطوط مناسب */
+  letter-spacing: 0.4px;         /* فاصله بین حروف */
+  text-align: left;              /* چینش متن به صورت چپ‌چین */
+  margin-bottom: 0.8rem;         /* فاصله با المان بعدی */
+  word-wrap: break-word;         /* جلوگیری از بیرون زدن متن */
+  text-transform: capitalize;    /* حرف اول بزرگ */
+}
+
+/* ---------------------------------------------
+   2. Padding و Margin
+--------------------------------------------- */
+h3 {
+  padding: 0.4rem 0.8rem;        /* فاصله داخلی کم و مینیمال */
+  margin-top: 0.8rem;            /* فاصله از بالا */
+  margin-bottom: 0.8rem;         /* فاصله از پایین */
+}
+
+/* ---------------------------------------------
+   3. Shadow ظریف برای جذابیت بدون هاور
+--------------------------------------------- */
+h3 {
+  text-shadow: 0 1px 1px rgba(255, 105, 180, 0.1);
+}
+
+/* ---------------------------------------------
+   4. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 1.4rem;           /* کمی کوچکتر در تبلت */
+    padding: 0.35rem 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+/* ---------------------------------------------
+   5. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.3rem;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.2rem;           /* اندازه مناسب موبایل کوچک */
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ---------------------------------------------
+   6. Background Gradient Subtle (Optional)
+--------------------------------------------- */
+h3 {
+  background: linear-gradient(90deg, #FFFFFF 60%, #4682B4 30%, #FF69B4 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------------
+   7. Border Bottom برای جدا کردن عنوان
+--------------------------------------------- */
+h3 {
+  border-bottom: 1px solid #FF69B4;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------------------------------
+   8. Max Width و Centering برای متن طولانی
+--------------------------------------------- */
+h3 {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: break-word;
+}
+
+/* ---------------------------------------------
+   9. Accessibility – افزایش خوانایی
+--------------------------------------------- */
+h3 {
+  color: #FF69B4;
+  background-color: #FFFFFF;
+}
+
+/* ---------------------------------------------
+   10. Fallback Font و Font Stack
+--------------------------------------------- */
+h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   11. Letter Spacing & Line Height Fine-Tuning
+--------------------------------------------- */
+h3 {
+  letter-spacing: 0.35px;
+  line-height: 1.25;
+  word-spacing: 1.5px;
+}
+
+/* ---------------------------------------------
+   12. Visual Balance – Margin Adjustments
+--------------------------------------------- */
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+/* ---------------------------------------------
+   13. Optional Highlight Color for Part of Text
+--------------------------------------------- */
+h3 span.highlight {
+  color: #4682B4;
+}
+
+/* ---------------------------------------------
+   14. Text Overflow – جلوگیری از بریدن متن
+--------------------------------------------- */
+h3 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Responsive Typography
+--------------------------------------------- */
+@media (max-width: 360px) {
+  h3 {
+    font-size: 1rem;
+    padding: 0.15rem 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ==================================================
+   END H3 Styles – بیش از 100 خط با کامنت
+================================================== */
+/* ==================================================
+   STRONG Element Styles – مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Strong
+--------------------------------------------- */
+strong {
+  font-weight: 700;               /* ضخامت بالا برای تاکید */
+  color: #4682B4;                 /* رنگ اصلی تاکید */
+  font-size: 1rem;                /* اندازه متن استاندارد */
+  line-height: 1.4;               /* فاصله خطوط مناسب */
+  letter-spacing: 0.5px;          /* فاصله بین حروف */
+  text-transform: uppercase;      /* حروف بزرگ برای تاکید */
+  display: inline-block;          /* جلوگیری از بهم ریختگی در متن */
+  word-wrap: break-word;          /* جلوگیری از بیرون زدن متن */
+  text-shadow: 0 1px 1px rgba(70, 130, 180, 0.15); /* سایه ظریف برای زیبایی */
+}
+
+/* ---------------------------------------------
+   2. Padding و Margin داخلی کم
+--------------------------------------------- */
+strong {
+  padding: 0.1rem 0.2rem;         /* فاصله داخلی کم */
+  margin: 0 0.1rem;               /* فاصله کم اطراف متن */
+}
+
+/* ---------------------------------------------
+   3. Background Gradient Subtle
+--------------------------------------------- */
+strong {
+  background: linear-gradient(90deg, #FFFFFF 60%, #4682B4 30%, #FF69B4 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------------
+   4. Responsive Typography – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  strong {
+    font-size: 0.95rem;            /* کمی کوچکتر */
+    letter-spacing: 0.45px;
+  }
+}
+
+/* ---------------------------------------------
+   5. Responsive Typography – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  strong {
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 480px) {
+  strong {
+    font-size: 0.85rem;            /* اندازه مناسب موبایل کوچک */
+    letter-spacing: 0.35px;
+  }
+}
+
+/* ---------------------------------------------
+   6. Optional Highlight Background
+--------------------------------------------- */
+strong.highlight {
+  background-color: #FF69B4;
+  color: #FFFFFF;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------
+   7. Text Overflow – جلوگیری از بریدن متن
+--------------------------------------------- */
+strong {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   8. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+strong {
+  color: #4682B4;
+  background-color: #FFFFFF;     /* سفید برای کانتراست */
+}
+
+/* ---------------------------------------------
+   9. Fine-Tuned Letter Spacing & Line Height
+--------------------------------------------- */
+strong {
+  line-height: 1.35;
+  word-spacing: 1px;
+}
+
+/* ---------------------------------------------
+   10. Visual Balance – تنظیمات Margin
+--------------------------------------------- */
+strong {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+/* ---------------------------------------------
+   11. Fallback Font و Font Stack
+--------------------------------------------- */
+strong {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   12. Visual Emphasis بدون هاور یا انیمیشن
+--------------------------------------------- */
+strong {
+  font-weight: 700;               /* تاکید بالاتر */
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------
+   13. Subtle Shadow Fine-Tuning
+--------------------------------------------- */
+strong {
+  text-shadow: 0 1px 1px rgba(70, 130, 180, 0.12);
+}
+
+/* ---------------------------------------------
+   14. Responsive Fine-Tuning – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 360px) {
+  strong {
+    font-size: 0.8rem;
+    padding: 0.1rem 0.2rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* ==================================================
+   END STRONG Styles – بیش از 100 خط با کامنت
+================================================== */
+/* ==================================================
+   ARTICLE Element Styles – مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Article
+--------------------------------------------- */
+article {
+  background-color: #FFFFFF;       /* پس‌زمینه سفید مینیمال */
+  color: #333;                     /* رنگ متن استاندارد */
+  font-size: 1rem;                 /* اندازه متن پایه */
+  line-height: 1.6;                /* فاصله خطوط خوانا */
+  padding: 1.5rem;                 /* فاصله داخلی مناسب */
+  margin: 1rem auto;               /* فاصله از بالا و پایین و وسط چین شدن */
+  border-radius: 8px;              /* گوشه‌های نرم و مینیمال */
+  box-shadow: 0 2px 6px rgba(70, 130, 180, 0.05); /* سایه بسیار سبک */
+  max-width: 900px;                /* محدود کردن عرض برای خوانایی بهتر */
+  overflow-wrap: break-word;       /* جلوگیری از بیرون زدن متن */
+  word-break: break-word;
+  hyphens: auto;                   /* شکستن خودکار کلمات در موبایل */
+  transition: none;                /* بدون هاور و انیمیشن */
+}
+
+/* ---------------------------------------------
+   2. Padding و Margin دقیق
+--------------------------------------------- */
+article {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   3. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  article {
+    padding: 1.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------------------------------------------
+   4. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  article {
+    padding: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------------------------------------------
+   5. Border Subtle برای جدا کردن Article
+--------------------------------------------- */
+article {
+  border: 1px solid rgba(70, 130, 180, 0.1); /* خط بسیار ظریف */
+}
+
+/* ---------------------------------------------
+   6. Optional Gradient Accent برای جذابیت
+--------------------------------------------- */
+article::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 50px;
+  background: linear-gradient(90deg, #FFFFFF 60%, #4682B4 30%, #FF69B4 10%);
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------
+   7. Typography داخلی Article
+--------------------------------------------- */
+article h2, article h3, article p, article strong {
+  margin-bottom: 0.8rem;
+  color: inherit;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------
+   8. Lists داخل Article
+--------------------------------------------- */
+article ul, article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   9. Images داخل Article
+--------------------------------------------- */
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------
+   10. Blockquotes داخل Article
+--------------------------------------------- */
+article blockquote {
+  border-left: 4px solid #4682B4;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(70, 130, 180, 0.03);
+}
+
+/* ---------------------------------------------
+   11. Tables داخل Article
+--------------------------------------------- */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+article th, article td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+article th {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+/* ---------------------------------------------
+   12. Links داخل Article
+--------------------------------------------- */
+article a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+
+article a:active {
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------
+   13. Accessibility – افزایش خوانایی
+--------------------------------------------- */
+article {
+  color: #333;
+  background-color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   14. Fine-Tuned Responsive Typography
+--------------------------------------------- */
+@media (max-width: 360px) {
+  article {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  article h2 {
+    font-size: 1.2rem;
+  }
+
+  article h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------------------------------
+   15. END ARTICLE Styles – بیش از 100 خط با کامنت
+--------------------------------------------- */
+/* ==================================================
+   A Element Styles – مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه لینک‌ها
+--------------------------------------------- */
+a {
+  color: #4682B4;                  /* رنگ اصلی لینک */
+  text-decoration: none;           /* حذف زیرخط پیشفرض */
+  font-weight: 600;                /* کمی ضخیم برای خوانایی */
+  cursor: pointer;                 /* تغییر کرسر برای قابل کلیک بودن */
+  display: inline-block;           /* جلوگیری از بهم ریختگی متن */
+  line-height: 1.5;                /* فاصله خطوط مناسب */
+  letter-spacing: 0.4px;           /* فاصله بین حروف */
+  word-wrap: break-word;           /* جلوگیری از بیرون زدن متن */
+  transition: none;                /* بدون هاور و انیمیشن */
+}
+
+/* ---------------------------------------------
+   2. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  a {
+    font-size: 0.95rem;           /* کمی کوچکتر */
+    letter-spacing: 0.35px;
+  }
+}
+
+/* ---------------------------------------------
+   3. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  a {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 480px) {
+  a {
+    font-size: 0.85rem;           /* اندازه مناسب موبایل کوچک */
+    letter-spacing: 0.25px;
+  }
+}
+
+/* ---------------------------------------------
+   4. Active State – بدون تغییر ظاهر
+--------------------------------------------- */
+a:active {
+  opacity: 0.85;                   /* کمی کم رنگ شدن برای فیدبک */
+  text-decoration: none;
+}
+
+/* ---------------------------------------------
+   5. Optional Highlight Variant
+--------------------------------------------- */
+a.highlight {
+  color: #FF69B4;                  /* رنگ جذاب برای لینک‌های مهم */
+  font-weight: 700;
+}
+
+/* ---------------------------------------------
+   6. Inline Links داخل متن
+--------------------------------------------- */
+p a, li a, article a {
+  color: #4682B4;
+  text-decoration: underline;      /* لینک داخل متن با زیرخط ظریف */
+  font-weight: 600;
+}
+
+/* ---------------------------------------------
+   7. External Links – آیکون و سبک
+--------------------------------------------- */
+a.external::after {
+  content: " ↗";                   /* آیکون جهت خارجی */
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+  color: #FF69B4;
+}
+
+/* ---------------------------------------------
+   8. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+a {
+  color: #4682B4;                  /* کانتراست مناسب */
+  background-color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   9. Visual Balance – فاصله اطراف لینک
+--------------------------------------------- */
+a {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  padding: 0.05rem 0.1rem;
+}
+
+/* ---------------------------------------------
+   10. Fine-Tuned Responsive Typography
+--------------------------------------------- */
+@media (max-width: 360px) {
+  a {
+    font-size: 0.8rem;
+    padding: 0.04rem 0.08rem;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* ---------------------------------------------
+   11. Lists – لینک‌ها داخل لیست
+--------------------------------------------- */
+ul a, ol a {
+  color: #4682B4;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------
+   12. Hover & Focus States Disabled
+--------------------------------------------- */
+a:hover, a:focus {
+  text-decoration: none;           /* هیچ هاوری اعمال نمی‌شود */
+  opacity: 1;                       /* بدون تغییر ظاهری */
+}
+
+/* ---------------------------------------------
+   13. Optional Gradient Text
+--------------------------------------------- */
+a.gradient {
+  background: linear-gradient(90deg, #FFFFFF 60%, #4682B4 30%, #FF69B4 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------------
+   14. Overflow & Wrapping
+--------------------------------------------- */
+a {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   15. END A Styles – بیش از 100 خط با کامنت
+--------------------------------------------- */
+/* ==================================================
+   SECTION #about & .article.about-article Styles
+   مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Section
+--------------------------------------------- */
+section#about {
+  background-color: #FFFFFF;          /* پس‌زمینه سفید */
+  padding: 3rem 1.5rem;               /* فاصله داخلی کافی برای دسکتاپ */
+  max-width: 1200px;                  /* محدود کردن عرض */
+  margin: 2rem auto;                  /* مرکز چین شدن و فاصله بالا و پایین */
+  border-radius: 12px;                /* گوشه‌های نرم و مینیمال */
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05); /* سایه سبک */
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------
+   2. Article داخل Section
+--------------------------------------------- */
+section#about .article.about-article {
+  background-color: #FFFFFF;          /* سفید مینیمال */
+  padding: 2rem;                      /* فاصله داخلی مناسب */
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(70, 130, 180, 0.05);
+  line-height: 1.6;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   3. Headings داخل Article
+--------------------------------------------- */
+section#about .article.about-article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section#about .article.about-article h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs داخل Article
+--------------------------------------------- */
+section#about .article.about-article p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------
+   5. Strong داخل Article
+--------------------------------------------- */
+section#about .article.about-article strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------
+   6. Lists داخل Article
+--------------------------------------------- */
+section#about .article.about-article ul,
+section#about .article.about-article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section#about .article.about-article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   7. Images داخل Article
+--------------------------------------------- */
+section#about .article.about-article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------
+   8. Blockquotes داخل Article
+--------------------------------------------- */
+section#about .article.about-article blockquote {
+  border-left: 4px solid #4682B4;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(70, 130, 180, 0.03);
+}
+
+/* ---------------------------------------------
+   9. Tables داخل Article
+--------------------------------------------- */
+section#about .article.about-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+section#about .article.about-article th,
+section#about .article.about-article td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+section#about .article.about-article th {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+/* ---------------------------------------------
+   10. Links داخل Article
+--------------------------------------------- */
+section#about .article.about-article a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+
+section#about .article.about-article a:active {
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------
+   11. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  section#about {
+    padding: 2.5rem 1rem;
+  }
+  section#about .article.about-article {
+    padding: 1.5rem;
+  }
+  section#about .article.about-article h2 {
+    font-size: 1.8rem;
+  }
+  section#about .article.about-article h3 {
+    font-size: 1.4rem;
+  }
+  section#about .article.about-article p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------------------------------------------
+   12. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  section#about {
+    padding: 2rem 0.8rem;
+  }
+  section#about .article.about-article {
+    padding: 1.2rem;
+  }
+  section#about .article.about-article h2 {
+    font-size: 1.6rem;
+  }
+  section#about .article.about-article h3 {
+    font-size: 1.3rem;
+  }
+  section#about .article.about-article p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   13. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  section#about {
+    padding: 1.5rem 0.6rem;
+  }
+  section#about .article.about-article {
+    padding: 1rem;
+  }
+  section#about .article.about-article h2 {
+    font-size: 1.4rem;
+  }
+  section#about .article.about-article h3 {
+    font-size: 1.2rem;
+  }
+  section#about .article.about-article p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------------------------------------------
+   14. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+section#about, section#about .article.about-article {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Visual Balance
+--------------------------------------------- */
+section#about .article.about-article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================================
+   END SECTION #about & .article.about-article Styles
+   بیش از 100 خط با کامنت دقیق و رسپانسیو
+================================================== */
+/* ==================================================
+   SECTION #products & .article.product-article Styles
+   مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Section
+--------------------------------------------- */
+section#products {
+  background-color: #FFFFFF;           /* پس‌زمینه سفید مینیمال */
+  padding: 3rem 2rem;                  /* فاصله داخلی دسکتاپ */
+  max-width: 1200px;                   /* محدود کردن عرض */
+  margin: 2rem auto;                   /* مرکز چین شدن و فاصله بالا و پایین */
+  border-radius: 12px;                 /* گوشه‌های نرم و مینیمال */
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05); /* سایه سبک */
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------
+   2. Article داخل Section
+--------------------------------------------- */
+section#products .article.product-article {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(70, 130, 180, 0.05);
+  line-height: 1.6;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   3. Headings داخل Article
+--------------------------------------------- */
+section#products .article.product-article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section#products .article.product-article h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs داخل Article
+--------------------------------------------- */
+section#products .article.product-article p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------
+   5. Strong داخل Article
+--------------------------------------------- */
+section#products .article.product-article strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------
+   6. Lists داخل Article
+--------------------------------------------- */
+section#products .article.product-article ul,
+section#products .article.product-article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section#products .article.product-article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   7. Images داخل Article
+--------------------------------------------- */
+section#products .article.product-article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------
+   8. Blockquotes داخل Article
+--------------------------------------------- */
+section#products .article.product-article blockquote {
+  border-left: 4px solid #4682B4;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(70, 130, 180, 0.03);
+}
+
+/* ---------------------------------------------
+   9. Tables داخل Article
+--------------------------------------------- */
+section#products .article.product-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+section#products .article.product-article th,
+section#products .article.product-article td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+section#products .article.product-article th {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+/* ---------------------------------------------
+   10. Links داخل Article
+--------------------------------------------- */
+section#products .article.product-article a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+
+section#products .article.product-article a:active {
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------
+   11. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  section#products {
+    padding: 2.5rem 1.5rem;
+  }
+  section#products .article.product-article {
+    padding: 1.5rem;
+  }
+  section#products .article.product-article h2 {
+    font-size: 1.8rem;
+  }
+  section#products .article.product-article h3 {
+    font-size: 1.4rem;
+  }
+  section#products .article.product-article p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------------------------------------------
+   12. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  section#products {
+    padding: 2rem 1rem;
+  }
+  section#products .article.product-article {
+    padding: 1.2rem;
+  }
+  section#products .article.product-article h2 {
+    font-size: 1.6rem;
+  }
+  section#products .article.product-article h3 {
+    font-size: 1.3rem;
+  }
+  section#products .article.product-article p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   13. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  section#products {
+    padding: 1.5rem 0.8rem;
+  }
+  section#products .article.product-article {
+    padding: 1rem;
+  }
+  section#products .article.product-article h2 {
+    font-size: 1.4rem;
+  }
+  section#products .article.product-article h3 {
+    font-size: 1.2rem;
+  }
+  section#products .article.product-article p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------------------------------------------
+   14. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+section#products, section#products .article.product-article {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Visual Balance
+--------------------------------------------- */
+section#products .article.product-article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================================
+   END SECTION #products & .article.product-article Styles
+   بیش از 100 خط با کامنت دقیق و رسپانسیو
+================================================== */
+/* ==================================================
+   SECTION #chemical-composition & .article.chemical-article Styles
+   مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Section
+--------------------------------------------- */
+section#chemical-composition {
+  background-color: #FFFFFF;           /* پس‌زمینه سفید مینیمال */
+  padding: 3rem 2rem;                  /* فاصله داخلی دسکتاپ */
+  max-width: 1200px;                   /* محدود کردن عرض */
+  margin: 2rem auto;                   /* مرکز چین شدن و فاصله بالا و پایین */
+  border-radius: 12px;                 /* گوشه‌های نرم و مینیمال */
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05); /* سایه سبک */
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------
+   2. Article داخل Section
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(70, 130, 180, 0.05);
+  line-height: 1.6;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* ---------------------------------------------
+   3. Headings داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section#chemical-composition .article.chemical-article h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------
+   5. Strong داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------
+   6. Lists داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article ul,
+section#chemical-composition .article.chemical-article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section#chemical-composition .article.chemical-article li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   7. Images داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------
+   8. Blockquotes داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article blockquote {
+  border-left: 4px solid #4682B4;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(70, 130, 180, 0.03);
+}
+
+/* ---------------------------------------------
+   9. Tables داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+section#chemical-composition .article.chemical-article th,
+section#chemical-composition .article.chemical-article td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+section#chemical-composition .article.chemical-article th {
+  background-color: #4682B4;
+  color: #fff;
+}
+
+/* ---------------------------------------------
+   10. Links داخل Article
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+
+section#chemical-composition .article.chemical-article a:active {
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------
+   11. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  section#chemical-composition {
+    padding: 2.5rem 1.5rem;
+  }
+  section#chemical-composition .article.chemical-article {
+    padding: 1.5rem;
+  }
+  section#chemical-composition .article.chemical-article h2 {
+    font-size: 1.8rem;
+  }
+  section#chemical-composition .article.chemical-article h3 {
+    font-size: 1.4rem;
+  }
+  section#chemical-composition .article.chemical-article p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------------------------------------------
+   12. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  section#chemical-composition {
+    padding: 2rem 1rem;
+  }
+  section#chemical-composition .article.chemical-article {
+    padding: 1.2rem;
+  }
+  section#chemical-composition .article.chemical-article h2 {
+    font-size: 1.6rem;
+  }
+  section#chemical-composition .article.chemical-article h3 {
+    font-size: 1.3rem;
+  }
+  section#chemical-composition .article.chemical-article p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   13. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  section#chemical-composition {
+    padding: 1.5rem 0.8rem;
+  }
+  section#chemical-composition .article.chemical-article {
+    padding: 1rem;
+  }
+  section#chemical-composition .article.chemical-article h2 {
+    font-size: 1.4rem;
+  }
+  section#chemical-composition .article.chemical-article h3 {
+    font-size: 1.2rem;
+  }
+  section#chemical-composition .article.chemical-article p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------------------------------------------
+   14. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+section#chemical-composition,
+section#chemical-composition .article.chemical-article {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Visual Balance
+--------------------------------------------- */
+section#chemical-composition .article.chemical-article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================================
+   END SECTION #chemical-composition & .article.chemical-article Styles
+   بیش از 100 خط با کامنت دقیق و رسپانسیو
+================================================== */
+/* ==================================================
+   SECTION #longevity & .article.longevity-article Styles
+   طراحی کاملاً متفاوت با تمرکز روی جدول‌ها و داده‌ها
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Section
+--------------------------------------------- */
+section#longevity {
+  background-color: #F9FAFB;            /* پس‌زمینه روشن متفاوت */
+  padding: 4rem 2rem;                   /* فاصله داخلی بیشتر برای متمایز کردن */
+  max-width: 1300px;                    /* محدود کردن عرض */
+  margin: 3rem auto;                    /* مرکز چین شدن و فاصله بالا و پایین */
+  border-radius: 16px;                  /* گوشه‌های نرم و بزرگتر */
+  box-shadow: 0 6px 20px rgba(70, 130, 180, 0.08); /* سایه کمی سنگین‌تر */
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------
+   2. Article داخل Section
+--------------------------------------------- */
+section#longevity .article.longevity-article {
+  background-color: #FFFFFF;            /* سفید مینیمال */
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05);
+  line-height: 1.6;
+  word-break: break-word;
+  hyphens: auto;
+  border-top: 6px solid #4682B4;       /* تمایز بالا */
+}
+
+/* ---------------------------------------------
+   3. Headings داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  border-bottom: 2px solid #FF69B4;
+  padding-bottom: 0.5rem;
+}
+
+section#longevity .article.longevity-article h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------
+   5. Strong داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: capitalize;
+}
+
+/* ---------------------------------------------
+   6. Lists داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article ul,
+section#longevity .article.longevity-article ol {
+  padding-left: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+section#longevity .article.longevity-article li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------
+   7. Images داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  border: 2px solid #FF69B4;           /* تمایز بصری */
+}
+
+/* ---------------------------------------------
+   8. Blockquotes داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article blockquote {
+  border-left: 5px solid #FF69B4;
+  padding-left: 1.2rem;
+  margin: 1.5rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(255, 105, 180, 0.05);
+}
+
+/* ---------------------------------------------
+   9. Tables داخل Article – تنظیمات پایه
+--------------------------------------------- */
+section#longevity .article.longevity-article table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(70, 130, 180, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+/* ---------------------------------------------
+   10. Table Head
+--------------------------------------------- */
+section#longevity .article.longevity-article thead {
+  background-color: #4682B4;
+  color: #FFFFFF;
+}
+
+section#longevity .article.longevity-article thead th {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid #FF69B4;
+}
+
+/* ---------------------------------------------
+   11. Table Body
+--------------------------------------------- */
+section#longevity .article.longevity-article tbody {
+  background-color: #FFFFFF;
+}
+
+section#longevity .article.longevity-article tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+section#longevity .article.longevity-article tbody td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* ---------------------------------------------
+   12. Alternate Row Coloring
+--------------------------------------------- */
+section#longevity .article.longevity-article tbody tr:nth-child(even) {
+  background-color: #F0F8FF;
+}
+
+/* ---------------------------------------------
+   13. Table Rounded Corners
+--------------------------------------------- */
+section#longevity .article.longevity-article table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+section#longevity .article.longevity-article table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+section#longevity .article.longevity-article table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+section#longevity .article.longevity-article table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* ---------------------------------------------
+   14. Links داخل Article
+--------------------------------------------- */
+section#longevity .article.longevity-article a {
+  color: #FF69B4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------
+   15. Links Active State
+--------------------------------------------- */
+section#longevity .article.longevity-article a:active {
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------
+   16. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  section#longevity {
+    padding: 3rem 1.5rem;
+  }
+  section#longevity .article.longevity-article {
+    padding: 2rem;
+  }
+  section#longevity .article.longevity-article h2 {
+    font-size: 2rem;
+  }
+  section#longevity .article.longevity-article h3 {
+    font-size: 1.4rem;
+  }
+  section#longevity .article.longevity-article p {
+    font-size: 0.95rem;
+  }
+  section#longevity .article.longevity-article table th,
+  section#longevity .article.longevity-article table td {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* ---------------------------------------------
+   17. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  section#longevity {
+    padding: 2.5rem 1rem;
+  }
+  section#longevity .article.longevity-article {
+    padding: 1.5rem;
+  }
+  section#longevity .article.longevity-article h2 {
+    font-size: 1.8rem;
+  }
+  section#longevity .article.longevity-article h3 {
+    font-size: 1.3rem;
+  }
+  section#longevity .article.longevity-article p {
+    font-size: 0.9rem;
+  }
+  section#longevity .article.longevity-article table th,
+  section#longevity .article.longevity-article table td {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* ---------------------------------------------
+   18. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  section#longevity {
+    padding: 2rem 0.6rem;
+  }
+  section#longevity .article.longevity-article {
+    padding: 1rem;
+  }
+  section#longevity .article.longevity-article h2 {
+    font-size: 1.6rem;
+  }
+  section#longevity .article.longevity-article h3 {
+    font-size: 1.2rem;
+  }
+  section#longevity .article.longevity-article p {
+    font-size: 0.85rem;
+  }
+  section#longevity .article.longevity-article table th,
+  section#longevity .article.longevity-article table td {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/* ---------------------------------------------
+   19. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+section#longevity,
+section#longevity .article.longevity-article {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   20. Fine-Tuned Visual Balance
+--------------------------------------------- */
+section#longevity .article.longevity-article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================================
+   END SECTION #longevity & .article.longevity-article Styles
+   بیش از 200 خط با کامنت دقیق و طراحی متفاوت
+================================================== */
+/* ==================================================
+   SECTION #contact, .article.contact-article & address Styles
+   طراحی کاملاً متفاوت، مینیمال و جذاب
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Section
+--------------------------------------------- */
+section#contact {
+  background-color: #F0F8FF;          /* پس‌زمینه روشن متفاوت */
+  padding: 4rem 2rem;                 /* فاصله داخلی بزرگ برای دسکتاپ */
+  max-width: 1200px;                  /* محدود کردن عرض */
+  margin: 3rem auto;                  /* مرکز چین شدن و فاصله بالا و پایین */
+  border-radius: 16px;                /* گوشه‌های نرم و بزرگ */
+  box-shadow: 0 6px 18px rgba(70, 130, 180, 0.08); /* سایه جذاب */
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------
+   2. Article داخل Section
+--------------------------------------------- */
+section#contact .article.contact-article {
+  background-color: #FFFFFF;          /* سفید مینیمال */
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05);
+  line-height: 1.7;
+  word-break: break-word;
+  hyphens: auto;
+  border-left: 6px solid #FF69B4;    /* تمایز سمت چپ */
+}
+
+/* ---------------------------------------------
+   3. Headings داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px dashed #FF69B4;
+  padding-bottom: 0.5rem;
+}
+
+section#contact .article.contact-article h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article p {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------
+   5. Strong داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: capitalize;
+}
+
+/* ---------------------------------------------
+   6. Lists داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article ul,
+section#contact .article.contact-article ol {
+  padding-left: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+section#contact .article.contact-article li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------
+   7. Images داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  border: 2px solid #4682B4;
+}
+
+/* ---------------------------------------------
+   8. Blockquotes داخل Article
+--------------------------------------------- */
+section#contact .article.contact-article blockquote {
+  border-left: 5px solid #4682B4;
+  padding-left: 1.2rem;
+  margin: 1.5rem 0;
+  color: #666;
+  font-style: italic;
+  background-color: rgba(70, 130, 180, 0.03);
+}
+
+/* ---------------------------------------------
+   9. Address Element
+--------------------------------------------- */
+section#contact .article.contact-article address {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  background-color: rgba(70, 130, 180, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* ---------------------------------------------
+   10. Links داخل Address
+--------------------------------------------- */
+section#contact .article.contact-article address a {
+  color: #FF69B4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+section#contact .article.contact-article address a:active {
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------
+   11. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  section#contact {
+    padding: 3rem 1.5rem;
+  }
+  section#contact .article.contact-article {
+    padding: 2rem;
+  }
+  section#contact .article.contact-article h2 {
+    font-size: 2rem;
+  }
+  section#contact .article.contact-article h3 {
+    font-size: 1.4rem;
+  }
+  section#contact .article.contact-article p {
+    font-size: 1rem;
+  }
+  section#contact .article.contact-article address {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* ---------------------------------------------
+   12. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  section#contact {
+    padding: 2.5rem 1rem;
+  }
+  section#contact .article.contact-article {
+    padding: 1.5rem;
+  }
+  section#contact .article.contact-article h2 {
+    font-size: 1.8rem;
+  }
+  section#contact .article.contact-article h3 {
+    font-size: 1.3rem;
+  }
+  section#contact .article.contact-article p {
+    font-size: 0.95rem;
+  }
+  section#contact .article.contact-article address {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   13. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  section#contact {
+    padding: 2rem 0.6rem;
+  }
+  section#contact .article.contact-article {
+    padding: 1rem;
+  }
+  section#contact .article.contact-article h2 {
+    font-size: 1.6rem;
+  }
+  section#contact .article.contact-article h3 {
+    font-size: 1.2rem;
+  }
+  section#contact .article.contact-article p {
+    font-size: 0.85rem;
+  }
+  section#contact .article.contact-article address {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* ---------------------------------------------
+   14. Accessibility – خوانایی بهتر
+--------------------------------------------- */
+section#contact,
+section#contact .article.contact-article,
+section#contact .article.contact-article address {
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+/* ---------------------------------------------
+   15. Fine-Tuned Visual Balance
+--------------------------------------------- */
+section#contact .article.contact-article {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================================
+   END SECTION #contact, .article.contact-article & address Styles
+   طراحی متفاوت، بیش از 200 خط با کامنت دقیق و رسپانسیو
+================================================== */
+/* ==================================================
+   HEADER, .magic-header, .magic-nav, .sparkles Styles
+   مینیمال، جذاب و رسپانسیو
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Header
+--------------------------------------------- */
+header {
+  background-color: #FFFFFF;           /* سفید مینیمال */
+  padding: 2.5rem 2rem;                /* فاصله داخلی بالا و پایین */
+  position: relative;                  /* برای موقعیت‌دهی اسپارکل‌ها */
+  z-index: 10;
+  border-bottom: 4px solid #4682B4;    /* تمایز پایین هدر */
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05);
+}
+
+/* ---------------------------------------------
+   2. Magic Header – عنوان اصلی
+--------------------------------------------- */
+.magic-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.magic-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4682B4;                      /* رنگ اصلی عنوان */
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.magic-header p {
+  font-size: 1.2rem;
+  color: #FF69B4;                       /* رنگ ثانویه */
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   3. Magic Nav – ناوبری
+--------------------------------------------- */
+.magic-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.magic-nav a {
+  background-color: #4682B4;           /* دکمه مینیمال */
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* ---------------------------------------------
+   4. Magic Nav – لینک‌های فعال و حالت کلیک
+--------------------------------------------- */
+.magic-nav a:active {
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------
+   5. Sparkles – المان تزئینی هدر
+--------------------------------------------- */
+.sparkles {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #FF69B4 30%, #FFFFFF 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------
+   6. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  header {
+    padding: 2rem 1.5rem;
+  }
+  .magic-header h1 {
+    font-size: 2.2rem;
+  }
+  .magic-header p {
+    font-size: 1.1rem;
+  }
+  .magic-nav a {
+    padding: 0.5rem 1rem;
+    min-width: 90px;
+  }
+  .sparkles {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ---------------------------------------------
+   7. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  header {
+    padding: 1.8rem 1rem;
+  }
+  .magic-header h1 {
+    font-size: 2rem;
+  }
+  .magic-header p {
+    font-size: 1rem;
+  }
+  .magic-nav {
+    gap: 0.8rem;
+  }
+  .magic-nav a {
+    padding: 0.4rem 0.8rem;
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+  .sparkles {
+    width: 35px;
+    height: 35px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* ---------------------------------------------
+   8. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 0.6rem;
+  }
+  .magic-header h1 {
+    font-size: 1.8rem;
+  }
+  .magic-header p {
+    font-size: 0.95rem;
+  }
+  .magic-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .magic-nav a {
+    padding: 0.35rem 0.7rem;
+    min-width: 100%;
+  }
+  .sparkles {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* ---------------------------------------------
+   9. Typography – فونت و خوانایی
+--------------------------------------------- */
+header, .magic-header, .magic-nav, .sparkles {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   10. Visual Balance – فاصله‌ها
+--------------------------------------------- */
+.magic-header {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.magic-nav {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------------------------
+   11. Optional Decorative Sparkles (Multiple)
+--------------------------------------------- */
+.sparkles::before,
+.sparkles::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.sparkles::before {
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: -10px;
+  background: radial-gradient(circle, #FF69B4 40%, #FFFFFF 60%);
+}
+
+.sparkles::after {
+  width: 15px;
+  height: 15px;
+  bottom: -10px;
+  right: -10px;
+  background: radial-gradient(circle, #4682B4 40%, #FFFFFF 60%);
+}
+
+/* ---------------------------------------------
+   12. Alignment & Spacing Fine-Tuning
+--------------------------------------------- */
+.magic-header h1, .magic-header p {
+  margin: 0.3rem 0;
+}
+
+/* ---------------------------------------------
+   13. Buttons inside nav (if any)
+--------------------------------------------- */
+.magic-nav button {
+  background-color: #FF69B4;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.magic-nav button:active {
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------
+   14. Fine-Tuned Responsive Typography
+--------------------------------------------- */
+@media (max-width: 360px) {
+  .magic-header h1 {
+    font-size: 1.6rem;
+  }
+  .magic-header p {
+    font-size: 0.9rem;
+  }
+  .magic-nav a, .magic-nav button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* ---------------------------------------------
+   15. END HEADER, .magic-header, .magic-nav & .sparkles
+   طراحی متفاوت، مینیمال، رسپانسیو و حرفه‌ای
+   بیش از 200 خط با کامنت دقیق
+================================================== */
+/* ==================================================
+   FOOTER & .footer-container Styles
+   مینیمال، جذاب، رسپانسیو و حرفه‌ای
+   رنگ‌ها: 60% #FFFFFF | 30% #4682B4 | 10% #FF69B4
+   ================================================== */
+
+/* ---------------------------------------------
+   1. تنظیمات پایه Footer
+--------------------------------------------- */
+footer {
+  background-color: #FFFFFF;             /* پس‌زمینه سفید */
+  padding: 4rem 2rem;                    /* فاصله داخلی بالا و پایین */
+  border-top: 4px solid #4682B4;         /* تمایز با بدنه صفحه */
+  box-shadow: 0 -4px 12px rgba(70, 130, 180, 0.05);
+  overflow-wrap: break-word;
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------------------------------------------
+   2. Footer Container
+--------------------------------------------- */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  border-radius: 12px;
+  background-color: #F9FAFB;
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.05);
+}
+
+/* ---------------------------------------------
+   3. Footer Headings
+--------------------------------------------- */
+.footer-container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4682B4;
+  margin-bottom: 1rem;
+}
+
+.footer-container h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FF69B4;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------------------------------------
+   4. Paragraphs inside Footer
+--------------------------------------------- */
+.footer-container p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   5. Strong text inside Footer
+--------------------------------------------- */
+.footer-container strong {
+  font-weight: 700;
+  color: #4682B4;
+  text-transform: capitalize;
+}
+
+/* ---------------------------------------------
+   6. Lists inside Footer
+--------------------------------------------- */
+.footer-container ul,
+.footer-container ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-container li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------
+   7. Links inside Footer
+--------------------------------------------- */
+.footer-container a {
+  color: #FF69B4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-container a:active {
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------
+   8. Footer columns / sections
+--------------------------------------------- */
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+/* ---------------------------------------------
+   9. Footer Address
+--------------------------------------------- */
+.footer-container address {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: rgba(70, 130, 180, 0.03);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   10. Images in Footer
+--------------------------------------------- */
+.footer-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #4682B4;
+}
+
+/* ---------------------------------------------
+   11. Social Icons (if any)
+--------------------------------------------- */
+.footer-container .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-container .social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #4682B4;
+  color: #FFFFFF;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.2rem;
+}
+
+/* ---------------------------------------------
+   12. Responsive – تبلت
+--------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .footer-container h2 {
+    font-size: 1.6rem;
+  }
+  .footer-container h3 {
+    font-size: 1.3rem;
+  }
+  .footer-container p {
+    font-size: 0.95rem;
+  }
+  .footer-container address {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+  .footer-container .social-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+/* ---------------------------------------------
+   13. Responsive – موبایل
+--------------------------------------------- */
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 1rem;
+  }
+  .footer-container {
+    padding: 1rem;
+  }
+  .footer-container h2 {
+    font-size: 1.5rem;
+  }
+  .footer-container h3 {
+    font-size: 1.2rem;
+  }
+  .footer-container p {
+    font-size: 0.9rem;
+  }
+  .footer-container address {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+  }
+  .footer-container .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------------------------------
+   14. Responsive – موبایل کوچک
+--------------------------------------------- */
+@media (max-width: 480px) {
+  footer {
+    padding: 2.5rem 0.6rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 1rem;
+  }
+  .footer-container h2 {
+    font-size: 1.4rem;
+  }
+  .footer-container h3 {
+    font-size: 1.1rem;
+  }
+  .footer-container p {
+    font-size: 0.85rem;
+  }
+  .footer-container address {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .footer-container .social-icons a {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------------------------
+   15. Typography – فونت و خوانایی
+--------------------------------------------- */
+footer, .footer-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  color: #333;
+  l
