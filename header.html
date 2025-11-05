@@ -1,0 +1,83 @@
+<header class="header">
+  <div class="container d-flex justify-content-space-between align-items-center">
+    
+    <!-- لوگو برند -->
+    <a href="#" class="logo-area d-flex align-items-center">
+      <img src="assets/logo.png" alt="رنگ پت" class="logo">
+      <span class="brand-name">رنگ پت</span>
+    </a>
+
+    <!-- منوی ناوبری -->
+    <nav class="nav">
+      <a href="#hero">خانه</a>
+      <a href="#product">ساختار و ایمنی</a>
+      <a href="#about">تحقیقات علمی</a>
+      <a href="#contact">تماس و مشاوره</a>
+    </nav>
+
+    <!-- دکمه تماس سریع -->
+    <a href="tel:09384958682" class="btn-contact">تماس فوری</a>
+  </div>
+</header>
+
+<style>
+  /* ساختار پایه هدر */
+  .header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 0;
+  }
+
+  .logo {
+    height: 40px;
+    width: auto;
+    margin-left: 10px;
+  }
+
+  .brand-name {
+    font-family: 'Yekan-Bakh', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1159FC;
+  }
+
+  .nav a {
+    margin: 0 14px;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+  }
+
+  .nav a:hover {
+    color: #1159FC;
+  }
+
+  .btn-contact {
+    background-color: #1159FC;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background-color: #0d47d8;
+  }
+
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+
+    .btn-contact {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+</style>
