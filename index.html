@@ -1,462 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-   
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-<link href="https://cdn.fontcdn.ir/Font/Persian/IRANSans.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-/* ============================
-   استایل کلی بدن و فونت‌ها
-============================ */
-body {
-    color: #4a4a4a;
-    font-family: 'IRANSans', sans-serif;
-    direction: rtl;
-    text-align: right;
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-}
-
-/* ============================
-   سکشن‌ها و container
-============================ */
-.section {
-    padding: 100px 20px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.section .container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.section-separator {
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #d63384, #ff6b81);
-    margin: 60px auto;
-    border-radius: 2px;
-}
-
-/* ============================
-   کارت محصول
-============================ */
-.product-card {
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    overflow: hidden;
-    max-width: 1000px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-.product-image {
-    flex: 1;
-    text-align: center;
-    padding: 30px;
-}
-
-.product-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.product-image img:hover {
-    transform: scale(1.05) rotate(-2deg);
-    filter: brightness(1.05) drop-shadow(0 0 20px rgba(0,0,0,0.2));
-}
-
-.product-content {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.product-content h2 {
-    font-size: 25px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    background: linear-gradient(45deg, #d63384, #ff6b81);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.product-content p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.product-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.product-content ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    background: #f7f7f7;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-content ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* ============================
-   کارت واردکننده
-============================ */
-.importer-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    padding: 50px 45px;
-    max-width: 1000px;
-    transition: 0.4s;
-}
-
-.importer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-}
-
-.importer-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    background: linear-gradient(45deg, #d63384, #ff6b81);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.importer-content p {
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 18px;
-    color: #333;
-}
-
-.importer-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 25px 0;
-}
-
-.importer-content ul li {
-    font-size: 16px;
-    margin-bottom: 12px;
-    padding: 12px 18px;
-    border-radius: 15px;
-    background: #f8f8f8;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.importer-content ul li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ============================
-   شماره تماس
-============================ */
-.contact-box {
-    margin-top: 50px;
-    padding: 30px 40px;
-    background: linear-gradient(135deg, #ffd6e8, #ffe0f0);
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.3);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #d63384;
-}
-
-.contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(214, 51, 132, 0.35);
-}
-
-.contact-box span {
-    font-size: 26px;
-    font-weight: 800;
-}
-
-.contact-box a {
-    font-size: 18px;
-    font-weight: 800;
-    color: #d63384;
-    padding: 12px 20px;
-    border-radius: 15px;
-    text-decoration: none;
-    background: #fff0f5;
-    transition: all 0.3s ease;
-}
-
-.contact-box a:hover {
-    color: #ff2e99;
-    background: #ffd6e8;
-    transform: scale(1.05);
-}
-
-/* ============================
-   ریسپانسیو موبایل
-============================ */
-
-@media (max-width: 768px) {
-    .product-card,
-    .importer-card {
-        width: 100%;            /* کارت کل عرض صفحه */
-        max-width: 100%;        /* حداکثر عرض هم 100% */
-        flex-direction: column; /* چینش ستونی */
-        align-items: stretch;   /* محتوا تمام عرض */
-        padding: 20px;          /* padding داخلی مناسب */
-        margin: 0;              /* فاصله خارجی صفر */
-        border-radius: 0;       /* گوشه‌ها صاف */
-        box-shadow: none;       /* سایه‌ها حذف */
-        background: transparent; /* زمینه کارت بدون رنگ */
-    }
-
-    .product-content,
-    .importer-content {
-        padding: 0; /* محتوای داخل کارت هم به لبه‌ها بچسبه */
-    }
-}
-/* برای دسکتاپ */
-.product-card {
-    flex-direction: row; /* کنار هم بودن تصویر و متن */
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto; /* وسط چین کردن */
-}
-
-.product-image, .product-content {
-    flex: 1 1 50%; /* تقسیم فضای 50-50 */
-    min-width: 300px; /* جلوگیری از خیلی کوچک شدن */
-}
-
-</style>
-</head><body>
-
-   <section id="product-text-section" class="section">
-    <div class="container">
-        <div class="product-card">
-
-            <!-- بخش متن محصول -->
-            <div class="product-content">
-                <div class="section-separator"></div>
-                <h2>رنگ موی مخصوص سگ و حیوانات – ایمن، غیرشیمیایی و مناسب آرایش پت</h2>
-    <div class="product-image">
-    <img src="unnamed (1).jpg" alt="رنگ موی مخصوص سگ و گربه – ایمن و غیرشیمیایی برای حیوانات">
-    </div>
-<div class="intro-text" style="margin-bottom: 25px; padding: 20px; background: #fff4f8; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-    <p style="font-size: 18px; line-height: 1.7; color: #4a4a4a; text-align: justify;">
-        آیا به دنبال <strong>رنگ موی حیوانات</strong> ایمن و غیرشیمیایی هستید؟ 
-        <strong>رنگ موی مخصوص سگ</strong> و <strong>رنگ موی مخصوص گربه</strong> Brooklyn Pet Dye 
-        تجربه‌ای منحصر به فرد و حرفه‌ای برای <strong>رنگ کردن موی حیوانات</strong> فراهم می‌کند. 
-        این محصول بدون آمونیاک و مواد شیمیایی سنگین، بهترین گزینه برای سلامت و زیبایی پت شما است.
-    </p>
-    <p style="font-size: 18px; line-height: 1.7; color: #4a4a4a; text-align: justify;">
-        رنگ کردن موی حیوانات می‌تواند تجربه‌ای سرگرم‌کننده و خلاقانه باشد، اما تنها در صورتی که ایمنی حیوان در اولویت باشد. 
-        تفاوت بین رنگ موی انسان و رنگ موی مخصوص سگ فراتر از بسته‌بندی است؛ در فرمولاسیون شیمیایی، سطح pH پوست و ایمنی حیوان نهفته است.
-    </p>
-    <p style="font-size: 18px; line-height: 1.7; color: #4a4a4a; text-align: justify;">
-        <strong>تفاوت‌های شیمیایی:</strong> رنگ موی انسان دارای آمونیاک، پراکسید و PPD است که می‌تواند باعث سوختگی، زخم و ریزش مو در سگ شود، در حالی که رنگ موی سگ فاقد این مواد و غیر سمی است.
-    </p>
-    <p style="font-size: 18px; line-height: 1.7; color: #4a4a4a; text-align: justify;">
-        <strong>تفاوت در سطح pH پوست:</strong> پوست سگ‌ها خنثی‌تر یا قلیایی‌تر است (pH حدود 6.5 تا 7.5) و استفاده از رنگ موی انسان می‌تواند باعث خشکی، خارش و عفونت پوستی شود.
-    </p>
-    <p style="font-size: 18px; line-height: 1.7; color: #4a4a4a; text-align: justify;">
-        <strong>خطر بلع:</strong> سگ‌ها بدن خود را لیس می‌زنند و استفاده از رنگ موی انسان می‌تواند باعث مسمومیت و آسیب به اندام‌های داخلی شود. رنگ‌های مخصوص سگ ما غیر سمی و ایمن هستند.
-    </p>
-</div>
-
-<p>
-    اگر به دنبال <strong>رنگ موی حیوانات</strong> باشید که هم زیبا باشد و هم سلامت پت را حفظ کند، 
-    این محصول دقیقا برای همین هدف ساخته شده است. 
-    <strong>رنگ موی مخصوص سگ</strong> و گربه Brooklyn Pet Dye بدون آمونیاک و مواد شیمیایی سنگین تولید شده 
-    و از ترکیبات کاملاً غیرسمی و سازگار با پوست و موی حیوانات بهره می‌برد. 
-    این رنگ‌ها باعث ایجاد ظاهر فانتزی و جذاب می‌شوند، 
-    بدون اینکه باعث سوزش، خشکی یا آسیب به پوست و موی پت شوند.
-    مناسب برای آرایشگران حرفه‌ای، پت‌شاپ‌ها و صاحبان حیوانات خانگی که می‌خواهند تجربه‌ای ایمن، 
-    خلاقانه و متفاوت در <strong>رنگ کردن موی حیوانات</strong> داشته باشند.
-</p>
-
-<ul>
-    <li>✨ رنگ‌های زنده و چشم‌گیر برای <strong>رنگ کردن موی حیوانات</strong></li>
-    <li>🛡️ کاملاً ایمن و <strong>غیرشیمیایی</strong> برای سگ و گربه</li>
-    <li>🎨 آزادی خلاقیت حرفه‌ای با <strong>رنگ موی مخصوص سگ</strong> و حیوانات</li>
-    <li>🔬 کنترل کیفیت و تست عملی پیش از عرضه برای تضمین سلامت حیوان</li>
-</ul>
-
-            </div>
-
-            <!-- بخش تصویر محصول -->
-            <div class="product-image">
-                <img src="DarkPink2.png" alt="رنگ موی مخصوص سگ و گربه – ایمن و غیرشیمیایی برای حیوانات">
-            </div>
-
-            <!-- بخش واردکننده -->
-            
-                <div class="product-content">
-                    <h2>سهند رنجبری پور – تأمین‌کننده مستقل رنگ موی حیوانات</h2>
-
-<div class="importer-highlight" style="margin: 25px 0; padding: 25px; background: #fff4f0; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-    <p style="font-size: 17px; line-height: 1.8; color: #4a4a4a; text-align: justify;">
-        محصولات Brooklyn Pet Dye تحت مدیریت <strong>سهند رنجبری پور</strong> عرضه می‌شوند و پیش از ارائه، کنترل کیفیت و بررسی ایمنی انجام شده است.  
-        این رنگ‌ها با فرمول‌های سازگار با پوست و موی سگ و گربه طراحی شده‌اند و فاقد آمونیاک و مواد شیمیایی سنگین هستند تا سلامت حیوانات تضمین شود.  
-        محصولات برای استفاده در آرایشگاه‌های حیوانات، پت‌شاپ‌ها و مراقبت خانگی مناسب هستند و امکان ایجاد جلوه‌های طبیعی و فانتزی را فراهم می‌کنند.  
-        هدف این مجموعه، ارائه محصولاتی با کیفیت قابل اعتماد، همراه با اطلاعات شفاف درباره ترکیبات و ایمنی است تا مصرف‌کنندگان بتوانند با اطمینان از آنها استفاده کنند.
-    </p>
-    <p style="font-size: 17px; line-height: 1.8; color: #4a4a4a; text-align: justify;">
-        مسیر تأمین محصولات از تولیدکنندگان معتبر خارجی انجام می‌شود و تمرکز بر انتخاب منابع با استانداردهای مناسب و بررسی عملکرد محصول قبل از عرضه است.  
-        بدین ترتیب، مصرف‌کنندگان و آرایشگران حیوانات می‌توانند تجربه‌ای ایمن و حرفه‌ای در <strong>رنگ کردن موی حیوانات</strong> داشته باشند، بدون اینکه نیاز به ادعای نمایندگی رسمی یا مجوزهای قانونی وجود داشته باشد.
-    </p>
-</div>
-
-<p>
-    تمامی محصولات پت و <strong>لوازم آرایشی حیوانات</strong>، از جمله <strong>رنگ موی مخصوص سگ و گربه</strong> برند Brooklyn، توسط مجموعه تحت مدیریت <strong>سهند رنجبری پور</strong> عرضه می‌شوند.  
-    این محصولات از تولیدکنندگان معتبر خارجی تهیه شده و پیش از ارائه در بازار، تحت بررسی کیفیت و تست‌های سازگاری با پوست و موی حیوانات قرار گرفته‌اند.  
-    هدف این مجموعه ارائه کالاهایی با کیفیت قابل اعتماد است که استانداردهای بین‌المللی را رعایت کرده و پاسخگوی نیاز صاحبان حیوانات خانگی و آرایشگران حرفه‌ای باشند.
-</p>
-
-<p>
-    اگر به دنبال تأمین <strong>رنگ موی حیوانات</strong>، <strong>رنگ موی مخصوص سگ و گربه</strong> و سایر محصولات مرتبط با حوزه پت هستید، مجموعه تحت مدیریت <strong>سهند رنجبری پور</strong> امکان ارائه محصولاتی با کیفیت و اطلاعات شفاف را فراهم کرده است.  
-    این محصولات شامل <strong>لوازم آرایشی حیوانات</strong>، تجهیزات گرومینگ و ملزومات پت‌شاپ می‌شوند و پیش از ارائه، کنترل کیفیت و بررسی ایمنی آنها انجام شده است.  
-    هدف این مجموعه ارائه کالاهای مطمئن و قابل اعتماد برای آرایشگران حرفه‌ای، پت‌شاپ‌ها و صاحبان حیوانات خانگی است.
-</p>
-
-<ul>
-    <li>💰 ارائه محصولات با کیفیت و قیمت مناسب برای <strong>رنگ موی حیوانات</strong> و سایر ملزومات پت‌شاپ</li>
-    <li>⏱ زمان تحویل بهینه و هماهنگ با شرایط مشتریان برای <strong>رنگ موی مخصوص سگ و گربه</strong> و دیگر محصولات</li>
-    <li>✅ کنترل کیفیت دقیق و بررسی ایمنی تمامی <strong>لوازم آرایشی حیوانات</strong> قبل از عرضه</li>
-    <li>🛡️ اصالت و منبع معتبر محصولات، همراه با توضیح شفاف درباره مسیر تأمین و بررسی کیفیت پیش از ارائه به بازار</li>
-</ul>
-
-<p>
-    مجموعه تحت مدیریت <strong>سهند رنجبری پور</strong> تلاش دارد تجربه‌ای مطمئن و حرفه‌ای در زمینه <strong>رنگ موی حیوانات</strong> و <strong>لوازم آرایشی حیوانات</strong> برای فروشگاه‌ها، آرایشگران حرفه‌ای و صاحبان حیوانات خانگی فراهم کند.  
-    این مجموعه خدمات مشاوره و راهنمایی در زمینه انتخاب محصولات، آموزش استفاده ایمن و سفارش محصولات را با تمرکز بر کیفیت و شفافیت ارائه می‌دهد.
-</p>
-
-<div class="section-separator"></div>
-<div class="contact-box">
-    <span>برای دریافت اطلاعات بیشتر، مشاوره و خرید محصولات <strong>رنگ موی حیوانات</strong> و <strong>لوازم آرایشی حیوانات</strong>، می‌توانید با مجموعه تحت مدیریت <strong>سهند رنجبری پور</strong> تماس بگیرید:</span>
-    <a href="tel:09384958682">682 4958 0938📞</a>
-    <a href="tel:09928292995">2995 829 0992📞</a>
-    <p style="font-size: 14px; color: #4a4a4a; margin-top: 10px;">
-        تیم پشتیبانی پاسخگوی سوالات شما در مورد ویژگی‌ها، ایمنی و نحوه استفاده محصولات خواهد بود و اطلاعات لازم برای خرید مطمئن و آگاهانه را ارائه می‌دهد.
-    </p>
-</div>
-
-                </div>
-            </div>
-
-        
-    </div>
-</section>
-
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-<script>// GSAP Animation for Product Section
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#product-section",
-        start: "top 80%",
-    }
-}).from("#product-section .product-image img", {
-    y: 50,
-    opacity: 0,
-    scale: 0.8,
-    duration: 1,
-    ease: "power2.out"
-});
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: "#product-section",
-        start: "top 80%",
-    }
-}).from("#product-section .product-content h2", {
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-});
-gsap.from("#product-image-section .product-image img", {
-    scrollTrigger: {
-        trigger: "#product-image-section",
-        start: "top 80%",
-    },
-    y: 50,
-    opacity: 0,
-    scale: 0.8,
-    duration: 1,
-    ease: "power2.out"
-});
-
-gsap.from("#product-text-section .product-content h2", {
-    scrollTrigger: {
-        trigger: "#product-text-section",
-        start: "top 80%",
-    },
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-});
-
-gsap.from("#product-text-section .product-content p, #product-text-section ul li", {
-    scrollTrigger: {
-        trigger: "#product-text-section",
-        start: "top 85%",
-    },
-    y: 20,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.1,
-    ease: "power2.out"
-});
-
-</script>
-
-</body>
-
-</html>
-
-
-
-
