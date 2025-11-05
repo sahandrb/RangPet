@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رنگ پت</title>
+</head>
+<body>
+
+<!-- کانتینر مرکزی که همه کامپوننت‌ها داخل آن قرار می‌گیرند -->
+<div id="app"></div>
+
+<!-- پیام loading -->
+<template id="tpl-loading">
+  <div class="component-loading" data-loading>
+    در حال بارگذاری...
+  </div>
+</template>
+
+<script>
+/* ====== تنظیم: نام فایل‌های کامپوننت (در روت پروژه) به ترتیب دلخواه ====== */
+const COMPONENT_FILES = [
+  'header.html',
+  'product.html',
+  'about.html',
+  'contact.html',
+  'footer.html'
+];
+
+const app = document.getElementById('app');
+const loadingTpl = document.getElementById('tpl-loading').content;
+
+// نمایش placeholder
+function showLoading(onEl) {
+  const node = loadingTpl.cloneNode(true);
+  onEl.appendChild(node);
+  return node;
+}
+
+// اجرای اسکریپت‌های داخل HTML تزریق شده
+function runScripts(container) {
+  const scripts = Array.from(container.querySelectorAll('script'));
+  scripts.forEach(oldScript => {
+    const newScript = document.createElement('script');
+    if (oldScript.type) newScript.type = oldScript.type;
+    if (oldScript.src) {
+      newScript.src = oldScript.src;
+      if (oldScript.async) newScript.async = true;
+      if (oldScript.defer) newScript.defer = true;
+      document.body.appendChild(newScript);
+    } else {
+      newScript.textContent = oldScript.textContent;
+      document.body.appendChild(newScript);
+    }
+    oldScript.parentNode && oldScript.parentNode.removeChild(oldScript);
+  });
+}
+
+// بارگذاری و inject هر فایل
+async function loadAndInject(fileName, targetParent) {
+  const holder = document.createElement('div');
+  holder.className = 'component-holder';
+  const loadingNode = showLoading(holder);
+  try {
+    const res = await fetch(fileName, { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const htmlText = await res.text();
+    holder.innerHTML = htmlText;
+    runScripts(holder);
+    targetParent.appendChild(holder);
+  } catch (err) {
+    holder.innerHTML = '<div class="component-error">خطا در بارگذاری ' + fileName + ' — ' + err.message + '</div>';
+    targetParent.appendChild(holder);
+    console.error('Failed to load component', fileName, err);
+  } finally {
+    const ph = holder.querySelector('[data-loading]');
+    if (ph) ph.remove();
+  }
+}
+
+// بارگذاری ترتیبی کامپوننت‌ها
+(async function bootstrap() {
+  for (const f of COMPONENT_FILES) {
+    await loadAndInject(f, app);
+  }
+  console.log('All components injected.');
+})();
+</script>
+
+</body>
+</html>
