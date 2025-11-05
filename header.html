@@ -1,23 +1,34 @@
-<header class="header-minimal">
-  <div class="container">
-    <h1 class="brand-name">Brooklyn رنگ </h1>
+<header class="header">
+  <div class="container d-flex justify-content-space-between align-items-center">
+    
+    <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="Multi3del.png" alt="رنگ مخصوص حیوانات" class="hero-image">
+    <h1 class="hero-title">رنگ مخصوص حیوانات</h1>
+    <p class="hero-subtitle">با کیفیت بالا و تنوع رنگ بی‌نظیر برای حیوانات شما</p>
+  </div>
+</section>
+    <!-- منوی ناوبری -->
+    <!-- آیکون منوی موبایل -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
 
 <style>
-/* هدر مینیمال */
-.header-minimal {
+/* پایه هدر */
+.header {
   position: sticky;
   top: 0;
-  width: 100%;
+  z-index: 1000;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  z-index: 1000;
-  padding: 18px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 28px 0; /* افزایش ارتفاع برای حس لوکس */
   transition: all 0.3s ease;
 }
 
@@ -25,36 +36,214 @@
 .container {
   width: 92%;
   max-width: 1200px;
-  text-align: center;
+  margin: auto;
 }
 
-/* نام برند */
+/* لوگو و برند */
+.logo {
+  height: 55px;
+  margin-left: 15px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: drop-shadow(0 2px 6px rgba(17, 89, 252, 0.5));
+}
+.logo-area:hover .logo {
+  transform: scale(1.05);
+}
 .brand-name {
   font-family: 'Yekan-Bakh', sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  color: #1159FC;
+  font-size: 22px;
   background: linear-gradient(90deg, #1159FC, #0D47D8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-right: 12px;
   text-shadow: 0 1px 4px rgba(0,0,0,0.15);
   transition: transform 0.3s;
 }
-
-.brand-name:hover {
+.logo-area:hover .brand-name {
   transform: scale(1.05);
+}
+
+/* منو */
+.nav a {
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #45474A; /* خاکستری ملایم برای حس حرفه‌ای */
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: #1159FC;
+  border-radius: 2px;
+  opacity: 0.2; /* underline subtle همیشه فعال */
+  transition: opacity 0.3s;
+}
+.nav a:hover {
+  color: #1159FC;
+}
+.nav a:hover::after {
+  opacity: 1;
+}
+
+/* منوی موبایل */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  margin: 3px 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ریسپانسیو */
 @media (max-width: 900px) {
-  .brand-name {
-    font-size: 20px;
+  .nav {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+  }
+  .nav a {
+    display: block;
+    margin: 18px 0;
+    font-size: 17px;
+  }
+  .nav.active {
+    right: 0;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+  >
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #F9F9FB;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 900px; /* حداکثر عرض برای تعادل */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* تصویر با گوشه گرد و shadow */
+.hero-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 24px; /* گوشه گرد */
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15); /* حالت برجسته */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+/* عنوان */
+.hero-title {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1159FC;
+  margin-bottom: 12px;
+}
+
+/* زیرعنوان */
+.hero-subtitle {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #45474A;
+  margin: 0;
+}
+
+/* ریسپانسیو برای تبلت و موبایل */
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 16px;
+  }
+  .hero-image {
+    max-width: 90%;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 500px) {
-  .brand-name {
-    font-size: 18px;
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
   }
 }
 </style>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
+});
+  
+</script>
