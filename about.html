@@ -1,15 +1,13 @@
 <section id="about" class="section container">
-  <h2 class="section-title">پیشینه علمی و تحقیقات درباره رنگ موی حیوانات</h2>
-  <p class="section-intro">
-    رنگ‌آمیزی موی حیوانات، برخلاف ظاهر ساده‌اش، نتیجه‌ی سال‌ها پژوهش در زمینه <strong>فیزیولوژی پوست، ایمنی شیمیایی و جذب رنگدانه</strong> است.  
-    مطالعات متعدد نشان داده‌اند که شناخت ساختار پوست سگ و گربه، نقش حیاتی در طراحی رنگ موی ایمن و علمی دارد.
-  </p>
+  <h2 class="section-title">علم پشت رنگ‌آمیزی ایمن و علمی موی حیوانات</h2>
+  <p class="section-intro">رنگ‌آمیزی موی حیوانات، بیش از یک زیبایی ساده، نتیجه‌ی سال‌ها تحقیق و توسعه علمی در زمینه ساختار پوست و موی حیوانات، ایمنی ترکیبات و نفوذ کنترل‌شده رنگدانه‌ها است.
+شناخت دقیق تفاوت‌های فیزیولوژیکی پوست و موی سگ و گربه، پایه‌ی طراحی محصولاتی است که هم زیبا، هم ایمن و سازگار با حیوانات خانگی هستند.</p>
 
   <!-- بلوک‌های محتوا -->
   <div class="about-grid">
 
     <div class="about-card">
-      <img src="assets/about-skin.png" alt="مطالعات علمی رنگ مو حیوانات">
+      <img src="1000072406" alt="مطالعات علمی رنگ مو حیوانات">
       <h3>مطالعات علمی بر پایه فیزیولوژی حیوانات</h3>
       <p>
         پژوهش‌ها نشان می‌دهند که <strong>پوست حیوانات دارای pH و ضخامت متفاوت</strong> نسبت به انسان است.  
@@ -19,7 +17,7 @@
     </div>
 
     <div class="about-card">
-      <img src="assets/about-lab.png" alt="کنترل کیفیت و ایمنی رنگ حیوانات">
+      <img src="1000072407" alt="کنترل کیفیت و ایمنی رنگ حیوانات">
       <h3>کنترل کیفیت و آزمایش‌های درماتولوژیک</h3>
       <p>
         تمامی رنگ‌های حیوانات باید تحت آزمایش‌های <strong>درماتولوژیک، سمیت‌سنجی و جذب پوستی</strong> قرار گیرند.  
@@ -27,14 +25,7 @@
       </p>
     </div>
 
-    <div class="about-card">
-      <img src="assets/about-data.png" alt="مطالعات میدانی درباره رنگ مو حیوانات">
-      <h3>مطالعات میدانی و داده‌های آماری</h3>
-      <p>
-        نتایج تحقیقات ۲۰۱۸ نشان می‌دهد رنگ موی حیوانات می‌تواند به عنوان <strong>مارکر شناسایی ایمن تا ۶۰ روز</strong> عمل کند.  
-        این داده‌ها نشان‌دهنده دوام، ثبات و پایداری علمی محصولات رنگ حیوانات هستند.
-      </p>
-    </div>
+
 
   </div>
 
@@ -48,118 +39,125 @@
   </div>
 </section>
 
-<style>
-  /* ======= About Section Style ======= */
+<style>/* ======= About Section Modern Style ======= */
+#about {
+  padding: 100px 20px;
+  background-color: #fff;
+  font-family: 'Yekan Bakh', sans-serif;
+}
 
-  #about {
-    padding: 100px 0;
-    background-color: #fff;
-    font-family: 'Yekan Bakh', sans-serif;
-  }
+#about .section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0F49E8;
+  margin-bottom: 24px;
+}
 
-  #about .section-title {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 800;
-    color: #0F49E8;
-    margin-bottom: 18px;
-  }
+#about .section-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.9;
+}
 
-  #about .section-intro {
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto 60px auto;
-    color: #555;
-    font-size: 17px;
-    line-height: 1.9;
-  }
+/* Grid Layout for Cards */
+#about .about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
 
-  /* Grid Layout */
-  #about .about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    padding: 0 40px;
-  }
+#about .about-card {
+  background: #FAFBFF;
+  border-radius: 20px;
+  overflow: hidden; /* تصویر گوشه‌ها را هم گرد می‌کند */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  #about .about-card {
-    background: #FAFBFF;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-    padding: 32px 28px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-top: 4px solid #0F49E8;
-  }
+#about .about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
 
-  #about .about-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 26px rgba(0,0,0,0.08);
-  }
+#about .about-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.4s ease;
+}
 
-  #about .about-card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 18px;
-  }
+#about .about-card:hover img {
+  transform: scale(1.05);
+}
 
-  #about .about-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #0F49E8;
-    margin-bottom: 12px;
-  }
+#about .about-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0F49E8;
+  margin: 16px 12px 8px 12px;
+}
 
-  #about .about-card p {
-    color: #444;
-    font-size: 15.5px;
-    line-height: 1.9;
-  }
+#about .about-card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.85;
+  margin: 0 12px 16px 12px;
+}
 
-  /* Highlight Box */
-  #about .about-highlight {
-    background: #EDF3FF;
-    border-right: 5px solid #0F49E8;
-    border-radius: 14px;
-    padding: 22px 28px;
-    margin-top: 70px;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.03);
-  }
+/* Highlight Box */
+#about .about-highlight {
+  background: #EDF3FF;
+  border-radius: 16px;
+  padding: 28px 30px;
+  max-width: 860px;
+  margin: 50px auto 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
 
-  #about .about-highlight h4 {
-    color: #0F49E8;
-    font-size: 18px;
-    margin-bottom: 8px;
-    font-weight: 700;
-  }
+#about .about-highlight h4 {
+  color: #0F49E8;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
 
-  #about .about-highlight p {
-    color: #333;
-    font-size: 15.5px;
-    line-height: 1.9;
-  }
+#about .about-highlight p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+}
 
-  /* ===== Responsive ===== */
-  @media (max-width: 1024px) {
-    #about .section-title { font-size: 26px; }
-    #about .section-intro { font-size: 16px; padding: 0 20px; }
-  }
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  #about .section-title { font-size: 28px; }
+  #about .section-intro { font-size: 16px; }
+}
 
-  @media (max-width: 768px) {
-    #about { padding: 70px 0; }
-    #about .about-card { padding: 26px 20px; }
-    #about .about-card h3 { font-size: 17px; }
-    #about .about-card p { font-size: 14.5px; }
-    #about .section-title { font-size: 24px; }
-  }
+@media (max-width: 768px) {
+  #about { padding: 70px 20px; }
+  #about .about-card { padding: 24px 16px; }
+  #about .about-card h3 { font-size: 18px; }
+  #about .about-card p { font-size: 15px; }
+  #about .section-title { font-size: 26px; }
+}
 
-  @media (max-width: 480px) {
-    #about { padding: 60px 0; }
-    #about .about-card img { width: 70px; height: 70px; }
-    #about .about-highlight { padding: 18px 20px; }
-  }
+@media (max-width: 480px) {
+  #about { padding: 60px 16px; }
+  #about .about-card img { height: 160px; }
+  #about .about-card h3 { font-size: 17px; }
+  #about .about-card p { font-size: 14.5px; }
+  #about .about-highlight { padding: 20px 16px; }
+}
+
 </style>
