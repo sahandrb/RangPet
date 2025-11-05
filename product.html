@@ -77,133 +77,75 @@
   </div>
 </section>
 
-<style>/* ====== Section: Product (Scientific Hair Dye Info) ====== */
+<style>/* ====== Mobile-First Enhancements for Hero & Product Sections ====== */
 
-#product {
-  padding: 100px 0;
-  background: #FAFBFF;
-  font-family: 'Yekan Bakh', sans-serif;
-}
-
-#product .section-title {
-  font-size: 30px;
-  font-weight: 800;
-  color: #0F49E8;
-  text-align: center;
-  margin-bottom: 16px;
-  letter-spacing: -0.3px;
-}
-
-#product .section-intro {
-  max-width: 850px;
-  margin: 0 auto 60px auto;
-  text-align: center;
-  color: #555;
-  font-size: 17px;
-  line-height: 1.9;
-  font-weight: 400;
-}
-
-/* === Grid Layout === */
-#product .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  padding: 0 40px;
-}
-
-/* === Card Style === */
-#product .product-card {
-  background: #fff;
-  border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  padding: 32px 28px;
-  text-align: center;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-#product .product-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 6px;
-  background: linear-gradient(90deg, #0F49E8, #00C896);
-  border-radius: 22px 22px 0 0;
-}
-
-#product .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* === Card Elements === */
-#product .product-card img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 20px;
-  object-fit: contain;
-}
-
-#product .product-card h3 {
-  font-size: 19px;
-  font-weight: 700;
-  color: #0F49E8;
-  margin-bottom: 12px;
-}
-
-#product .product-card p {
-  font-size: 15.5px;
-  color: #444;
-  line-height: 1.85;
-  font-weight: 400;
-}
-
-/* === Scientific Note Block === */
-#product .scientific-note {
-  background: #EDF3FF;
-  border-right: 5px solid #0F49E8;
-  border-radius: 16px;
-  padding: 24px 30px;
-  max-width: 860px;
-  margin: 70px auto 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
-
-#product .scientific-note h4 {
-  color: #0F49E8;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-#product .scientific-note p {
-  font-size: 15.5px;
+/* فونت و خوانایی بهتر */
+body, #product, .hero {
+  font-family: 'Yekan Bakh', 'Tahoma', sans-serif;
   color: #333;
-  line-height: 1.9;
 }
 
-/* === Hover Micro Animation === */
-#product .product-card:hover img {
-  transform: scale(1.05);
-  transition: transform 0.4s ease;
+/* افزایش فاصله خطوط برای متن طولانی */
+#product .product-card p,
+#product .scientific-note p,
+#product .section-intro {
+  line-height: 2;
 }
 
-/* === Responsive Design === */
-@media (max-width: 1024px) {
-  #product .section-title {
-    font-size: 26px;
+/* تصاویر کارت‌ها بزرگ‌تر و مناسب موبایل */
+@media (max-width: 480px) {
+  #product .product-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* کارت‌ها و padding بهتر روی موبایل */
+@media (max-width: 500px) {
+  #product .product-card {
+    padding: 28px 20px;
+  }
+  #product .scientific-note {
+    padding: 22px 20px;
+  }
+  #product .product-card h3 {
+    font-size: 18px;
+  }
+  #product .product-card p {
+    font-size: 15px;
   }
   #product .section-intro {
     font-size: 16px;
-    padding: 0 20px;
+    line-height: 1.9;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
   }
 }
 
+/* هرو و تصاویر هرو روی موبایل */
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 16px;
+  }
+  .hero-image {
+    max-width: 90%;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* کارت‌ها و گرید روی تبلت */
 @media (max-width: 768px) {
   #product {
-    padding: 70px 0;
+    padding: 70px 20px;
   }
   #product .product-card {
     padding: 28px 20px;
@@ -212,32 +154,36 @@
     font-size: 17px;
   }
   #product .product-card p {
-    font-size: 14.5px;
+    font-size: 14.8px;
   }
   #product .section-title {
     font-size: 24px;
   }
   #product .section-intro {
-    font-size: 15px;
+    font-size: 15.5px;
   }
 }
 
-@media (max-width: 480px) {
+/* دسکتاپ بزرگ و استاندارد */
+@media (min-width: 1025px) {
   #product {
-    padding: 60px 0;
+    padding: 100px 0;
   }
-  #product .product-card {
-    padding: 24px 18px;
-  }
-  #product .product-card img {
-    width: 70px;
-    height: 70px;
+  #product .section-title {
+    font-size: 30px;
   }
   #product .section-intro {
-    line-height: 1.8;
+    font-size: 17px;
+    max-width: 850px;
   }
-  #product .scientific-note {
-    padding: 18px 20px;
+  #product .product-card p {
+    font-size: 15.5px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
   }
 }
 
