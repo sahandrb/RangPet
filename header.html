@@ -1,0 +1,79 @@
+<header>
+  <div class="header-container">
+    <h1 class="logo">رنگ پت</h1>
+    <nav class="main-nav">
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس</a>
+    </nav>
+    <div class="special-icons">
+      <span class="offer">🎁</span>
+      <span class="highlight">✨</span>
+    </div>
+  </div>
+
+  <style>
+  header {
+    background-color: #F5F5DC; /* Light Beige 60% */
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    color: #6B8E23; /* Olive Green 30% */
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .main-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #6B8E23; /* Olive Green 30% */
+    font-weight: bold;
+  }
+
+  .main-nav a:hover {
+    color: #B76E79; /* Rose Gold 10% */
+  }
+
+  .special-icons span {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #B76E79; /* Rose Gold 10% */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .special-icons span:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .main-nav {
+      margin-top: 10px;
+    }
+  }
+  </style>
+
+  <script>
+  console.log('Header loaded');
+  // مثال ساده: وقتی روی آیکون offer کلیک شد، پیام نشان داده شود
+  document.addEventListener('DOMContentLoaded', () => {
+    const offerIcon = document.querySelector('.special-icons .offer');
+    if(offerIcon){
+      offerIcon.addEventListener('click', () => alert('🎉 پیشنهاد ویژه امروز!'));
+    }
+  });
+  </script>
+</header>
