@@ -1,78 +1,84 @@
 <header>
-  <div class="header-container">
-    <h1 class="logo">رنگ پت</h1>
-    <nav class="main-nav">
+  <div class="magic-header">
+    <h1>✨ رنگ پت – دنیای جادویی رنگ حیوانات ✨</h1>
+    <p>ایمن، غیرشیمیایی و تجربه‌ای متفاوت برای پت شما</p>
+    <nav class="magic-nav">
       <a href="#products">محصولات</a>
       <a href="#about">درباره ما</a>
       <a href="#contact">تماس</a>
     </nav>
-    <div class="special-icons">
-      <span class="offer">🎁</span>
-      <span class="highlight">✨</span>
+    <div class="sparkles">
+      <span>🌟</span><span>✨</span><span>💫</span>
     </div>
   </div>
 
   <style>
   header {
-    background-color: #F5F5DC; /* Light Beige 60% */
-    padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #F5F5DC; /* Light Beige 60% */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .logo {
+  .magic-header h1 {
+    font-size: 3rem;
     color: #6B8E23; /* Olive Green 30% */
-    font-size: 28px;
-    margin: 0;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
 
-  .main-nav a {
+  .magic-header p {
+    font-size: 1.3rem;
+    color: #6B8E23; /* Olive Green 30% */
+    margin-bottom: 25px;
+  }
+
+  .magic-nav a {
     margin: 0 15px;
+    font-size: 1.1rem;
     text-decoration: none;
-    color: #6B8E23; /* Olive Green 30% */
+    color: #B76E79; /* Rose Gold 10% */
     font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
-  .main-nav a:hover {
-    color: #B76E79; /* Rose Gold 10% */
+  .magic-nav a:hover {
+    transform: scale(1.2);
+    color: #6B8E23; /* Olive Green 30% */
   }
 
-  .special-icons span {
-    font-size: 24px;
-    margin-left: 10px;
-    color: #B76E79; /* Rose Gold 10% */
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  .sparkles {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: float 3s infinite linear;
+    pointer-events: none;
+    opacity: 0.7;
   }
 
-  .special-icons span:hover {
-    transform: scale(1.2) rotate(10deg);
+  @keyframes float {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-15px); }
+    100% { transform: translateX(-50%) translateY(0); }
   }
 
   @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .main-nav {
-      margin-top: 10px;
-    }
+    .magic-header h1 { font-size: 2rem; }
+    .magic-header p { font-size: 1rem; }
+    .magic-nav a { display: block; margin: 10px 0; }
   }
   </style>
 
   <script>
-  console.log('Header loaded');
-  // مثال ساده: وقتی روی آیکون offer کلیک شد، پیام نشان داده شود
+  console.log('Magic Header loaded');
+  // اضافه کردن یک تعامل کوچک جادویی: وقتی روی متن کلیک شود، یک پیام کوتاه ظاهر شود
   document.addEventListener('DOMContentLoaded', () => {
-    const offerIcon = document.querySelector('.special-icons .offer');
-    if(offerIcon){
-      offerIcon.addEventListener('click', () => alert('🎉 پیشنهاد ویژه امروز!'));
+    const headerTitle = document.querySelector('.magic-header h1');
+    if(headerTitle){
+      headerTitle.addEventListener('click', () => alert('✨ دنیا جادویی رنگ پت آماده شماست! ✨'));
     }
   });
   </script>
