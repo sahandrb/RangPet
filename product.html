@@ -1,0 +1,122 @@
+<section id="products">
+  <div class="section-container">
+    <h2>محصولات رنگ پت</h2>
+    <p>رنگ موی مخصوص سگ و گربه – ایمن و غیرشیمیایی</p>
+
+    <div class="product-cards">
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="assets/images/product1.jpg" alt="رنگ موی سگ – صورتی">
+        </div>
+        <div class="product-content">
+          <h3>رنگ صورتی</h3>
+          <p>ایمن، غیرشیمیایی، مناسب آرایش حرفه‌ای پت‌ها</p>
+          <ul>
+            <li>✨ رنگ زنده و جذاب</li>
+            <li>🛡️ کاملاً ایمن برای سگ و گربه</li>
+            <li>🎨 خلاقیت حرفه‌ای</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="assets/images/DarkPink2.png" alt="رنگ موی سگ – رز گلد">
+        </div>
+        <div class="product-content">
+          <h3>رنگ رز گلد</h3>
+          <p>ایمن، غیرشیمیایی، مناسب آرایش حرفه‌ای پت‌ها</p>
+          <ul>
+            <li>✨ جلوه جذاب و فانتزی</li>
+            <li>🛡️ فاقد مواد شیمیایی مضر</li>
+            <li>🎨 ایجاد تنوع رنگی برای پت شما</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <style>
+  section#products {
+    padding: 60px 20px;
+    background-color: #F5F5DC; /* Light Beige 60% */
+  }
+
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #6B8E23; /* Olive Green 30% */
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .product-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 1 1 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #6B8E23; /* Olive Green 30% */
+  }
+
+  .product-content {
+    padding: 20px;
+  }
+
+  .product-content h3 {
+    margin-top: 0;
+    color: #6B8E23; /* Olive Green 30% */
+  }
+
+  .product-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+  }
+
+  .product-content ul li {
+    background-color: #B76E79; /* Rose Gold 10% */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .product-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  </style>
+
+  <script>
+  console.log('Product section loaded');
+  </script>
+</section>
