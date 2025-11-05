@@ -11,58 +11,64 @@
       <span>🌟</span><span>✨</span><span>💫</span>
     </div>
   </div>
-
-  <style>
+<style>
   header {
-    background: #F5F5DC; /* Light Beige 60% */
+    background: #f5f5f5f5; /* Main neutral background */
     padding: 60px 20px;
-    text-align: center;
+    text-align: right;
+    direction: rtl;
     position: relative;
     overflow: hidden;
   }
 
   .magic-header h1 {
     font-size: 3rem;
-    color: #6B8E23; /* Olive Green 30% */
+    color: #087E8B; /* Secondary 30% */
     margin: 0 0 15px 0;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
 
   .magic-header p {
     font-size: 1.3rem;
-    color: #6B8E23; /* Olive Green 30% */
+    color: #000000; /* Main text color */
     margin-bottom: 25px;
   }
 
+  .magic-nav {
+    margin-top: 20px;
+    text-align: right;
+  }
+
   .magic-nav a {
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 1.1rem;
     text-decoration: none;
-    color: #B76E79; /* Rose Gold 10% */
+    color: #087E8B; /* Secondary 30% */
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
   .magic-nav a:hover {
     transform: scale(1.2);
-    color: #6B8E23; /* Olive Green 30% */
+    color: #FF5A5F; /* Accent 10% */
   }
 
   .sparkles {
     position: absolute;
     top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     font-size: 2rem;
     animation: float 3s infinite linear;
     pointer-events: none;
     opacity: 0.7;
+    color: #087E8B;
   }
 
   @keyframes float {
-    0% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-15px); }
-    100% { transform: translateX(-50%) translateY(0); }
+    0% { transform: translateX(50%) translateY(0); }
+    50% { transform: translateX(50%) translateY(-15px); }
+    100% { transform: translateX(50%) translateY(0); }
   }
 
   @media (max-width: 768px) {
@@ -70,7 +76,8 @@
     .magic-header p { font-size: 1rem; }
     .magic-nav a { display: block; margin: 10px 0; }
   }
-  </style>
+</style>
+
 
   <script>
   console.log('Magic Header loaded');
