@@ -1,0 +1,60 @@
+<header class="header-minimal">
+  <div class="container">
+    <h1 class="brand-name">Brooklyn رنگ </h1>
+  </div>
+</header>
+
+<style>
+/* هدر مینیمال */
+.header-minimal {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  z-index: 1000;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* کانتینر */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* نام برند */
+.brand-name {
+  font-family: 'Yekan-Bakh', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1159FC;
+  background: linear-gradient(90deg, #1159FC, #0D47D8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.brand-name:hover {
+  transform: scale(1.05);
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .brand-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-name {
+    font-size: 18px;
+  }
+}
+</style>
