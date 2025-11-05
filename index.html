@@ -252,6 +252,18 @@ body {
         padding: 0; /* محتوای داخل کارت هم به لبه‌ها بچسبه */
     }
 }
+/* برای دسکتاپ */
+.product-card {
+    flex-direction: row; /* کنار هم بودن تصویر و متن */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; /* وسط چین کردن */
+}
+
+.product-image, .product-content {
+    flex: 1 1 50%; /* تقسیم فضای 50-50 */
+    min-width: 300px; /* جلوگیری از خیلی کوچک شدن */
+}
 
 </style>
 </head><body>
@@ -444,6 +456,7 @@ gsap.from("#product-text-section .product-content p, #product-text-section ul li
 </body>
 
 </html>
+
 
 
 
