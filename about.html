@@ -208,20 +208,20 @@
   #brooklyn-article .text, #brooklyn-article .intro-text { font-size: 15px; }
   .card h3 { font-size: 15px; }
   .card p { font-size: 14px; }
-}
-  /* ===== Article Body (برای متن‌های توضیحی) ===== */
+}/* ===== Article Body ===== */
 .article-body {
-  max-width: 880px;         /* محدود به پهنای مناسب برای خوانایی */
-  margin: 0 auto;            /* وسط‌چین در صفحه */
-  padding: 0 20px;           /* کمی فاصله از طرفین بدون مارجین بیرونی */
-  text-align: justify;       /* چینش دوطرفه برای خوانایی فارسی */
-  font-size: 19px;           /* کمی درشت‌تر */
-  line-height: 2.3;          /* فاصله مناسب خطوط */
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: justify;
+  font-size: 19px;
+  line-height: 2.3;
   color: #333;
+  font-weight: 400; /* وزن نرمال روی دسکتاپ */
 }
 
 .article-body p {
-  margin-bottom: 28px;       /* فاصله بین پاراگراف‌ها */
+  margin-bottom: 28px;
 }
 
 .article-body strong {
@@ -229,13 +229,19 @@
   font-weight: 700;
 }
 
-/* نسخه موبایل */
+/* ===== Responsive (Mobile) ===== */
 @media (max-width: 600px) {
   .article-body {
-    font-size: 17px;
-    line-height: 2.2;
-    padding: 0 16px;          /* فاصله کمتر از طرفین ولی هنوز هوا داره */
+    font-size: 20px;         /* کمی بزرگ‌تر برای صفحه موبایل */
+    line-height: 2.4;        /* فاصله بیشتر بین خطوط */
+    padding: 0 18px;         /* فاصله متعادل از کناره‌ها */
+    font-weight: 500;        /* کمی بولدتر برای وضوح بالاتر */
+  }
+
+  .article-body p {
+    margin-bottom: 26px;
   }
 }
+
 
 </style>
