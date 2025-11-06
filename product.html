@@ -4,13 +4,13 @@
   <span class="yellow-text" style="color:#000;">در رنگ‌های متفاوت</span>
 </h2>
 
-  
+  <section class="article-body">
   <p class="section-intro">
     انتخاب <strong>رنگ موی حیوانات</strong> باید ایمن و تخصصی باشد. 
     <strong>Brooklyn Pet Dye</strong> با تنوع رنگ‌های <span class="yellow-text">جذاب</span>، 
     زیبایی و درخشش موی حیوان شما را بدون آسیب به پوست و مو تضمین می‌کند.
   </p>
-
+<section>
   <!-- تغییر: کارت چند رنگ به درون grid منتقل شد تا هم‌ردیف بقیه کارت‌ها باشد -->
   <div class="product-grid">
     <div class="product-card">
@@ -194,4 +194,39 @@
   .product-card h3 { font-size: 16px; }
   .product-card p { font-size: 14px; }
 }
+  /* ===== Article Body ===== */
+.article-body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: justify;
+  font-size: 19px;
+  line-height: 2.3;
+  color: #333;
+  font-weight: 400; /* وزن نرمال روی دسکتاپ */
+}
+
+.article-body p {
+  margin-bottom: 28px;
+}
+
+.article-body strong {
+  color: #F4C430;
+  font-weight: 700;
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 600px) {
+  .article-body {
+    font-size: 20px;         /* کمی بزرگ‌تر برای صفحه موبایل */
+    line-height: 2.4;        /* فاصله بیشتر بین خطوط */
+    padding: 0 18px;         /* فاصله متعادل از کناره‌ها */
+    font-weight: 500;        /* کمی بولدتر برای وضوح بالاتر */
+  }
+
+  .article-body p {
+    margin-bottom: 26px;
+  }
+}
+
 </style>
