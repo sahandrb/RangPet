@@ -1,9 +1,9 @@
 <!-- Product Section -->
 <section id="product" class="section product-container"> <!-- تغییر: کلاس container به product-container تبدیل شد تا تداخلی با container بیرونی نداشته باشد -->
   <h2 class="section-title">
-  <span class="yellow-text" style="color:#000;">در رنگ‌های متفاوت</span>
-</h2>
-
+    
+    <h2 class="gradient-text">با رنگ های  طبیعی جذاب</h2>
+    
   <section class="article-body">
   <p class="section-intro">
     انتخاب <strong>رنگ موی حیوانات</strong> باید ایمن و تخصصی باشد. 
@@ -229,4 +229,33 @@
   }
 }
 
+.gradient-text {
+  font-family: 'Yekan Bakh', sans-serif;
+  font-weight: 800;
+  background: linear-gradient(90deg, #000 0%, #F4C430 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  animation: glowPulse 3s infinite ease-in-out;
+  display: inline-block;
+}
+
+/* افکت درخشش */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(244,196,48,0.4);
+  }
+  50% {
+    text-shadow: 0 0 14px rgba(244,196,48,0.7);
+  }
+}
+
+/* افکت هاور (اختیاری) */
+.gradient-text:hover {
+  background: linear-gradient(90deg, #F4C430 0%, #000 90%);
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
 </style>
