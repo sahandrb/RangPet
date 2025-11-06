@@ -1,13 +1,10 @@
 <article id="brooklyn-article">
 
-  <!-- تصویر هدر -->
-  <div class="header-image">
-    <img src="1000072410.png" alt="Brooklyn Pet Dye">
-  </div>
+  
 
   <div class="content container">
 
-    <h1 class="title">Brooklyn Pet Dye: درخشش ایمن و جذاب برای پت‌شاپ‌ها و حیوانات خانگی ✨🐾</h1>
+    <h1 class="title">Brooklyn Pet Dye: درخشش ایمن و جذاب برای پت‌شاپ‌ها و حیوانات خانگی</h1>
 
     <p class="intro-text">
       در دنیای مدرن پت‌شاپ‌ها و سالن‌های گِرومینگ، صاحبان حیوانات خانگی به دنبال محصولاتی هستند که ترکیبی از زیبایی، ایمنی و کیفیت حرفه‌ای را ارائه دهند.  
@@ -80,14 +77,15 @@
   text-align: center;
 }
 
-/* تصویر هدر */
-#brooklyn-article .header-image img {
+/* تصویر هدر */#brooklyn-article .header-image img {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
+  height: auto; /* ارتفاع خود تصویر نگه داشته می‌شود */
+  object-fit: contain; /* کل تصویر نمایش داده می‌شود بدون برش */
+  border-bottom-left-radius: 0; /* اگر می‌خواهید گوشه‌ها صاف باشند */
+  border-bottom-right-radius: 0;
+  display: block;
 }
+
 
 /* متن‌ها */
 #brooklyn-article .container {
