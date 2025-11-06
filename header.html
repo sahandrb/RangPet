@@ -1,19 +1,23 @@
 <header class="header">
   <div class="container d-flex justify-content-space-between align-items-center">
     
+    <!-- برند در مرکز -->
+    <div class="brand-center">
+      <h1 class="brand-title">Brooklyn</h1>
+    </div>
 
-    <!-- منوی ناوبری -->
     <!-- آیکون منوی موبایل -->
     <div class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
   </div>
 </header>
 
 <style>
-/* پایه هدر */
+/* ===== Header Base ===== */
 .header {
   position: sticky;
   top: 0;
@@ -21,80 +25,61 @@
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 28px 0; /* افزایش ارتفاع برای حس لوکس */
+  padding: 26px 0;
   transition: all 0.3s ease;
 }
 
-/* کانتینر */
+/* ===== Container ===== */
 .container {
   width: 92%;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* لوگو و برند */
-.logo {
-  height: 55px;
-  margin-left: 15px;
-  transition: transform 0.3s, filter 0.3s;
-  filter: drop-shadow(0 2px 6px rgba(17, 89, 252, 0.5));
+/* ===== Brand Title (مرکزی) ===== */
+.brand-center {
+  text-align: center;
 }
-.logo-area:hover .logo {
-  transform: scale(1.05);
-}
-.brand-name {
-  font-family: 'Yekan-Bakh', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  background: linear-gradient(90deg, #1159FC, #0D47D8);
+
+.brand-title {
+  font-family: 'Yekan Bakh', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  background: linear-gradient(90deg, #000 0%, #F4C430 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-right: 12px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-}
-.logo-area:hover .brand-name {
-  transform: scale(1.05);
-}
-
-/* منو */
-.nav a {
-  margin: 0 20px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #45474A; /* خاکستری ملایم برای حس حرفه‌ای */
-  position: relative;
-  transition: all 0.3s ease;
-}
-.nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: #1159FC;
-  border-radius: 2px;
-  opacity: 0.2; /* underline subtle همیشه فعال */
-  transition: opacity 0.3s;
-}
-.nav a:hover {
-  color: #1159FC;
-}
-.nav a:hover::after {
-  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  animation: glowPulse 3s infinite ease-in-out;
+  cursor: default;
 }
 
-/* منوی موبایل */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(244,196,48,0.4);
+  }
+  50% {
+    text-shadow: 0 0 14px rgba(244,196,48,0.7);
+  }
+}
+
+/* ===== Menu Icon ===== */
 .menu-toggle {
-  display: none;
+  position: absolute;
+  right: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
   width: 28px;
   height: 22px;
 }
+
 .menu-toggle span {
   height: 3px;
   width: 100%;
@@ -103,6 +88,7 @@
   border-radius: 4px;
   transition: all 0.3s ease;
 }
+
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -113,50 +99,24 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ریسپانسیو */
-@media (max-width: 900px) {
-  .nav {
-    position: fixed;
-    top: 80px;
-    right: -100%;
-    width: 70%;
-    height: calc(100vh - 80px);
-    background-color: #fff;
-    box-shadow: -2px 0 16px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    transition: right 0.3s ease;
-  }
-  .nav a {
-    display: block;
-    margin: 18px 0;
-    font-size: 17px;
-  }
-  .nav.active {
-    right: 0;
-  }
-  .menu-toggle {
-    display: flex;
+/* ===== Hover Effect ===== */
+.brand-title:hover {
+  background: linear-gradient(90deg, #F4C430 0%, #000 90%);
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 24px;
   }
 }
 </style>
 
 <script>
 const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
 });
-
-document.querySelectorAll('#navMenu a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
-  
 </script>
