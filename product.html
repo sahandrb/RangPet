@@ -1,45 +1,50 @@
-<!-- Hero Section -->
-
-
 <!-- Product Section -->
 <section id="product" class="section container">
   <h2 class="section-title">رنگ موی مخصوص سگ و حیوانات Brooklyn</h2>
   
   <p class="section-intro">
-    انتخاب <strong>رنگ موی حیوانات</strong> باید ایمن و تخصصی باشد. <strong>Brooklyn Pet Dye</strong> با تنوع رنگ‌های جذاب، زیبایی و درخشش موی حیوان شما را بدون آسیب به پوست و مو تضمین می‌کند.
+    انتخاب <strong>رنگ موی حیوانات</strong> باید ایمن و تخصصی باشد. 
+    <strong>Brooklyn Pet Dye</strong> با تنوع رنگ‌های جذاب، 
+    زیبایی و درخشش موی حیوان شما را بدون آسیب به پوست و مو تضمین می‌کند.
   </p>
 
   <div class="product-grid">
-
     <div class="product-card">
-      <img src="Blue4.png" alt="تفاوت ساختار پوست حیوانات">
-      <h3>درخشش طبیعی و سالم</h3>
-      <p>با هر بار استفاده، موهای حیوان شما نرم و براق باقی می‌ماند.</p>
+      <img src="Blue4.png" alt="درخشش طبیعی و سالم">
+      <div class="product-content">
+        <h3>درخشش طبیعی و سالم</h3>
+        <p>با هر بار استفاده، موهای حیوان شما نرم و براق باقی می‌ماند.</p>
+      </div>
     </div>
 
     <div class="product-card">
-      <img src="Pink5 - Copy.png" alt="ایمنی ترکیبات رنگ موی حیوانات">
-      <h3>فرمولاسیون غیرسمی</h3>
-      <p>رنگدانه‌های Food-Grade فقط روی مو می‌نشینند و پوست را محافظت می‌کنند.</p>
+      <img src="Pink5 - Copy.png" alt="فرمولاسیون غیرسمی">
+      <div class="product-content">
+        <h3>فرمولاسیون غیرسمی</h3>
+        <p>رنگدانه‌های Food-Grade فقط روی مو می‌نشینند و پوست را محافظت می‌کنند.</p>
+      </div>
     </div>
 
     <div class="product-card">
-      <img src="Purple.png" alt="ساختار مو و جذب کنترل‌شده رنگ">
-      <h3>ماندگاری طولانی رنگ</h3>
-      <p>رنگ‌ها به‌صورت سطحی و کنترل‌شده نفوذ می‌کنند و ماندگاری بالا دارند.</p>
+      <img src="Purple.png" alt="ماندگاری طولانی رنگ">
+      <div class="product-content">
+        <h3>ماندگاری طولانی رنگ</h3>
+        <p>رنگ‌ها به‌صورت سطحی و کنترل‌شده نفوذ می‌کنند و ماندگاری بالا دارند.</p>
+      </div>
     </div>
 
     <div class="product-card">
-      <img src="Red2.png" alt="استانداردها و کنترل کیفیت">
-      <h3>ایمن و استاندارد</h3>
-      <p>تولید مطابق استانداردهای بین‌المللی حیوانات خانگی، بدون خطر برای حیوانات.</p>
+      <img src="Red2.png" alt="ایمن و استاندارد">
+      <div class="product-content">
+        <h3>ایمن و استاندارد</h3>
+        <p>تولید مطابق استانداردهای بین‌المللی حیوانات خانگی، بدون خطر برای حیوانات.</p>
+      </div>
     </div>
-
   </div>
 
   <div class="scientific-note">
     <p>
-      هرگز از رنگ‌های انسانی روی حیوانات استفاده نکنید. Brooklyn Pet Dye انتخابی ایمن و حرفه‌ای است.
+      هرگز از رنگ‌های انسانی روی حیوانات استفاده نکنید. <strong>Brooklyn Pet Dye</strong> انتخابی ایمن و حرفه‌ای است.
     </p>
   </div>
 </section>
@@ -48,86 +53,104 @@
 /* ===== Product Section ===== */
 #product {
   padding: 80px 20px;
-  background: #f5f5f5;
+  background: linear-gradient(180deg, #faf8f4 0%, #f5f5f5 100%);
   font-family: 'Yekan Bakh', sans-serif;
-  color: #222;
+  color: #333;
 }
 
 #product .section-title {
   text-align: center;
   font-size: 34px;
   font-weight: 800;
-  color: #0F49E8;
+  color: #333; /* خاکستری پررنگ */
   margin-bottom: 24px;
 }
 
 #product .section-intro {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 60px;
   font-size: 18px;
   line-height: 1.9;
-  color: #222;
+  color: #444;
 }
 
-/* Product Grid */
+#product .section-intro strong,
+.product-card p strong,
+.scientific-note strong {
+  color: #222; /* خاکستری پررنگ برای متن‌های بولد */
+  font-weight: 700;
+}
+
+/* ===== Product Grid ===== */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: stretch;
 }
+
 .product-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   background: #fff;
-  border-radius: 20px;
-  overflow: hidden; /* خیلی مهم برای اینکه تصویر گوشه‌هاش بریده نشه */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 22px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
 
 .product-card img {
   width: 100%;
-  height: auto; /* ارتفاع خود تصویر را نگه می‌دارد */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 }
 
-.product-card h3, .product-card p {
-  padding: 12px 16px; /* فاصله متن از لبه کارت */
+.product-content {
+  display: grid;
+  place-items: center;
+  padding: 20px;
 }
 
 .product-card h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #0F49E8;
-  margin-bottom: 8px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .product-card p {
   font-size: 16px;
-  color: #222;
+  color: #444;
   line-height: 1.8;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-/* Scientific Note */
+/* ===== Scientific Note ===== */
 .scientific-note {
   background: #fff;
   padding: 28px 30px;
   border-radius: 18px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   max-width: 860px;
-  margin: 50px auto 0 auto;
+  margin: 60px auto 0;
   font-size: 16px;
   line-height: 1.85;
-  color: #222;
+  color: #333;
   text-align: center;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   #product { padding: 60px 16px; }
-  .product-card img { height: 180px; }
   #product .section-title { font-size: 30px; }
   #product .section-intro { font-size: 16px; }
   .product-card h3 { font-size: 18px; }
@@ -136,10 +159,9 @@
 
 @media (max-width: 480px) {
   #product { padding: 50px 12px; }
-  .product-card img { height: 160px; }
-  #product .section-title { font-size: 28px; }
+  #product .section-title { font-size: 26px; }
   #product .section-intro { font-size: 15px; }
   .product-card h3 { font-size: 16px; }
-  .product-card p { font-size: 14.5px; }
+  .product-card p { font-size: 14px; }
 }
 </style>
