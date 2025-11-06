@@ -228,34 +228,15 @@
     margin-bottom: 26px;
   }
 }
-
 .gradient-text {
   font-family: 'Yekan Bakh', sans-serif;
   font-weight: 800;
+  font-size: 28px;
   background: linear-gradient(90deg, #000 0%, #F4C430 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  animation: glowPulse 3s infinite ease-in-out;
-  display: inline-block;
-}
-
-/* افکت درخشش */
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow: 0 0 8px rgba(244,196,48,0.4);
-  }
-  50% {
-    text-shadow: 0 0 14px rgba(244,196,48,0.7);
-  }
-}
-
-/* افکت هاور (اختیاری) */
-.gradient-text:hover {
-  background: linear-gradient(90deg, #F4C430 0%, #000 90%);
-  transform: scale(1.03);
-  transition: all 0.3s ease;
+  text-align: center; /* وسط‌چین شدن متن */
 }
 </style>
