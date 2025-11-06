@@ -17,10 +17,11 @@
 </header>
 
 <style>
-/* ===== Header Base ===== */
-.header {
-  position: sticky;
+/* ===== Header Base ===== */.header {
+  position: fixed; /* قبلاً sticky بود */
   top: 0;
+  left: 0;
+  width: 100%; /* اضافه شده تا کل عرض رو بگیره */
   z-index: 1000;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
