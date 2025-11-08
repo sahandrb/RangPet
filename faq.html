@@ -128,6 +128,50 @@ body {
   .faq-answer ul li { font-size: 14px; }
   .faq-item { padding: 16px 12px; }
 }
+
+  
+/* wrapper دکمه */
+.faq-contact-btn-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* دکمه */
+.faq-contact-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #333; /* خاکستری تیره */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* هاور */
+.faq-contact-btn:hover {
+  background: linear-gradient(90deg, #444, #F4C430); /* خاکستری تیره به طلایی ملایم */
+  color: #111;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .faq-contact-btn {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-contact-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
 </style>
 
 
@@ -162,7 +206,7 @@ body {
 <body>
   <section class="faq-section" id="faq">
     <h1 class="faq-title">سؤالات متداول</h1>
-    <p class="faq-intro">در این بخش می‌توانید پاسخ به پرسش‌های رایج و نکات آموزشی درباره استفاده از رنگ‌های طبیعی حیوانات رنگ پت را مطالعه کنید.</p>
+   
 
     <!-- نمونه سؤالات -->
     <article class="faq-item" itemscope itemtype="https://schema.org/Question">
@@ -214,7 +258,7 @@ body {
   <h2 class="faq-question" itemprop="name">آیا تک‌فروشی دارید؟ حداقل تعداد خرید چقدر است؟</h2>
   <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
     <p class="faq-answer" itemprop="text">
-      سیاست فروش ما بر اساس سفارش‌های عمده (حداقل ۱۰ عدد) است، اما برای گرومرهای عزیز یا پت‌شاپ‌هایی که قصد تست محصول برای اولین بار را دارند، امکان سفارش تعداد کمتر (حتی یک عدد برای تست) نیز فراهم است.
+      سیاست فروش ما بر اساس سفارش‌های عمده (حداقل ۱۰ عدد) است، اما برای گرومرهای عزیز یا پت‌شاپ‌هایی که قصد تست محصول برای اولین بار را دارند، امکان سفارش تعداد کمتر نیز فراهم است.
     </p>
   </div>
 </article>
@@ -251,9 +295,6 @@ body {
     </p>
     <p class="faq-answer" itemprop="text">
       <strong>عوامل مؤثر:</strong> روی موهای روشن‌تر (مانند پودل سفید) ماندگاری بیشتری دارد و روی موهای زبر یا کوتاه‌تر ممکن است زودتر پاک شود.
-    </p>
-    <p class="faq-answer" itemprop="text">
-      <strong>پاک کردن سریع‌تر:</strong> برای تسریع در روند پاک شدن رنگ، می‌توانید از شامپوهای قوی‌تر یا شامپوهای شفاف‌کننده استفاده کنید و تعداد دفعات حمام را افزایش دهید.
     </p>
   </div>
 </article>
@@ -345,7 +386,7 @@ body {
   <h2 class="faq-question" itemprop="name">محصول شما "صفر تحریک" و "ضد حساسیت" معرفی شده است. آیا این بدان معناست که دیگر نیازی به انجام تست حساسیت پوستی نیست؟</h2>
   <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
     <p class="faq-answer" itemprop="text">
-      اگرچه فرمولاسیون ما به گونه‌ای طراحی شده که میزان تحریکات پوستی نزدیک به صفر باشد و تست‌های ایمنی را گذرانده است، اما تست حساسیت (Patch Test) همچنان یک اقدام احتیاطی استاندارد و حرفه‌ای در صنعت گرومینگ است. پوست هر حیوان منحصر به فرد است. همیشه ۴۸ ساعت قبل از اعمال کامل رنگ، تست پچ را انجام دهید تا از عدم وجود واکنش‌های آلرژیک مطمئن شوید و آرامش خاطر کامل داشته باشید.
+      اگرچه فرمولاسیون ما به گونه‌ای طراحی شده که میزان تحریکات پوستی نزدیک به صفر باشد و تست‌های ایمنی را گذرانده است، اما تست حساسیت (Patch Test) همچنان یک اقدام احتیاطی استاندارد و حرفه‌ای در صنعت گرومینگ است. پوست هر حیوان منحصر به فرد است. همیشه قبل از اعمال کامل رنگ، تست پچ را انجام دهید تا از عدم وجود واکنش‌های آلرژیک مطمئن شوید و آرامش خاطر کامل داشته باشید.
     </p>
   </div>
 </article>
@@ -450,7 +491,10 @@ body {
     
 
 
-
+<!-- دکمه تماس -->
+<div class="faq-contact-btn-wrapper">
+  <a href="tel:09384958682" class="faq-contact-btn">پاسخ سوال خود را دریافت نکردید؟ با ما تماس بگیرید!</a>
+</div>
 
     
 
