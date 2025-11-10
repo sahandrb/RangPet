@@ -4,4 +4,12 @@
     <loc>https://www.rangpet.ir/</loc>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>https://www.rangpet.ir/how</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.rangpet.ir/faq</loc>
+    <priority>0.80</priority>
+  </url>
 </urlset>
