@@ -6,6 +6,14 @@
       <h1 class="brand-title">Brooklyn</h1>
     </div>
 
+    <!-- منوی اصلی -->
+    <nav class="main-menu" id="mainMenu">
+      <ul>
+        <li><a href="https://www.brooklynpetcolor.ir/how">چگونه از محصول استفاده کنیم؟</a></li>
+        <li><a href="https://www.brooklynpetcolor.ir/faq">سوالات متداول</a></li>
+      </ul>
+    </nav>
+
     <!-- آیکون منوی موبایل -->
     <div class="menu-toggle" id="menuToggle">
       <span></span>
@@ -113,11 +121,57 @@
     font-size: 24px;
   }
 }
+  /* منوی اصلی */
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+  color: #F4C430;
+}
+
+/* برای موبایل: منو مخفی و عمودی */
+@media (max-width: 768px) {
+  .main-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  .main-menu.active {
+    display: flex;
+  }
+
+  .main-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 </style>
 
-<script>
-const menuToggle = document.getElementById('menuToggle');
+<script>const menuToggle = document.getElementById('menuToggle');
+const mainMenu = document.getElementById('mainMenu');
+
 menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
+  menuToggle.classList.toggle('active'); // تغییر شکل آیکون
+  mainMenu.classList.toggle('active');   // نمایش/مخفی کردن منو
 });
+
 </script>
