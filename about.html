@@ -362,5 +362,63 @@ p {
 
 
   
-    
+    /* =============================
+   DARK MODE برای نوشته‌های گرادینتی مقاله Brooklyn
+   ============================= */
+@media (prefers-color-scheme: dark) {
+
+  /* عنوان اصلی */
+  .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #fff !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.35);
+  }
+
+  /* تیتر داخل کارت ها */
+  .card h3 {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #fff !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.30);
+  }
+
+  /* رنگ عمومی متن‌ها */
+  #brooklyn-article,
+  #brooklyn-article p,
+  #brooklyn-article strong {
+    color: #e8e8e8 !important;
+  }
+
+  /* پس زمینه مقاله */
+  #brooklyn-article {
+    background: #121212 !important;
+  }
+
+  /* کارت‌ها در دارک مود */
+  .card {
+    background: #1c1c1c !important;
+    border-color: #333 !important;
+  }
+
+  .card p {
+    color: #ccc !important;
+  }
+
+  /* باکس تأکید */
+  .highlight-box {
+    background: #1f1f1f !important;
+    border-color: #444 !important;
+    color: #ddd !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: #121212 !important;
+  }
+
+  .hero-image {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.7) !important;
+  }
+}
 </style>
