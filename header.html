@@ -112,6 +112,21 @@
   .brand-title {
     font-size: 24px;
   }
+}  
+  /* حالت پیش‌فرض (روشن) → گرادینت طلایی */
+.brand-title {
+  background: linear-gradient(90deg, #000 0%, #F4C430 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* حالت تاریک → نوشته سفید */
+@media (prefers-color-scheme: dark) {
+  .brand-title {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important; /* سفید */
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+  }
 }
 </style>
 
