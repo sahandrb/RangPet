@@ -382,5 +382,57 @@ p {
   .index-faq-btn { font-size: 14px; padding: 12px 24px; }
 }
 
+/* =============================
+   تغییر رنگ نوشته‌های گرادینتی در دارک مود
+   ============================= */
+@media (prefers-color-scheme: dark) {
 
+  /* تمام عنوان‌های گرادینتی */
+  .gradient-text,
+  .yellow-text,
+  .product-card h3 {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #fff !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.35);
+  }
+
+  /* رنگ عمومی متن‌ها در دارک مود */
+  #product,
+  #product p,
+  .index-faq-header,
+  .index-faq-header p,
+  .article-body {
+    color: #ddd !important;
+  }
+
+  /* پس‌زمینه کارت‌ها در دارک مود */
+  .product-card {
+    background: #1b1b1b !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* پس‌زمینه بخش اصلی */
+  #product {
+    background: #121212 !important;
+  }
+
+  /* Scientific note (زرد ملایم → خاکستری ملایم) */
+  .scientific-note {
+    background: #222 !important;
+    border-color: #444 !important;
+    color: #eee !important;
+  }
+
+  /* FAQ box در دارک مود */
+  .index-faq-header {
+    background: #1c1c1c !important;
+  }
+
+  /* دکمه‌ها */
+  .index-faq-btn {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
 </style>
