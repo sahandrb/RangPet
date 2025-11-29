@@ -353,6 +353,23 @@ body.dark-mode .index-faq-btn:hover {
 body.dark-mode .index-faq-header::before {
   background: radial-gradient(circle, rgba(255,213,79,0.12), transparent 70%);
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #fff;
+  }
+  body:not(.dark-mode) {
+    background: #121212;
+  }
+  body:not(.dark-mode) .faq-item {
+    background: #1E1E1E;
+    color: #fff;
+  }
+  body:not(.dark-mode) .faq-title,
+  body:not(.dark-mode) .faq-question {
+    color: #fff;
+  }
+}
 
 </style>
 
