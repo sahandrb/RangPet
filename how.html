@@ -289,6 +289,67 @@ body.dark-mode {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* فعال کردن حالت شب خودکار بر اساس تنظیمات سیستم */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e5e5e5;
+  }
+
+  /* هدر مقاله */
+  .article-header {
+    background: #1c1c1c;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  }
+  .article-header h1 { color: #fff; }
+  .article-header p { color: #ccc; }
+
+  /* بخش‌های مقاله */
+  .article-section {
+    background: #1a1a1a;
+    border: 2px solid rgba(255,255,255,0.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  }
+  .article-section h2 { color: #fff; }
+  .article-section p { color: #ddd; }
+  .article-section ul li { color: #ddd; }
+
+  /* عکس‌ها */
+  .article-section img.article-img {
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+  }
+
+  /* نکات مهم */
+  .article-note {
+    background: #F4C430;
+    color: #000;
+  }
+
+  /* FAQ Header */
+  .index-faq-header {
+    background: #1c1c1c;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  }
+  .index-faq-header h2 { color: #fff; }
+  .index-faq-header p { color: #ccc; }
+
+  /* دکمه CTA */
+  .index-faq-btn {
+    background: #F4C430;
+    color: #000;
+  }
+  .index-faq-btn:hover {
+    box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+  }
+
+  /* متن گرادینتی */
+  .gradient-text {
+    background: linear-gradient(90deg, #fff 0%, #F4C430 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 
   
 </style>
