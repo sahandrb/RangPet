@@ -155,6 +155,32 @@
   padding: 10px 16px;
   direction: ltr; /* اضافه شد */
 }
+/* حالت شب خودکار */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #fff;
+  }
+
+  .post {
+    background: #1E1E1E;
+    box-shadow: 0 4px 16px rgba(255,255,255,0.05);
+  }
+
+  .post-caption {
+    color: #e6e6e6;
+  }
+
+  .post-share {
+    border-top: 1px solid #333;
+  }
+
+  .share-btn {
+    /* در صورت نیاز می‌توانید رنگ دکمه را هم تغییر دهید */
+    background: #FFD54F;
+    color: #000;
+  }
+}
 
   </style>
 </head>
