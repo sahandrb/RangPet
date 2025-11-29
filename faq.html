@@ -253,6 +253,106 @@ body {
   .index-faq-header p { font-size: 15px; }
   .index-faq-btn { font-size: 14px; padding: 12px 24px; }
 }
+/* =======================
+     حالت شب (Dark Mode)
+   ======================= */
+
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+/* سکشن */
+body.dark-mode .faq-section {
+  background: #121212;
+}
+
+/* عنوان */
+body.dark-mode .faq-title {
+  color: #fff;
+}
+
+body.dark-mode .faq-title::after {
+  background: #FFD54F; /* زرد */
+}
+
+/* توضیحات اولیه */
+body.dark-mode .faq-intro {
+  color: #ddd;
+}
+
+/* کارت سؤال‌ها */
+body.dark-mode .faq-item {
+  background: #1E1E1E;
+  box-shadow: 0 6px 18px rgba(255,255,255,0.04);
+}
+
+body.dark-mode .faq-item:hover {
+  box-shadow: 0 10px 25px rgba(255,255,255,0.08);
+}
+
+/* تیتر سؤال */
+body.dark-mode .faq-question {
+  color: #fff;
+}
+
+body.dark-mode .faq-question::before {
+  color: #FFD54F; /* آیکون زرد */
+}
+
+/* پاسخ‌ها */
+body.dark-mode .faq-answer {
+  color: #e6e6e6;
+}
+
+/* جاهای مهم و کلیدی در متن */
+body.dark-mode .faq-answer strong {
+  color: #FFD54F; /* زرد */
+  font-weight: 900;
+}
+
+/* Bullet list */
+body.dark-mode .faq-answer ul li {
+  color: #dcdcdc;
+}
+
+/* دکمه تماس */
+body.dark-mode .faq-contact-btn {
+  background: #FFD54F;
+  color: #000;
+}
+
+body.dark-mode .faq-contact-btn:hover {
+  box-shadow: 0 8px 18px rgba(255,213,79,0.35);
+}
+
+/* هدر جذاب FAQ */
+body.dark-mode .index-faq-header {
+  background: #1A1A1A;
+  box-shadow: 0 12px 32px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .index-faq-header h2 {
+  color: #fff;
+}
+
+body.dark-mode .index-faq-header p {
+  color: #ccc;
+}
+
+body.dark-mode .index-faq-btn {
+  background: #FFD54F;
+  color: #000;
+}
+
+body.dark-mode .index-faq-btn:hover {
+  box-shadow: 0 10px 25px rgba(255,213,79,0.3);
+}
+
+/* نقطه نورانی بک‌گراند */
+body.dark-mode .index-faq-header::before {
+  background: radial-gradient(circle, rgba(255,213,79,0.12), transparent 70%);
+}
 
 </style>
 
@@ -346,11 +446,12 @@ body {
     }
   ]
 }
+  
 </script>
 
 </head>
 
-<body>
+<body class="dark-mode">
   <section class="faq-section" id="faq">
     <h1 class="faq-title">سؤالات متداول</h1>
    
