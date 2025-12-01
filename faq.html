@@ -5,39 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سؤالات متداول | رنگ پت</title>
   <meta name="description" content="پاسخ به رایج‌ترین پرسش‌ها درباره رنگ‌های طبیعی حیوانات، روش استفاده و ایمنی محصولات رنگ پت.">
-<style>
-/* ========== پایه ========== */
+<style/* =====================
+       پایه
+   ===================== */
 * {
-  box-sizing: border-box; /* جلوگیری از overflow */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Yekan Bakh', sans-serif;
-  background: #f5f5f5; /* پس‌زمینه خاکستری روشن */
-  margin: 0;
-  padding: 0;
+  background: #f5f5f5;
   color: #222;
   line-height: 1.8;
 }
 
-/* ========== سکشن اصلی FAQ ========== */
+/* =====================
+       سکشن FAQ
+   ===================== */
 .faq-section {
-  padding: 80px 20px;
   max-width: 950px;
   width: 100%;
   margin: auto;
+  padding: 80px 20px;
   position: relative;
 }
 
-/* ========== عنوان و مقدمه ========== */
+/* عنوان FAQ */
 .faq-title {
   text-align: center;
   font-size: 34px;
   font-weight: 900;
   color: #111;
   margin-bottom: 14px;
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .faq-title::after {
@@ -45,7 +48,7 @@ body {
   display: block;
   width: 80px;
   height: 4px;
-  background: #333; /* خط زیر عنوان خاکستری تیره */
+  background: #333;
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
@@ -59,13 +62,12 @@ body {
   line-height: 1.9;
 }
 
-/* ========== کارت‌های سؤال و جواب ========== */
+/* کارت سوال و جواب */
 .faq-item {
-  background: #e0e0e0; /* خاکستری تیره‌تر */
+  background: #e0e0e0;
   border-radius: 18px;
   padding: 26px 30px;
   margin-bottom: 28px;
-  border-right: none; /* حذف نوار طلایی */
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
@@ -75,7 +77,7 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ========== تیتر سؤال ========== */
+/* سوال */
 .faq-question {
   font-size: 21px;
   font-weight: 800;
@@ -88,11 +90,11 @@ body {
 
 .faq-question::before {
   content: "❓";
-  color: #555; /* خاکستری */
+  color: #555;
   font-size: 20px;
 }
 
-/* ========== پاسخ ========== */
+/* پاسخ */
 .faq-answer {
   font-size: 17px;
   color: #333;
@@ -108,39 +110,16 @@ body {
   margin-bottom: 6px;
 }
 
-/* ========== ریسپانسیو ========== */
-@media (max-width: 768px) {
-  .faq-title { font-size: 30px; }
-  .faq-intro { font-size: 16px; margin-bottom: 40px; }
-  .faq-question { font-size: 19px; gap: 6px; }
-  .faq-question::before { font-size: 18px; }
-  .faq-answer { font-size: 15.5px; }
-  .faq-answer ul li { font-size: 15px; }
-  .faq-item { padding: 22px 20px; }
-}
-
-@media (max-width: 480px) {
-  .faq-title { font-size: 26px; }
-  .faq-intro { font-size: 15px; }
-  .faq-question { font-size: 17px; gap: 4px; }
-  .faq-question::before { font-size: 16px; }
-  .faq-answer { font-size: 14px; }
-  .faq-answer ul li { font-size: 14px; }
-  .faq-item { padding: 16px 12px; }
-}
-
-  
-/* wrapper دکمه */
+/* دکمه تماس */
 .faq-contact-btn-wrapper {
   text-align: center;
   margin-top: 40px;
 }
 
-/* دکمه */
 .faq-contact-btn {
   display: inline-block;
   padding: 14px 28px;
-  background: #333; /* خاکستری تیره */
+  background: #333;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -150,43 +129,24 @@ body {
   transition: all 0.3s ease;
 }
 
-/* هاور */
 .faq-contact-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* ریسپانسیو */
-@media (max-width: 768px) {
-  .faq-contact-btn {
-    font-size: 15px;
-    padding: 12px 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .faq-contact-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-}
-
-
-/* ===== هدر FAQ جذاب و هماهنگ ===== */
+/* هدر FAQ جذاب */
 .index-faq-header {
-  background: #f5f5f5; /* خاکستری روشن مثل article */
+  background: #f5f5f5;
   padding: 60px 20px;
   text-align: center;
   border-radius: 20px;
   margin: 50px auto;
   max-width: 900px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-  font-family: 'Yekan Bakh', sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-/* افکت ریز پس‌زمینه */
 .index-faq-header::before {
   content: '';
   position: absolute;
@@ -204,7 +164,6 @@ body {
   z-index: 1;
 }
 
-/* تیتر */
 .index-faq-header h2 {
   font-size: 32px;
   font-weight: 900;
@@ -213,7 +172,6 @@ body {
   line-height: 1.3;
 }
 
-/* متن توضیحی */
 .index-faq-header p {
   font-size: 18px;
   color: #444;
@@ -222,7 +180,6 @@ body {
   margin: 0 auto 30px auto;
 }
 
-/* دکمه CTA */
 .index-faq-btn {
   display: inline-block;
   padding: 16px 36px;
@@ -230,7 +187,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
-  background: #333; /* هماهنگ با کارت‌ها */
+  background: #333;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
@@ -241,140 +198,123 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* Responsive */
+/* ریسپانسیو */
 @media (max-width: 768px) {
+  .faq-title { font-size: 30px; }
+  .faq-intro { font-size: 16px; margin-bottom: 40px; }
+  .faq-question { font-size: 19px; gap: 6px; }
+  .faq-question::before { font-size: 18px; }
+  .faq-answer { font-size: 15.5px; }
+  .faq-answer ul li { font-size: 15px; }
+  .faq-item { padding: 22px 20px; }
   .index-faq-header h2 { font-size: 28px; }
   .index-faq-header p { font-size: 16px; }
   .index-faq-btn { font-size: 16px; padding: 14px 28px; }
 }
 
 @media (max-width: 480px) {
+  .faq-title { font-size: 26px; }
+  .faq-intro { font-size: 15px; }
+  .faq-question { font-size: 17px; gap: 4px; }
+  .faq-question::before { font-size: 16px; }
+  .faq-answer { font-size: 14px; }
+  .faq-answer ul li { font-size: 14px; }
+  .faq-item { padding: 16px 12px; }
   .index-faq-header h2 { font-size: 22px; }
   .index-faq-header p { font-size: 15px; }
   .index-faq-btn { font-size: 14px; padding: 12px 24px; }
 }
-/* =======================
-     حالت شب (Dark Mode)
-   ======================= */
 
-body.dark-mode {
-  background: #121212;
-  color: #fff;
-}
-
-/* سکشن */
-body.dark-mode .faq-section {
-  background: #121212;
-}
-
-/* عنوان */
-body.dark-mode .faq-title {
-  color: #fff;
-}
-
-body.dark-mode .faq-title::after {
-  background: #FFD54F; /* زرد */
-}
-
-/* توضیحات اولیه */
-body.dark-mode .faq-intro {
-  color: #ddd;
-}
-
-/* کارت سؤال‌ها */
-body.dark-mode .faq-item {
-  background: #1E1E1E;
-  box-shadow: 0 6px 18px rgba(255,255,255,0.04);
-}
-
-body.dark-mode .faq-item:hover {
-  box-shadow: 0 10px 25px rgba(255,255,255,0.08);
-}
-
-/* تیتر سؤال */
-body.dark-mode .faq-question {
-  color: #fff;
-}
-
-body.dark-mode .faq-question::before {
-  color: #FFD54F; /* آیکون زرد */
-}
-
-/* پاسخ‌ها */
-body.dark-mode .faq-answer {
-   color: #ffffff;
-}
-
-/* جاهای مهم و کلیدی در متن */
-body.dark-mode .faq-answer strong {
-  color: #FFD54F; /* زرد */
-  font-weight: 900;
-}
-
-/* Bullet list */
-body.dark-mode .faq-answer ul li {
-  color: #f0f0f0;
-}
-
-/* دکمه تماس */
-body.dark-mode .faq-contact-btn {
-  background: #FFD54F;
-  color: #000;
-}
-
-body.dark-mode .faq-contact-btn:hover {
-  box-shadow: 0 8px 18px rgba(255,213,79,0.35);
-}
-
-/* هدر جذاب FAQ */
-body.dark-mode .index-faq-header {
-  background: #1A1A1A;
-  box-shadow: 0 12px 32px rgba(255,255,255,0.05);
-}
-
-body.dark-mode .index-faq-header h2 {
-  color: #fff;
-}
-
-body.dark-mode .index-faq-header p {
-  color: #ccc;
-}
-
-body.dark-mode .index-faq-btn {
-  background: #FFD54F;
-  color: #000;
-}
-
-body.dark-mode .index-faq-btn:hover {
-  box-shadow: 0 10px 25px rgba(255,213,79,0.3);
-}
-
-/* نقطه نورانی بک‌گراند */
-body.dark-mode .index-faq-header::before {
-  background: radial-gradient(circle, rgba(255,213,79,0.12), transparent 70%);
-}
+/* =====================
+       حالت شب
+   ===================== */
+body.dark-mode,
 @media (prefers-color-scheme: dark) {
   body {
     background: #121212;
     color: #fff;
   }
-  body:not(.dark-mode) {
+
+  .faq-section {
     background: #121212;
   }
-  body:not(.dark-mode) .faq-item {
+
+  .faq-title {
+    color: #fff;
+  }
+
+  .faq-title::after {
+    background: #FFD54F;
+  }
+
+  .faq-intro {
+    color: #ddd;
+  }
+
+  .faq-item {
     background: #1E1E1E;
+    box-shadow: 0 6px 18px rgba(255,255,255,0.05);
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 10px 25px rgba(255,255,255,0.12);
+  }
+
+  .faq-question {
     color: #fff;
   }
-  body:not(.dark-mode) .faq-title,
-  body:not(.dark-mode) .faq-question {
+
+  .faq-question::before {
+    color: #FFD54F;
+  }
+
+  .faq-answer,
+  .faq-answer p,
+  .faq-answer ul,
+  .faq-answer ul li {
+    color: #ffffff;
+  }
+
+  .faq-answer strong {
+    color: #FFD54F;
+  }
+
+  .faq-contact-btn {
+    background: #FFD54F;
+    color: #000;
+    box-shadow: 0 6px 12px rgba(255,213,79,0.25);
+  }
+
+  .faq-contact-btn:hover {
+    box-shadow: 0 8px 18px rgba(255,213,79,0.35);
+  }
+
+  .index-faq-header {
+    background: #1A1A1A;
+    box-shadow: 0 12px 32px rgba(255,255,255,0.05);
+  }
+
+  .index-faq-header h2 {
     color: #fff;
   }
-}
-body.dark-mode .faq-answer,
-body.dark-mode .faq-answer p,
-body.dark-mode .faq-answer ul,
-body.dark-mode .faq-answer ul li {
-  color: #ffffff !important; /* !important برای override تمام استایل‌های دیگر */
+
+  .index-faq-header p {
+    color: #ccc;
+  }
+
+  .index-faq-btn {
+    background: #FFD54F;
+    color: #000;
+    box-shadow: 0 8px 20px rgba(255,213,79,0.25);
+  }
+
+  .index-faq-btn:hover {
+    box-shadow: 0 10px 25px rgba(255,213,79,0.35);
+  }
+
+  .index-faq-header::before {
+    background: radial-gradient(circle, rgba(255,213,79,0.15), transparent 70%);
+  }
 }
 
 </style>
