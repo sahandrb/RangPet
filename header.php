@@ -19,7 +19,7 @@
     "@type": "Offer",
     "url": "https://www.brooklynpetcolor.ir/",
     "priceCurrency": "IRR",
-    "price": "0", 
+    "price": "1880000", 
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
