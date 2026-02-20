@@ -1,18 +1,30 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 🎯 عنوان سئو شده -->
-  <title><?php echo isset($pageTitle) ? $pageTitle . ' | رنگ موی مخصوص حیوانات Brooklyn' : 'خرید رنگ موی مخصوص حیوانات | رنگ موی Brooklyn | رنگ پت'; ?></title>
-
-  <!-- 🎯 توضیحات سئو شده -->
-  <meta name="description" content="<?php echo isset($pageDesc) ? $pageDesc : 'خرید رنگ موی مخصوص حیوانات خانگی (سگ، گربه، خرگوش) برند Brooklyn. رنگ کاملاً ایمن، بدون بوی تند، بدون حساسیت و قابل ترکیب برای ایجاد رنگ‌های فانتزی. ارسال به سراسر کشور.'; ?>">
-
-  <!-- 🎯 کلمات کلیدی (مهم نیستند اما بد نیست باشند) -->
-  <meta name="keywords" content="رنگ موی حیوانات, رنگ موی سگ, رنگ موی Brooklyn, رنگ فانتزی حیوانات, رنگ ایمن سگ, رنگ گربه, رنگ گرومینگ, رنگ پت">
-
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+<!-- اسکیما محصول برای درک بهتر گوگل -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "رنگ موی مخصوص حیوانات خانگی Brooklyn",
+  "image": "https://www.brooklynpetcolor.ir/11717.jpg",
+  "description": "خرید بهترین رنگ موی فانتزی و گیاهی برای سگ، گربه و خرگوش. کاملاً ایمن، بدون آمونیاک و قابل استفاده در سالن‌های گرومینگ و منزل.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Brooklyn"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "124"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.brooklynpetcolor.ir/",
+    "priceCurrency": "IRR",
+    "price": "0", 
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "رنگ پت (Brooklyn Pet Color)"
+    }
+  }
+}
+</script>
