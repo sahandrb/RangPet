@@ -128,26 +128,27 @@
 </section>
 
 
-
-<!-- بخش ارسال نظر جدید -->
-<section class="submit-review-section">
-  <div class="submit-review-container">
-    <h3 class="seo-title text-center">شما هم تجربه خود را بنویسید!</h3>
-    <p class="submit-subtitle text-center">نظرات شما به دیگران در انتخاب بهتر کمک می‌کند.</p>
+<!-- فرم ثبت نظر حرفه‌ای و مینیمال -->
+<section class="review-form-section">
+  <div class="review-form-wrapper">
     
-    <!-- فرم ثبت نظر -->
-    <form id="reviewForm" class="review-form">
-      <div class="form-row">
+    <div class="form-header">
+      <h3 class="gradient-text">شما هم تجربه خود را بنویسید</h3>
+      <p>نظرات شما به دیگران در انتخاب بهتر کمک می‌کند.</p>
+    </div>
+    
+    <form id="reviewForm" class="modern-form">
+      <div class="input-grid">
         <input type="text" id="revName" placeholder="نام و نام خانوادگی" required>
+        
         <select id="revRole" required>
           <option value="" disabled selected>نقش شما...</option>
           <option value="owner">صاحب پت (مصرف خانگی)</option>
           <option value="groomer">گرومر حرفه‌ای (سالن)</option>
         </select>
-      </div>
-      
-      <div class="form-row">
+        
         <input type="text" id="revPet" placeholder="نوع و نژاد حیوان (مثال: سگ پودل)" required>
+        
         <select id="revColor" required>
           <option value="" disabled selected>رنگ استفاده شده...</option>
           <option value="pink">صورتی</option>
@@ -158,16 +159,22 @@
         </select>
       </div>
 
-      <textarea id="revText" rows="4" placeholder="تجربه استفاده شما از رنگ‌های بروکلین... (کیفیت، ماندگاری، عدم حساسیت و ...)" required></textarea>
+      <textarea id="revText" rows="4" placeholder="تجربه استفاده شما از محصولات ما... (کیفیت، ماندگاری و ...)" required></textarea>
       
-      <button type="submit" class="submit-review-btn">ارسال نظر</button>
+      <button type="submit" class="submit-btn">ثبت نظر</button>
     </form>
 
-    <!-- پیام موفقیت (در حالت عادی مخفی است) -->
-    <div id="successMessage" class="review-success-message">
-      <div class="success-icon">✔</div>
-      <h4>نظر شما با موفقیت ارسال شد!</h4>
-      <p>از اینکه تجربه خود را با ما به اشتراک گذاشتید سپاسگزاریم. نظر شما پس از بررسی کوتاه توسط پشتیبانی، در سایت نمایش داده خواهد شد.</p>
+    <!-- پیام موفقیت مینیمال -->
+    <div id="successMessage" class="success-box">
+      <div class="success-icon-modern">
+        <!-- یک تیک SVG بسیار شیک -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h4>نظر شما با موفقیت ثبت شد</h4>
+      <p>از اینکه تجربه خود را با ما به اشتراک گذاشتید سپاسگزاریم. این نظر پس از تایید در سایت نمایش داده می‌شود.</p>
     </div>
 
   </div>
@@ -798,152 +805,160 @@ p {
 
 
 
-  /* ===== کد برای ارسال نظرات راجب ===== */
-  /* ===== Submit Review Form ===== */
-.submit-review-section {
-  padding: 40px 20px 80px 20px;
+  /* ===== کد برای ارسال نظرات راجب ===== *//* ===== Modern Minimal Review Form ===== */
+.review-form-section {
+  padding: 60px 20px;
   font-family: 'Yekan Bakh', sans-serif;
 }
 
-.submit-review-container {
+.review-form-wrapper {
   max-width: 750px;
   margin: 0 auto;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  border: 1px solid #eee;
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.03); /* سایه بسیار محو و لوکس */
+  border: 1px solid #f0f0f0;
+  position: relative;
+  min-height: 400px; /* جلوگیری از پرش صفحه هنگام تغییر فرم */
 }
 
-.submit-subtitle {
+.form-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-header h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.form-header p {
   color: #666;
-  font-size: 16px;
-  margin-bottom: 30px;
-  margin-top: -10px;
+  font-size: 15px;
+  margin: 0;
 }
 
-.review-form {
+/* Grid Layout for Inputs */
+.modern-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  transition: opacity 0.4s ease;
 }
 
-.form-row {
-  display: flex;
-  gap: 15px;
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* دو ستون مساوی در دسکتاپ */
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-.form-row input, 
-.form-row select, 
-.review-form textarea {
+/* فیلدهای ورودی مینیمال */
+.modern-form input,
+.modern-form select,
+.modern-form textarea {
   width: 100%;
-  padding: 14px 18px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #e4e4e4;
+  border-radius: 14px;
+  background: #fafafa;
   font-family: 'Yekan Bakh', sans-serif;
   font-size: 15px;
-  color: #333;
-  background: #fafafa;
-  transition: all 0.3s ease;
+  color: #111;
+  transition: all 0.2s ease;
   outline: none;
+  box-sizing: border-box;
 }
 
-.form-row input:focus, 
-.form-row select:focus, 
-.review-form textarea:focus {
-  border-color: #F4C430;
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.15);
-}
-
-.review-form textarea {
+.modern-form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 110px;
 }
 
-.submit-review-btn {
-  background: #333;
+/* افکت جذاب هنگام تایپ کردن */
+.modern-form input:focus,
+.modern-form select:focus,
+.modern-form textarea:focus {
+  border-color: #111;
+  background: #fff;
+}
+
+/* دکمه ارسال شیک */
+.submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 16px;
+  background: #111;
   color: #fff;
   border: none;
-  padding: 16px;
-  font-size: 17px;
+  border-radius: 14px;
+  font-size: 16px;
   font-weight: 800;
-  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
-.submit-review-btn:hover {
-  background: #F4C430;
+.submit-btn:hover {
+  background: #F4C430; /* زرد برند شما */
   color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.3);
 }
 
-/* ===== Success Message Styling ===== */
-.review-success-message {
-  display: none; /* مخفی در حالت پیش‌فرض */
+/* ===== Success Message (Minimalist) ===== */
+.success-box {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 30px 20px;
-  background: #E8F5E9;
-  border-radius: 16px;
-  border: 1px solid #C8E6C9;
-  animation: fadeInForm 0.5s ease forwards;
+  width: 100%;
+  padding: 0 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.success-icon {
-  width: 60px;
-  height: 60px;
-  background: #4CAF50;
-  color: white;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 auto 15px auto;
+.success-icon-modern {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px auto;
+  color: #4CAF50; /* سبز ملایم */
 }
 
-.review-success-message h4 {
-  color: #2E7D32;
+.success-box h4 {
   font-size: 22px;
   font-weight: 800;
+  color: #111;
   margin-bottom: 10px;
 }
 
-.review-success-message p {
-  color: #388E3C;
-  font-size: 16px;
+.success-box p {
+  font-size: 15px;
+  color: #555;
   line-height: 1.8;
 }
 
-@keyframes fadeInForm {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsive (Mobile) ===== */
 @media (max-width: 600px) {
-  .form-row { flex-direction: column; gap: 15px; }
-  .submit-review-container { padding: 25px 20px; }
+  .review-form-wrapper { padding: 35px 20px; }
+  .input-grid { grid-template-columns: 1fr; /* تبدیل به یک ستون در موبایل */ }
+  .form-header h3 { font-size: 20px; }
+  .success-box { padding: 0 20px; }
 }
 
 /* ===== Dark Mode Integration ===== */
 @media (prefers-color-scheme: dark) {
-  .submit-review-container { background: #1b1b1b; border-color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-  .submit-subtitle { color: #aaa; }
-  .form-row input, .form-row select, .review-form textarea { 
-    background: #222; border-color: #444; color: #eee; 
+  .review-form-wrapper { background: #1a1a1a; border-color: #2a2a2a; box-shadow: none; }
+  .form-header p { color: #aaa; }
+  .modern-form input, .modern-form select, .modern-form textarea { 
+    background: #222; border-color: #333; color: #fff; 
   }
-  .form-row input:focus, .form-row select:focus, .review-form textarea:focus {
-    background: #111;
+  .modern-form input:focus, .modern-form select:focus, .modern-form textarea:focus {
+    border-color: #F4C430; background: #111;
   }
-  .submit-review-btn { background: #F4C430; color: #000; }
-  .submit-review-btn:hover { background: #fff; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); }
-  
-  .review-success-message { background: rgba(76, 175, 80, 0.1); border-color: rgba(76, 175, 80, 0.3); }
-  .review-success-message h4 { color: #81C784; }
-  .review-success-message p { color: #A5D6A7; }
+  .submit-btn { background: #F4C430; color: #000; }
+  .submit-btn:hover { background: #fff; }
+  .success-box h4 { color: #fff; }
+  .success-box p { color: #aaa; }
 }
 </style>
