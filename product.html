@@ -49,22 +49,6 @@
     </div>
   </div>
 
-    <!-- بخش سئویی: مقایسه و امنیت -->
-<section class="seo-content-box">
-  <h2 class="seo-title">چرا نباید از رنگ موی انسانی برای حیوانات استفاده کنیم؟</h2>
-  <div class="seo-text-inner">
-    <p>بسیاری از صاحبان پت به اشتباه فکر می‌کنند رنگ‌های فانتزی انسانی برای سگ‌ها یا گربه‌ها بی‌خطر هستند. اما رنگ‌های انسانی حاوی <strong>آمونیاک، پارابن و مواد شیمیایی سمی (Toxic)</strong> هستند که در صورت لیسیدن توسط حیوان، منجر به مسمومیت شدید و آسیب‌های پوستی جبران‌ناپذیر می‌شود.</p>
-    <p>محصولات <strong>Brooklyn Pet Dye</strong> به طور خاص برای ساختار مو و PH پوست حیوانات خانگی طراحی شده‌اند. این رنگ‌ها <strong>Food-Grade (خوراکی و بی‌خطر)</strong> بوده و حتی در صورت لیسیده شدن توسط سگ یا گربه، هیچگونه عارضه‌ای ایجاد نمی‌کنند.</p>
-    
-    <div class="features-list">
-      <ul>
-        <li>✅ <strong>بدون نیاز به اکسیدان و دکلره:</strong> مستقیماً روی موی حیوان استفاده می‌شود.</li>
-        <li>✅ <strong>کاملاً ضد حساسیت (Hypoallergenic):</strong> مناسب برای توله‌سگ‌ها و حیوانات با پوست حساس.</li>
-        <li>✅ <strong>تغذیه کننده مو:</strong> حاوی پروتئین‌های گیاهی برای نرمی مو پس از گرومینگ.</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
   <div class="scientific-note">
     <p>
@@ -122,7 +106,49 @@
       </p>
       <div class="review-product">رنگ استفاده شده: <strong>صورتی فانتزی</strong></div>
     </div>
+<!-- بخش ارسال نظر جدید -->
+<section class="submit-review-section">
+  <div class="submit-review-container">
+    <h3 class="seo-title text-center">شما هم تجربه خود را بنویسید!</h3>
+    <p class="submit-subtitle text-center">نظرات شما به دیگران در انتخاب بهتر کمک می‌کند.</p>
+    
+    <!-- فرم ثبت نظر -->
+    <form id="reviewForm" class="review-form">
+      <div class="form-row">
+        <input type="text" id="revName" placeholder="نام و نام خانوادگی" required>
+        <select id="revRole" required>
+          <option value="" disabled selected>نقش شما...</option>
+          <option value="owner">صاحب پت (مصرف خانگی)</option>
+          <option value="groomer">گرومر حرفه‌ای (سالن)</option>
+        </select>
+      </div>
+      
+      <div class="form-row">
+        <input type="text" id="revPet" placeholder="نوع و نژاد حیوان (مثال: سگ پودل)" required>
+        <select id="revColor" required>
+          <option value="" disabled selected>رنگ استفاده شده...</option>
+          <option value="pink">صورتی</option>
+          <option value="blue">آبی</option>
+          <option value="purple">بنفش</option>
+          <option value="magenta">سرخابی</option>
+          <option value="multi">ترکیبی (چند رنگ)</option>
+        </select>
+      </div>
 
+      <textarea id="revText" rows="4" placeholder="تجربه استفاده شما از رنگ‌های بروکلین... (کیفیت، ماندگاری، عدم حساسیت و ...)" required></textarea>
+      
+      <button type="submit" class="submit-review-btn">ارسال نظر</button>
+    </form>
+
+    <!-- پیام موفقیت (در حالت عادی مخفی است) -->
+    <div id="successMessage" class="review-success-message">
+      <div class="success-icon">✔</div>
+      <h4>نظر شما با موفقیت ارسال شد!</h4>
+      <p>از اینکه تجربه خود را با ما به اشتراک گذاشتید سپاسگزاریم. نظر شما پس از بررسی کوتاه توسط پشتیبانی، در سایت نمایش داده خواهد شد.</p>
+    </div>
+
+  </div>
+</section>
     <!-- نظر سوم: صاحب گربه (نشان دادن کاربرد برای گربه‌ها و ماندگاری) -->
     <div class="review-card">
       <div class="review-head">
@@ -762,5 +788,157 @@ p {
   .review-text { color: #ccc !important; }
   .review-product { background: #222; color: #aaa; border-right-color: #FFD54F; }
   .review-product strong { color: #fff; }
+}
+
+
+
+
+  /* ===== کد برای ارسال نظرات راجب ===== */
+  /* ===== Submit Review Form ===== */
+.submit-review-section {
+  padding: 40px 20px 80px 20px;
+  font-family: 'Yekan Bakh', sans-serif;
+}
+
+.submit-review-container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+}
+
+.submit-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input, 
+.form-row select, 
+.review-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: 'Yekan Bakh', sans-serif;
+  font-size: 15px;
+  color: #333;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-row input:focus, 
+.form-row select:focus, 
+.review-form textarea:focus {
+  border-color: #F4C430;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.15);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-review-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-review-btn:hover {
+  background: #F4C430;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.3);
+}
+
+/* ===== Success Message Styling ===== */
+.review-success-message {
+  display: none; /* مخفی در حالت پیش‌فرض */
+  text-align: center;
+  padding: 30px 20px;
+  background: #E8F5E9;
+  border-radius: 16px;
+  border: 1px solid #C8E6C9;
+  animation: fadeInForm 0.5s ease forwards;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background: #4CAF50;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+}
+
+.review-success-message h4 {
+  color: #2E7D32;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.review-success-message p {
+  color: #388E3C;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@keyframes fadeInForm {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .form-row { flex-direction: column; gap: 15px; }
+  .submit-review-container { padding: 25px 20px; }
+}
+
+/* ===== Dark Mode Integration ===== */
+@media (prefers-color-scheme: dark) {
+  .submit-review-container { background: #1b1b1b; border-color: #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  .submit-subtitle { color: #aaa; }
+  .form-row input, .form-row select, .review-form textarea { 
+    background: #222; border-color: #444; color: #eee; 
+  }
+  .form-row input:focus, .form-row select:focus, .review-form textarea:focus {
+    background: #111;
+  }
+  .submit-review-btn { background: #F4C430; color: #000; }
+  .submit-review-btn:hover { background: #fff; box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); }
+  
+  .review-success-message { background: rgba(76, 175, 80, 0.1); border-color: rgba(76, 175, 80, 0.3); }
+  .review-success-message h4 { color: #81C784; }
+  .review-success-message p { color: #A5D6A7; }
 }
 </style>
