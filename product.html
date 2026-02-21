@@ -236,6 +236,12 @@
 
   <!-- فرم ثبت نظر جدید -->
 <!-- ========================================== -->
+<!-- فرم ثبت نظر جدید (بدون جاوااسکریپت / CSS Only) -->
+<!-- ========================================== -->
+
+<!-- چک‌باکس مخفی برای اجرای انیمیشن پاپ‌آپ -->
+<input type="checkbox" id="submitReviewHack" class="hidden-trigger-checkbox">
+
 <section class="review-form-section">
   <div class="review-form-container">
     <div class="form-header">
@@ -243,7 +249,8 @@
       <p>تجربه استفاده خود از رنگ‌های Brooklyn را با دیگران به اشتراک بگذارید.</p>
     </div>
 
-    <form id="submitReviewForm" class="review-form">
+    <!-- تگ form به div تبدیل شده تا صفحه رفرش نشود -->
+    <div class="review-form">
       
       <!-- ردیف اول: نام و نقش -->
       <div class="form-row">
@@ -260,7 +267,7 @@
         </div>
       </div>
 
-      <!-- ردیف دوم: رنگ و امتیاز -->
+      <!-- ردیف دوم: رنگ و امتیاز (سیستم ستاره با CSS خالص) -->
       <div class="form-row">
         <div class="input-group">
           <label for="usedColor">رنگ استفاده شده</label>
@@ -268,15 +275,25 @@
         </div>
         <div class="input-group">
           <label>امتیاز شما</label>
-          <div class="star-rating-input" id="starSelector">
-            <span class="star active" data-value="1">★</span>
-            <span class="star active" data-value="2">★</span>
-            <span class="star active" data-value="3">★</span>
-            <span class="star active" data-value="4">★</span>
-            <span class="star active" data-value="5">★</span>
+          
+          <!-- سیستم ستاره بدون JS -->
+          <div class="css-star-rating">
+            <input type="radio" id="star5" name="rating" value="5" checked>
+            <label for="star5" title="5 ستاره">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 ستاره">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 ستاره">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 ستاره">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 ستاره">★</label>
           </div>
-          <!-- فیلد مخفی برای ذخیره مقدار ستاره -->
-          <input type="hidden" id="ratingValue" value="5" required>
+
         </div>
       </div>
 
@@ -286,11 +303,19 @@
         <textarea id="reviewText" rows="4" required placeholder="تجربه استفاده، میزان ماندگاری و واکنش پت خود را بنویسید..."></textarea>
       </div>
 
-      <!-- دکمه ارسال -->
-      <button type="submit" class="submit-review-btn">ارسال نظر</button>
-    </form>
+      <!-- دکمه ارسال (در واقع یک لیبل متصل به چک‌باکس مخفی است) -->
+      <label for="submitReviewHack" class="submit-review-btn">ارسال نظر</label>
+    </div>
   </div>
 </section>
+
+<!-- پاپ‌آپ نوتیفیکیشن (Toast) که با زدن دکمه بالا ظاهر می‌شود -->
+<div class="toast-notification">
+  <div class="toast-content">
+    <span class="toast-icon">✅</span>
+    <span class="toast-text">نظر شما با موفقیت ثبت شد و پس از بررسی نمایش داده می‌شود.</span>
+  </div>
+</div>
 
 <!-- ========================================== -->
 <!-- پاپ‌آپ نوتیفیکیشن (Toast) -->
@@ -930,14 +955,16 @@ p {
 
 <!-- ========================================== -->
 <!-- استایل‌های فرم و نوتیفیکیشن -->
-<!-- ========================================== -->
-<style>
+  /* مخفی کردن چک‌باکس راه‌انداز */
+  .hidden-trigger-checkbox { display: none; }
+
+  /* استایل‌های پایه فرم */
   .review-form-section {
     padding: 20px 15px 80px 15px;
     font-family: 'Yekan Bakh', sans-serif;
   }
   .review-form-container {
-    max-width: 800px; /* فرم کمی جمع‌وجورتر از کارت‌هاست تا شیک‌تر شود */
+    max-width: 800px;
     margin: 0 auto;
     background: #fff;
     padding: 35px 30px;
@@ -946,51 +973,17 @@ p {
     border: 1px solid rgba(0,0,0,0.04);
   }
 
-  .form-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .form-header h3 {
-    font-size: 24px;
-    font-weight: 900;
-    color: #111;
-    margin-bottom: 8px;
-  }
-  .form-header p {
-    font-size: 14px;
-    color: #666;
-  }
+  .form-header { text-align: center; margin-bottom: 30px; }
+  .form-header h3 { font-size: 24px; font-weight: 900; color: #111; margin-bottom: 8px; }
+  .form-header p { font-size: 14px; color: #666; }
 
-  .review-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+  .review-form { display: flex; flex-direction: column; gap: 20px; }
+  .form-row { display: flex; gap: 20px; }
+  .input-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .full-width { width: 100%; }
 
-  /* گرید ردیف‌ها برای دسکتاپ */
-  .form-row {
-    display: flex;
-    gap: 20px;
-  }
-  .input-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .full-width {
-    width: 100%;
-  }
-
-  /* لیبل‌ها و اینپوت‌ها */
-  .input-group label {
-    font-size: 14px;
-    font-weight: 800;
-    color: #333;
-  }
-  .input-group input, 
-  .input-group select, 
-  .input-group textarea {
+  .input-group label { font-size: 14px; font-weight: 800; color: #333; }
+  .input-group input, .input-group select, .input-group textarea {
     font-family: 'Yekan Bakh', sans-serif;
     padding: 12px 15px;
     border-radius: 12px;
@@ -998,82 +991,99 @@ p {
     background: #fafafa;
     font-size: 14px;
     color: #222;
-    transition: all 0.3s ease;
     outline: none;
+    transition: all 0.3s ease;
   }
-  .input-group input:focus, 
-  .input-group select:focus, 
-  .input-group textarea:focus {
-    border-color: #F4C430;
-    background: #fff;
+  .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+    border-color: #F4C430; background: #fff;
     box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.15);
   }
 
-  /* سیستم ستاره‌دهی */
-  .star-rating-input {
+  /* ========================================== */
+  /* منطق ستاره‌ها با CSS خالص (جادوی CSS) */
+  /* ========================================== */
+  .css-star-rating {
     display: flex;
-    gap: 5px;
-    font-size: 24px;
-    cursor: pointer;
-    direction: ltr; /* ستاره‌ها از چپ به راست پر شوند */
-    justify-content: flex-end; /* راست‌چین کردن ظاهری */
+    flex-direction: row-reverse; /* برای اینکه CSS بتواند به قبلی‌ها دسترسی پیدا کند */
+    justify-content: flex-end;
+    font-size: 28px;
+    gap: 4px;
+    direction: ltr;
   }
-  .star {
-    color: #ccc; /* رنگ ستاره خاموش */
+  .css-star-rating input {
+    display: none; /* مخفی کردن دکمه‌های رادیویی */
+  }
+  .css-star-rating label {
+    color: #ccc;
+    cursor: pointer;
     transition: color 0.2s;
   }
-  .star.active {
-    color: #FFC107; /* رنگ ستاره روشن (زرد) */
+  /* وقتی ماوس روی ستاره میره */
+  .css-star-rating label:hover,
+  .css-star-rating label:hover ~ label {
+    color: #FFC107;
+  }
+  /* وقتی ستاره انتخاب میشه */
+  .css-star-rating input:checked ~ label {
+    color: #FFC107;
+  }
+  /* حفظ رنگ زرد هنگام تغییر انتخاب */
+  .css-star-rating input:checked:hover ~ label,
+  .css-star-rating input:checked:hover ~ label ~ label {
+    color: #FFC107;
   }
 
-  /* دکمه ثبت */
+  /* ========================================== */
+  /* دکمه ارسال (Label) */
+  /* ========================================== */
   .submit-review-btn {
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 800;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Yekan Bakh', sans-serif;
-    margin-top: 10px;
+    background: #111; color: #fff; border: none;
+    padding: 15px; font-size: 16px; font-weight: 800;
+    border-radius: 12px; cursor: pointer; transition: all 0.3s ease;
+    text-align: center; margin-top: 10px; display: block;
   }
   .submit-review-btn:hover {
-    background: #F4C430;
-    color: #111;
+    background: #F4C430; color: #111;
     box-shadow: 0 8px 20px rgba(244, 196, 48, 0.3);
   }
+  .submit-review-btn:active {
+    transform: scale(0.98);
+  }
 
-  /* استایل نوتیفیکیشن (Toast) */
+  /* ========================================== */
+  /* پاپ‌آپ نوتیفیکیشن و انیمیشن CSS */
+  /* ========================================== */
   .toast-notification {
-    position: fixed;
-    bottom: -100px; /* مخفی در پایین */
-    left: 50%;
+    position: fixed; 
+    bottom: -100px; /* خارج از صفحه */
+    left: 50%; 
     transform: translateX(-50%);
-    background: #28a745; /* سبز موفقیت */
-    color: #fff;
+    background: #28a745; 
+    color: #fff; 
     padding: 16px 24px;
-    border-radius: 12px;
+    border-radius: 12px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     z-index: 9999;
-    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
     visibility: hidden;
   }
-  .toast-notification.show {
-    bottom: 40px; /* بالا می‌آید */
-    visibility: visible;
-  }
-  .toast-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .toast-content { display: flex; align-items: center; gap: 12px; }
   .toast-icon { font-size: 20px; }
-  .toast-text { font-size: 14px; font-weight: 700; }
+  .toast-text { font-size: 14px; font-weight: 700; font-family: 'Yekan Bakh', sans-serif; }
+
+  /* اجرای انیمیشن فقط وقتی دکمه ارسال کلیک شود */
+  #submitReviewHack:checked ~ .toast-notification {
+    animation: showToastAnimation 4s ease forwards;
+  }
+
+  @keyframes showToastAnimation {
+    0% { bottom: -100px; opacity: 0; visibility: visible; }
+    15% { bottom: 40px; opacity: 1; visibility: visible; }
+    85% { bottom: 40px; opacity: 1; visibility: visible; }
+    100% { bottom: -100px; opacity: 0; visibility: hidden; }
+  }
 
   /* ریسپانسیو فرم */
   @media (max-width: 768px) {
@@ -1082,100 +1092,33 @@ p {
     .toast-notification { width: 90%; text-align: center; }
   }
 
-  /* ==========================================
-     تنظیمات حالت شب (Dark Mode)
-  ========================================== */
+  /* ========================================== */
+  /* تنظیمات حالت شب (Dark Mode) */
+  /* ========================================== */
   body.dark-mode .review-form-container {
-    background: #1c1c1c;
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   }
-  body.dark-mode .form-header h3,
-  body.dark-mode .input-group label { color: #f5f5f5; }
+  body.dark-mode .form-header h3, body.dark-mode .input-group label { color: #f5f5f5; }
   body.dark-mode .form-header p { color: #bbb; }
-  
-  body.dark-mode .input-group input, 
-  body.dark-mode .input-group select, 
-  body.dark-mode .input-group textarea {
-    background: #2d2d2d;
-    border-color: #444;
-    color: #fff;
+  body.dark-mode .input-group input, body.dark-mode .input-group select, body.dark-mode .input-group textarea {
+    background: #2d2d2d; border-color: #444; color: #fff;
   }
-  body.dark-mode .input-group input:focus, 
-  body.dark-mode .input-group select:focus, 
-  body.dark-mode .input-group textarea:focus {
-    border-color: #F4C430;
-    background: #222;
+  body.dark-mode .input-group input:focus, body.dark-mode .input-group select:focus, body.dark-mode .input-group textarea:focus {
+    border-color: #F4C430; background: #222;
   }
   body.dark-mode .submit-review-btn { background: #F4C430; color: #111; }
   body.dark-mode .submit-review-btn:hover { background: #fff; }
 
   @media (prefers-color-scheme: dark) {
-    body:not(.light-mode) .review-form-container {
-      background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06);
-    }
+    body:not(.light-mode) .review-form-container { background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06); }
     body:not(.light-mode) .form-header h3, body:not(.light-mode) .input-group label { color: #f5f5f5; }
     body:not(.light-mode) .form-header p { color: #bbb; }
     body:not(.light-mode) .input-group input, body:not(.light-mode) .input-group select, body:not(.light-mode) .input-group textarea {
       background: #2d2d2d; border-color: #444; color: #fff;
     }
-    body:not(.light-mode) .input-group input:focus, body:not(.light-mode) .input-group textarea:focus {
-      border-color: #F4C430; background: #222;
-    }
+    body:not(.light-mode) .input-group input:focus, body:not(.light-mode) .input-group textarea:focus { border-color: #F4C430; background: #222; }
     body:not(.light-mode) .submit-review-btn { background: #F4C430; color: #111; }
   }
 </style>
 
-<!-- ========================================== -->
-<!-- اسکریپت (جاوااسکریپت) -->
-<!-- ========================================== -->
 
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. منطق ستاره‌دهی (Interactive Stars)
-    const stars = document.querySelectorAll(".star");
-    const ratingInput = document.getElementById("ratingValue");
-
-    stars.forEach(star => {
-      star.addEventListener("click", function() {
-        const value = parseInt(this.getAttribute("data-value"));
-        ratingInput.value = value;
-        
-        // روشن کردن ستاره‌های کلیک شده و قبل از آن
-        stars.forEach(s => {
-          if (parseInt(s.getAttribute("data-value")) <= value) {
-            s.classList.add("active");
-          } else {
-            s.classList.remove("active");
-          }
-        });
-      });
-    });
-
-    // 2. منطق ارسال فرم و نمایش نوتیفیکیشن
-    const form = document.getElementById("submitReviewForm");
-    const toast = document.getElementById("toastNotification");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault(); // جلوگیری از رفرش شدن صفحه
-
-      // نمایش نوتیفیکیشن Toast
-      toast.classList.add("show");
-
-      // پاک کردن فیلدهای فرم
-      form.reset();
-      
-      // برگرداندن ستاره‌ها به حالت پیش‌فرض (5 ستاره)
-      ratingInput.value = 5;
-      stars.forEach(s => s.classList.add("active"));
-
-      // مخفی کردن نوتیفیکیشن بعد از 4 ثانیه
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 4000);
-    });
-
-  });
-</script>
