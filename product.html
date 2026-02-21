@@ -238,10 +238,10 @@
 <!-- ========================================== -->
 <!-- فرم ثبت نظر جدید (بدون جاوااسکریپت / CSS Only) -->
 <!-- ========================================== -->
-
-<!-- چک‌باکس مخفی برای اجرای انیمیشن پاپ‌آپ -->
-<input type="checkbox" id="submitReviewHack" class="hidden-trigger-checkbox">
-
+<!-- فرم ثبت نظر جدید -->
+<!-- ========================================== -->
+<!-- فرم ثبت نظر جدید (100% خالص با HTML و CSS) -->
+<!-- ========================================== -->
 <section class="review-form-section">
   <div class="review-form-container">
     <div class="form-header">
@@ -249,8 +249,8 @@
       <p>تجربه استفاده خود از رنگ‌های Brooklyn را با دیگران به اشتراک بگذارید.</p>
     </div>
 
-    <!-- تگ form به div تبدیل شده تا صفحه رفرش نشود -->
-    <div class="review-form">
+    <!-- فرم: با استفاده از یک کلاس ساده -->
+    <form class="review-form">
       
       <!-- ردیف اول: نام و نقش -->
       <div class="form-row">
@@ -267,7 +267,7 @@
         </div>
       </div>
 
-      <!-- ردیف دوم: رنگ و امتیاز (سیستم ستاره با CSS خالص) -->
+      <!-- ردیف دوم: رنگ و امتیاز (ستاره‌های کاملاً CSS) -->
       <div class="form-row">
         <div class="input-group">
           <label for="usedColor">رنگ استفاده شده</label>
@@ -276,8 +276,8 @@
         <div class="input-group">
           <label>امتیاز شما</label>
           
-          <!-- سیستم ستاره بدون JS -->
           <div class="css-star-rating">
+            <!-- ستاره 5 (پیش‌فرض انتخاب شده برای اینکه بعد از پاک شدن فرم برگرده به 5) -->
             <input type="radio" id="star5" name="rating" value="5" checked>
             <label for="star5" title="5 ستاره">★</label>
             
@@ -303,29 +303,20 @@
         <textarea id="reviewText" rows="4" required placeholder="تجربه استفاده، میزان ماندگاری و واکنش پت خود را بنویسید..."></textarea>
       </div>
 
-      <!-- دکمه ارسال (در واقع یک لیبل متصل به چک‌باکس مخفی است) -->
-      <label for="submitReviewHack" class="submit-review-btn">ارسال نظر</label>
-    </div>
+      <!-- جادوی اصلی: دکمه از نوع reset است که به صورت بومی و بدون JS کل فرم را پاک می‌کند -->
+      <button type="reset" class="submit-review-btn">ارسال نظر</button>
+
+      <!-- پاپ‌آپ نوتیفیکیشن که به عنوان همسایه دکمه قرار دارد تا با CSS کنترل شود -->
+      <div class="toast-notification">
+        <div class="toast-content">
+          <span class="toast-icon">✅</span>
+          <span class="toast-text">نظر شما با موفقیت ثبت شد و پس از بررسی نمایش داده می‌شود.</span>
+        </div>
+      </div>
+
+    </form>
   </div>
 </section>
-
-<!-- پاپ‌آپ نوتیفیکیشن (Toast) که با زدن دکمه بالا ظاهر می‌شود -->
-<div class="toast-notification">
-  <div class="toast-content">
-    <span class="toast-icon">✅</span>
-    <span class="toast-text">نظر شما با موفقیت ثبت شد و پس از بررسی نمایش داده می‌شود.</span>
-  </div>
-</div>
-
-<!-- ========================================== -->
-<!-- پاپ‌آپ نوتیفیکیشن (Toast) -->
-<!-- ========================================== -->
-<div id="toastNotification" class="toast-notification hidden">
-  <div class="toast-content">
-    <span class="toast-icon">✅</span>
-    <span class="toast-text">نظر شما با موفقیت ثبت شد و پس از بررسی نمایش داده می‌شود.</span>
-  </div>
-</div>
 
 
 
@@ -954,11 +945,7 @@ p {
 
 
 <!-- ========================================== -->
-<!-- استایل‌های فرم و نوتیفیکیشن -->
-  /* مخفی کردن چک‌باکس راه‌انداز */
-  .hidden-trigger-checkbox { display: none; }
-
-  /* استایل‌های پایه فرم */
+<!-- استایل‌های فرم و نوتیفیکیشن -->  /* استایل‌های پایه فرم */
   .review-form-section {
     padding: 20px 15px 80px 15px;
     font-family: 'Yekan Bakh', sans-serif;
@@ -971,6 +958,7 @@ p {
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.06);
     border: 1px solid rgba(0,0,0,0.04);
+    position: relative; /* برای کنترل بهتر المان‌ها */
   }
 
   .form-header { text-align: center; margin-bottom: 30px; }
@@ -1000,47 +988,39 @@ p {
   }
 
   /* ========================================== */
-  /* منطق ستاره‌ها با CSS خالص (جادوی CSS) */
+  /* منطق ستاره‌ها با CSS خالص */
   /* ========================================== */
   .css-star-rating {
     display: flex;
-    flex-direction: row-reverse; /* برای اینکه CSS بتواند به قبلی‌ها دسترسی پیدا کند */
+    flex-direction: row-reverse;
     justify-content: flex-end;
     font-size: 28px;
     gap: 4px;
     direction: ltr;
   }
-  .css-star-rating input {
-    display: none; /* مخفی کردن دکمه‌های رادیویی */
-  }
+  .css-star-rating input { display: none !important; }
   .css-star-rating label {
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.2s;
+    color: #ccc; cursor: pointer; transition: color 0.2s; margin: 0; padding: 0;
   }
-  /* وقتی ماوس روی ستاره میره */
+  /* تغییر رنگ ستاره‌ها هنگام هاور و کلیک */
   .css-star-rating label:hover,
-  .css-star-rating label:hover ~ label {
-    color: #FFC107;
-  }
-  /* وقتی ستاره انتخاب میشه */
-  .css-star-rating input:checked ~ label {
-    color: #FFC107;
-  }
-  /* حفظ رنگ زرد هنگام تغییر انتخاب */
+  .css-star-rating label:hover ~ label,
+  .css-star-rating input:checked ~ label,
   .css-star-rating input:checked:hover ~ label,
   .css-star-rating input:checked:hover ~ label ~ label {
     color: #FFC107;
   }
 
   /* ========================================== */
-  /* دکمه ارسال (Label) */
+  /* دکمه ارسال */
   /* ========================================== */
   .submit-review-btn {
+    width: 100%;
     background: #111; color: #fff; border: none;
     padding: 15px; font-size: 16px; font-weight: 800;
     border-radius: 12px; cursor: pointer; transition: all 0.3s ease;
-    text-align: center; margin-top: 10px; display: block;
+    font-family: 'Yekan Bakh', sans-serif; margin-top: 10px;
+    outline: none;
   }
   .submit-review-btn:hover {
     background: #F4C430; color: #111;
@@ -1051,11 +1031,11 @@ p {
   }
 
   /* ========================================== */
-  /* پاپ‌آپ نوتیفیکیشن و انیمیشن CSS */
+  /* پاپ‌آپ نوتیفیکیشن با استفاده از Focus دکمه */
   /* ========================================== */
   .toast-notification {
     position: fixed; 
-    bottom: -100px; /* خارج از صفحه */
+    bottom: -100px; /* مخفی در پایین */
     left: 50%; 
     transform: translateX(-50%);
     background: #28a745; 
@@ -1068,24 +1048,26 @@ p {
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none; /* تا مانع کلیک روی سایت نشود */
   }
   .toast-content { display: flex; align-items: center; gap: 12px; }
   .toast-icon { font-size: 20px; }
   .toast-text { font-size: 14px; font-weight: 700; font-family: 'Yekan Bakh', sans-serif; }
 
-  /* اجرای انیمیشن فقط وقتی دکمه ارسال کلیک شود */
-  #submitReviewHack:checked ~ .toast-notification {
+  /* جادوی CSS: وقتی روی دکمه ارسال کلیک می‌شود (فوکوس می‌گیرد)، انیمیشن اجرا می‌شود */
+  .submit-review-btn:focus ~ .toast-notification {
     animation: showToastAnimation 4s ease forwards;
   }
 
+  /* انیمیشن پاپ‌آپ */
   @keyframes showToastAnimation {
-    0% { bottom: -100px; opacity: 0; visibility: visible; }
-    15% { bottom: 40px; opacity: 1; visibility: visible; }
-    85% { bottom: 40px; opacity: 1; visibility: visible; }
+    0%   { bottom: -100px; opacity: 0; visibility: visible; }
+    15%  { bottom: 40px;   opacity: 1; visibility: visible; }
+    85%  { bottom: 40px;   opacity: 1; visibility: visible; }
     100% { bottom: -100px; opacity: 0; visibility: hidden; }
   }
 
-  /* ریسپانسیو فرم */
+  /* ریسپانسیو */
   @media (max-width: 768px) {
     .form-row { flex-direction: column; gap: 15px; }
     .review-form-container { padding: 25px 20px; }
@@ -1093,19 +1075,13 @@ p {
   }
 
   /* ========================================== */
-  /* تنظیمات حالت شب (Dark Mode) */
+  /* تنظیمات بی‌نقص حالت شب (Dark Mode) */
   /* ========================================== */
-  body.dark-mode .review-form-container {
-    background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  }
+  body.dark-mode .review-form-container { background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
   body.dark-mode .form-header h3, body.dark-mode .input-group label { color: #f5f5f5; }
   body.dark-mode .form-header p { color: #bbb; }
-  body.dark-mode .input-group input, body.dark-mode .input-group select, body.dark-mode .input-group textarea {
-    background: #2d2d2d; border-color: #444; color: #fff;
-  }
-  body.dark-mode .input-group input:focus, body.dark-mode .input-group select:focus, body.dark-mode .input-group textarea:focus {
-    border-color: #F4C430; background: #222;
-  }
+  body.dark-mode .input-group input, body.dark-mode .input-group select, body.dark-mode .input-group textarea { background: #2d2d2d; border-color: #444; color: #fff; }
+  body.dark-mode .input-group input:focus, body.dark-mode .input-group select:focus, body.dark-mode .input-group textarea:focus { border-color: #F4C430; background: #222; }
   body.dark-mode .submit-review-btn { background: #F4C430; color: #111; }
   body.dark-mode .submit-review-btn:hover { background: #fff; }
 
@@ -1113,12 +1089,9 @@ p {
     body:not(.light-mode) .review-form-container { background: #1c1c1c; border: 1px solid rgba(255,255,255,0.06); }
     body:not(.light-mode) .form-header h3, body:not(.light-mode) .input-group label { color: #f5f5f5; }
     body:not(.light-mode) .form-header p { color: #bbb; }
-    body:not(.light-mode) .input-group input, body:not(.light-mode) .input-group select, body:not(.light-mode) .input-group textarea {
-      background: #2d2d2d; border-color: #444; color: #fff;
-    }
+    body:not(.light-mode) .input-group input, body:not(.light-mode) .input-group select, body:not(.light-mode) .input-group textarea { background: #2d2d2d; border-color: #444; color: #fff; }
     body:not(.light-mode) .input-group input:focus, body:not(.light-mode) .input-group textarea:focus { border-color: #F4C430; background: #222; }
     body:not(.light-mode) .submit-review-btn { background: #F4C430; color: #111; }
-  }
-</style>
+  }</style>
 
 
