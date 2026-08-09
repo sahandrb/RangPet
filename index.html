@@ -27,6 +27,33 @@
 
   <!-- فونت و استایل اصلی شما -->
   <link rel="stylesheet" href="App.css">
+  <link rel="stylesheet" href="offer-popup.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "رنگ موی حیوانات Brooklyn Pet Dye",
+    "image": "https://www.brooklynpetcolor.ir/productnum1.png",
+    "description": "رنگ موی گیاهی و ایمن مخصوص سگ و گربه Brooklyn با ۱۵ درصد تخفیف ویژه.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Brooklyn"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.brooklynpetcolor.ir/",
+      "priceCurrency": "IRR",
+      "price": "1650000",
+      "priceValidUntil": "2026-08-14",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Brooklyn Pet Dye"
+      }
+    }
+  }
+  </script>
 
   <style>
     /* --- Loader --- */
@@ -93,6 +120,7 @@
   <div id="product"></div>
   <div id="footer"></div>
 
+  <script src="offer-popup.js"></script>
   <script>
     async function loadSection(id, file) {
       try {
@@ -116,6 +144,7 @@
       setTimeout(() => {
         document.getElementById('loader').style.display = 'none';
         document.body.classList.remove('loading');
+        if (window.BrooklynOffer) window.BrooklynOffer.init();
       }, 300);
     }
 
