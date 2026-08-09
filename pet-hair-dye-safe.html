@@ -46,7 +46,16 @@
     .cta-box a { display: inline-block; background: #F4C430; color: #000; padding: 14px 28px; border-radius: 12px; font-weight: 800; text-decoration: none; margin: 6px; }
     .cta-box .links { margin-top: 18px; }
     .cta-box .links a { background: transparent; color: #a37500; text-decoration: underline; padding: 0 8px; font-weight: 700; }
-    img.hero { width: 100%; max-width: 900px; display: block; margin: 0 auto 24px; border-radius: 18px; }
+    img.hero {
+      display: block;
+      width: auto;
+      max-width: min(480px, 100%);
+      max-height: 520px;
+      height: auto;
+      margin: 0 auto 24px;
+      object-fit: contain;
+      border-radius: 18px;
+    }
     @media (prefers-color-scheme: dark) {
       body { background: #121212; color: #eee; }
       .article-header, .article-section { background: #1c1c1c; }
@@ -63,7 +72,7 @@
   </header>
 
   <div class="article-content">
-    <img class="hero" src="Certificate.jpg" alt="استاندارد و ایمنی رنگ موی حیوانات Brooklyn" width="900" height="600" loading="lazy">
+    <img class="hero" src="Certificate.jpg" alt="استاندارد و ایمنی رنگ موی حیوانات Brooklyn" loading="lazy">
 
     <section class="article-section">
       <div class="article-note">رنگ موی انسان ≠ رنگ حیوانات. این دو محصول قابل جایگزینی نیستند.</div>
