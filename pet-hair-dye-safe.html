@@ -63,9 +63,17 @@
       .article-header p, .article-section p, .article-section li { color: #ddd; }
       .article-section h2 { color: #fff; }
     }
-  </style>
+  
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
+</style>
 </head>
 <body>
+  <div id="header-mount"></div>
+
   <header class="article-header">
     <h1>ایمنی رنگ حیوانات؛ چرا فرمول بدون آمونیاک مهم است؟</h1>
     <p>زیبایی حیوان خانگی وقتی ارزشمند است که سلامت پوست و مو قربانی نشود. این صفحه خلاصه معیارهای ایمنی برای انتخاب و استفاده از رنگ موی سگ و گربه است.</p>
@@ -118,5 +126,8 @@
       <a href="https://www.brooklynpetcolor.ir/cat-hair-dye">رنگ موی گربه</a>
     </div>
   </div>
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>

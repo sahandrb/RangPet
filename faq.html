@@ -397,6 +397,12 @@ body.dark-mode .index-faq-header::before {
 }
 
 
+
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
 </style>
 
 
@@ -495,6 +501,8 @@ body.dark-mode .index-faq-header::before {
 </head>
 
 <body>
+  <div id="header-mount"></div>
+
   <section class="faq-section" id="faq">
     <h1 class="faq-title">سؤالات متداول</h1>
    
@@ -794,5 +802,8 @@ body.dark-mode .index-faq-header::before {
 
 
   </section>
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>

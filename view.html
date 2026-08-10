@@ -200,9 +200,17 @@
   position: relative;
   z-index: 1;
 }
-  </style>
+  
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
+</style>
 </head>
 <body>
+  <div id="header-mount"></div>
+
 
   <header class="gallery-seo-header" style="max-width:900px;margin:40px auto 10px;padding:0 20px;text-align:center;">
     <h1 style="font-family:'Yekan Bakh',sans-serif;font-size:28px;font-weight:800;margin-bottom:10px;">نمونه کار رنگ موی حیوانات Brooklyn</h1>
@@ -527,5 +535,8 @@
     }
   </script>
 
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>

@@ -1,5 +1,12 @@
 <header class="header" id="siteHeader">
   <div class="header-inner">
+    <a href="index.html" class="home-return" data-home-link aria-label="بازگشت به صفحه اصلی">
+      <span class="home-return__icon-wrap" aria-hidden="true">
+        <img src="BrooklynIcon.png" alt="" width="28" height="28" class="home-return__icon">
+      </span>
+      <span class="home-return__label">خانه</span>
+    </a>
+
     <nav class="desktop-nav" aria-label="ناوبری اصلی">
       <a href="#about" class="desktop-nav__link" data-nav-link>درباره Brooklyn</a>
       <a href="#product" class="desktop-nav__link" data-nav-link>محصولات</a>
@@ -9,7 +16,7 @@
     </nav>
 
     <div class="brand-center">
-      <a href="#about" class="brand-title" data-nav-link aria-label="Brooklyn — بازگشت به بالا">Brooklyn</a>
+      <a href="index.html" class="brand-title" data-home-link aria-label="Brooklyn — صفحه اصلی">Brooklyn</a>
     </div>
 
     <button
@@ -49,18 +56,21 @@
 
   <ul class="mobile-nav__list">
     <li style="--i: 0">
-      <a href="#about" class="mobile-nav__link" data-nav-link>درباره Brooklyn</a>
+      <a href="index.html" class="mobile-nav__link" data-home-link>خانه</a>
     </li>
     <li style="--i: 1">
-      <a href="#product" class="mobile-nav__link" data-nav-link>محصولات</a>
+      <a href="#about" class="mobile-nav__link" data-nav-link>درباره Brooklyn</a>
     </li>
     <li style="--i: 2">
-      <a href="faq.html" class="mobile-nav__link">سؤالات متداول</a>
+      <a href="#product" class="mobile-nav__link" data-nav-link>محصولات</a>
     </li>
     <li style="--i: 3">
-      <a href="how.html" class="mobile-nav__link">راهنمای استفاده</a>
+      <a href="faq.html" class="mobile-nav__link">سؤالات متداول</a>
     </li>
     <li style="--i: 4">
+      <a href="how.html" class="mobile-nav__link">راهنمای استفاده</a>
+    </li>
+    <li style="--i: 5">
       <a href="#footer" class="mobile-nav__link" data-nav-link>تماس با ما</a>
     </li>
   </ul>
@@ -95,6 +105,96 @@
   align-items: center;
   position: relative;
   min-height: 44px;
+}
+
+/* ===== Home return (visual top-left) ===== */
+.home-return {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 4px 10px 4px 4px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #222;
+  font-family: 'Yekan Bakh', 'Yekan-Bakh', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background: transparent;
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-return__icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(244, 196, 48, 0.16);
+  box-shadow: inset 0 0 0 1.5px rgba(244, 196, 48, 0.55);
+  transition:
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-return__icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.home-return__label {
+  line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+.home-return:hover,
+.home-return:focus-visible {
+  background: rgba(244, 196, 48, 0.14);
+  color: #a37500;
+  outline: none;
+}
+
+.home-return:hover .home-return__icon-wrap,
+.home-return:focus-visible .home-return__icon-wrap {
+  background: rgba(244, 196, 48, 0.28);
+  box-shadow: inset 0 0 0 1.5px #F4C430;
+  transform: scale(1.05);
+}
+
+.home-return:active {
+  transform: translateY(-50%) scale(0.97);
+}
+
+@media (max-width: 380px) {
+  .home-return__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .home-return {
+    padding: 4px;
+  }
 }
 
 /* ===== Brand ===== */
@@ -440,6 +540,15 @@ body.nav-open {
     min-height: 0;
   }
 
+  .home-return {
+    top: 6px;
+    transform: none;
+  }
+
+  .home-return:active {
+    transform: scale(0.97);
+  }
+
   .desktop-nav {
     display: flex;
     position: static;
@@ -473,6 +582,21 @@ body.nav-open {
   .header {
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .home-return {
+    color: #f0f0f0;
+  }
+
+  .home-return:hover,
+  .home-return:focus-visible {
+    background: rgba(244, 196, 48, 0.18);
+    color: #FFD54F;
+  }
+
+  .home-return__icon-wrap {
+    background: rgba(244, 196, 48, 0.2);
+    box-shadow: inset 0 0 0 1.5px rgba(255, 213, 79, 0.65);
   }
 
   .brand-title {
@@ -536,7 +660,9 @@ body.nav-open {
   .desktop-nav__link::after,
   .mobile-nav__link,
   .mobile-nav__cta,
-  .brand-title {
+  .brand-title,
+  .home-return,
+  .home-return__icon-wrap {
     transition: none !important;
   }
 

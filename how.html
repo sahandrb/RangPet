@@ -367,9 +367,17 @@ body.dark-mode {
 }
 
   
+
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
 </style>
 </head>
 <body>
+  <div id="header-mount"></div>
+
 
 <div class="article-header">
   <h1 class="gradient-text" >راهنمای گام به گام: چگونه موهای سگ خود را با Brooklyn Pet Dye رنگ کنیم؟</h1>
@@ -513,5 +521,8 @@ body.dark-mode {
   ]
 }
 </script>
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>

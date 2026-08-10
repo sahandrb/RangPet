@@ -63,9 +63,17 @@
       .article-header p, .article-section p, .article-section li { color: #ddd; }
       .article-section h2 { color: #fff; }
     }
-  </style>
+  
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
+</style>
 </head>
 <body>
+  <div id="header-mount"></div>
+
   <header class="article-header">
     <h1>رنگ موی گربه Brooklyn؛ ایمن برای پوست و لیس زدن</h1>
     <p>گربه‌ها مدام خودشان را لیس می‌زنند؛ برای همین انتخاب رنگ موی گربه باید با دقت بیشتری نسبت به سگ انجام شود. Brooklyn با رویکرد Food-Grade برای همین سناریو طراحی شده است.</p>
@@ -112,5 +120,8 @@
       <a href="https://www.brooklynpetcolor.ir/pet-hair-dye-safe">ایمنی</a>
     </div>
   </div>
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>

@@ -63,9 +63,17 @@
       .article-header p, .article-section p, .article-section li { color: #ddd; }
       .article-section h2 { color: #fff; }
     }
-  </style>
+  
+    /* Site header offset */
+    body { padding-top: 80px; }
+    @media (min-width: 900px) {
+      body { padding-top: 96px; }
+    }
+</style>
 </head>
 <body>
+  <div id="header-mount"></div>
+
   <header class="article-header">
     <h1>رنگ موی سگ Brooklyn؛ زیبا، گیاهی و ایمن</h1>
     <p>اگر به‌دنبال رنگ موی مخصوص سگ هستید که هم جلوه فانتزی بدهد و هم پوست و موی حیوان را اذیت نکند، Brooklyn برای سالن‌های گرومینگ و استفاده خانگی طراحی شده است.</p>
@@ -125,5 +133,8 @@
       <a href="https://www.brooklynpetcolor.ir/pet-hair-dye-safe">ایمنی</a>
     </div>
   </div>
+
+  <script src="header-nav.js"></script>
+  <script src="load-header.js"></script>
 </body>
 </html>
