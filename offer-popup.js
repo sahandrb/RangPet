@@ -221,6 +221,9 @@
     const closeBtn = overlayEl.querySelector('.brooklyn-offer-close');
     if (closeBtn) closeBtn.focus({ preventScroll: true });
     startTimer();
+    if (typeof window.trackEvent === 'function') {
+      window.trackEvent('offer_popup_view');
+    }
   }
 
   function closeModal(persistDismiss) {
