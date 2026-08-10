@@ -120,6 +120,7 @@
   <div id="product"></div>
   <div id="footer"></div>
 
+  <script src="header-nav.js"></script>
   <script src="offer-popup.js"></script>
   <script>
     async function loadSection(id, file) {
@@ -139,6 +140,9 @@
         loadSection('product', 'product.html'),
         loadSection('footer', 'footer.html')
       ]);
+
+      if (window.BrooklynNav) window.BrooklynNav.init();
+
       // پس از لود کامل، لودر را حذف می‌کنیم
       document.getElementById('loader').style.opacity = '0';
       setTimeout(() => {

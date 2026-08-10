@@ -1,144 +1,547 @@
-<header class="header">
-  <div class="container d-flex justify-content-space-between align-items-center">
-    
-    <!-- برند در مرکز -->
+<header class="header" id="siteHeader">
+  <div class="header-inner">
+    <nav class="desktop-nav" aria-label="ناوبری اصلی">
+      <a href="#about" class="desktop-nav__link" data-nav-link>درباره Brooklyn</a>
+      <a href="#product" class="desktop-nav__link" data-nav-link>محصولات</a>
+      <a href="faq.html" class="desktop-nav__link">سؤالات متداول</a>
+      <a href="how.html" class="desktop-nav__link">راهنمای استفاده</a>
+      <a href="#footer" class="desktop-nav__link" data-nav-link>تماس با ما</a>
+    </nav>
+
     <div class="brand-center">
-      <h1 class="brand-title">Brooklyn</h1>
+      <a href="#about" class="brand-title" data-nav-link aria-label="Brooklyn — بازگشت به بالا">Brooklyn</a>
     </div>
 
-    <!-- آیکون منوی موبایل -->
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="باز کردن منو"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+    >
+      <span class="menu-toggle__box" aria-hidden="true">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </span>
+    </button>
   </div>
 </header>
 
+<div
+  class="nav-overlay"
+  id="navOverlay"
+  aria-hidden="true"
+></div>
+
+<nav
+  class="mobile-nav"
+  id="mobileNav"
+  aria-label="منوی موبایل"
+  aria-hidden="true"
+  inert
+>
+  <div class="mobile-nav__header">
+    <span class="mobile-nav__brand">Brooklyn</span>
+    <span class="mobile-nav__accent" aria-hidden="true"></span>
+  </div>
+
+  <ul class="mobile-nav__list">
+    <li style="--i: 0">
+      <a href="#about" class="mobile-nav__link" data-nav-link>درباره Brooklyn</a>
+    </li>
+    <li style="--i: 1">
+      <a href="#product" class="mobile-nav__link" data-nav-link>محصولات</a>
+    </li>
+    <li style="--i: 2">
+      <a href="faq.html" class="mobile-nav__link">سؤالات متداول</a>
+    </li>
+    <li style="--i: 3">
+      <a href="how.html" class="mobile-nav__link">راهنمای استفاده</a>
+    </li>
+    <li style="--i: 4">
+      <a href="#footer" class="mobile-nav__link" data-nav-link>تماس با ما</a>
+    </li>
+  </ul>
+
+  <div class="mobile-nav__footer">
+    <a href="#product" class="mobile-nav__cta" data-nav-link>مشاهده محصول</a>
+  </div>
+</nav>
+
 <style>
-/* ===== Header Base ===== */.header {
-  position: fixed; /* قبلاً sticky بود */
+/* ===== Header Base ===== */
+.header {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* اضافه شده تا کل عرض رو بگیره */
+  width: 100%;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 26px 0;
-  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 18px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===== Container ===== */
-.container {
+.header-inner {
   width: 92%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 44px;
 }
 
-/* ===== Brand Title (مرکزی) ===== */
+/* ===== Brand ===== */
 .brand-center {
   text-align: center;
+  z-index: 1;
 }
 
 .brand-title {
-  font-family: 'Yekan Bakh', sans-serif;
+  font-family: 'Yekan Bakh', 'Yekan-Bakh', sans-serif;
   font-weight: 800;
   font-size: 28px;
-  background: linear-gradient(90deg, #000 0%, #F4C430 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  animation: glowPulse 3s infinite ease-in-out;
-  cursor: default;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-@keyframes glowPulse {
-  0%, 100% {
-    text-shadow: 0 0 8px rgba(244,196,48,0.4);
-  }
-  50% {
-    text-shadow: 0 0 14px rgba(244,196,48,0.7);
-  }
+.brand-title:hover,
+.brand-title:focus-visible {
+  color: #a37500;
+  outline: none;
 }
 
-/* ===== Menu Icon ===== */
+/* ===== Desktop nav ===== */
+.desktop-nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  max-width: calc(50% - 90px);
+}
+
+.desktop-nav__link {
+  font-family: 'Yekan Bakh', 'Yekan-Bakh', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 10px;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.22s ease;
+}
+
+.desktop-nav__link::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 4px;
+  height: 2px;
+  background: #F4C430;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.desktop-nav__link:hover,
+.desktop-nav__link:focus-visible {
+  color: #111;
+  outline: none;
+}
+
+.desktop-nav__link:hover::after,
+.desktop-nav__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ===== Hamburger ===== */
 .menu-toggle {
   position: absolute;
   right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 1300;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.22s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(244, 196, 48, 0.18);
+  outline: none;
+}
+
+.menu-toggle__box {
+  position: relative;
+  width: 22px;
+  height: 16px;
+  display: block;
+}
+
+.menu-toggle__bar {
+  position: absolute;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #333;
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.22s ease,
+    width 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    top 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-toggle__bar:nth-child(1) {
+  top: 0;
+  width: 22px;
+}
+
+.menu-toggle__bar:nth-child(2) {
+  top: 7px;
+  width: 16px;
+}
+
+.menu-toggle__bar:nth-child(3) {
+  top: 14px;
+  width: 20px;
+}
+
+.menu-toggle.is-active .menu-toggle__bar:nth-child(1) {
+  top: 7px;
+  width: 22px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.is-active .menu-toggle__bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+  transform: scaleX(0);
+}
+
+.menu-toggle.is-active .menu-toggle__bar:nth-child(3) {
+  top: 7px;
+  width: 22px;
+  transform: rotate(-45deg);
+}
+
+/* ===== Overlay ===== */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ===== Mobile drawer ===== */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1250;
+  width: min(88vw, 340px);
+  height: 100%;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  width: 28px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
+  padding:
+    calc(24px + env(safe-area-inset-top, 0px))
+    24px
+    calc(24px + env(safe-area-inset-bottom, 0px));
+  font-family: 'Yekan Bakh', 'Yekan-Bakh', sans-serif;
+  color: #111;
+  transform: translateX(105%);
+  visibility: hidden;
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-nav.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobile-nav__header {
+  margin-bottom: 28px;
+  padding-top: 8px;
+}
+
+.mobile-nav__brand {
+  display: block;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.mobile-nav__accent {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: #F4C430;
+}
+
+.mobile-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mobile-nav__list li {
+  opacity: 0;
+  transform: translateX(16px);
+  transition:
+    opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0s;
+}
+
+.mobile-nav.is-open .mobile-nav__list li {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: calc(0.06s + var(--i, 0) * 0.05s);
+}
+
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 12px 14px 12px 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.22s ease, color 0.22s ease;
+}
+
+.mobile-nav__link::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 3px;
+  height: 0;
+  border-radius: 2px;
+  background: #F4C430;
+  transform: translateY(-50%);
+  transition: height 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link:focus-visible {
+  background: rgba(244, 196, 48, 0.12);
+  color: #111;
+  outline: none;
+}
+
+.mobile-nav__link:hover::before,
+.mobile-nav__link:focus-visible::before {
   height: 22px;
 }
 
-.menu-toggle span {
-  height: 3px;
+.mobile-nav__footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.mobile-nav__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background-color: #333;
-  margin: 3px 0;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-//* حالت روشن (Light Mode) → متن مشکی ساده */
-.brand-title {
-  font-family: 'Yekan Bakh', sans-serif;
+  min-height: 52px;
+  padding: 14px 20px;
+  background: #F4C430;
+  color: #111;
+  font-family: inherit;
+  font-size: 16px;
   font-weight: 800;
-  font-size: 28px;
-  color: #000000 !important;
-  background: none !important;
-  -webkit-text-fill-color: #000000 !important;
-  text-shadow: none;
-  cursor: default;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(244, 196, 48, 0.35);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
-/* حالت تاریک واقعی */
-@media (prefers-color-scheme: dark) {
-  /* پس‌زمینه هدر تیره و مات */
+.mobile-nav__cta:hover,
+.mobile-nav__cta:focus-visible {
+  background: #e6b820;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(244, 196, 48, 0.45);
+  outline: none;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+/* ===== Desktop breakpoint ===== */
+@media (min-width: 900px) {
   .header {
-    background: rgba(0, 0, 0, 0.85); /* مشکی مات */
-    backdrop-filter: blur(10px); /* تار کردن پشت */
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    padding: 20px 0 14px;
   }
 
-  /* نوشته بروکلین سفید */
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+  }
+
+  .desktop-nav {
+    display: flex;
+    position: static;
+    transform: none;
+    max-width: 100%;
+    justify-content: center;
+    order: 2;
+    gap: 2px 6px;
+  }
+
+  .brand-center {
+    order: 1;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-overlay,
+  .mobile-nav {
+    display: none !important;
+  }
+
   .brand-title {
-    color: #f5f5f5 !important;
-    -webkit-text-fill-color: #f5f5f5 !important;
-    text-shadow: 0 0 8px rgba(245,245,245,0.25);
-    background: none !important;
+    font-size: 30px;
+  }
+}
+
+/* ===== Dark mode ===== */
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   }
 
-  /* آیکون منو سفید */
-  .menu-toggle span {
-    background-color: #f5f5f5 !important;
+  .brand-title {
+    color: #f5f5f5;
+  }
+
+  .brand-title:hover,
+  .brand-title:focus-visible {
+    color: #F4C430;
+  }
+
+  .desktop-nav__link {
+    color: #ddd;
+  }
+
+  .desktop-nav__link:hover,
+  .desktop-nav__link:focus-visible {
+    color: #fff;
+  }
+
+  .menu-toggle__bar {
+    background: #f5f5f5;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
+    background: rgba(244, 196, 48, 0.22);
+  }
+
+  .mobile-nav {
+    background: rgba(18, 18, 18, 0.97);
+    color: #f5f5f5;
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .mobile-nav__brand {
+    color: #f5f5f5;
+  }
+
+  .mobile-nav__link {
+    color: #eee;
+  }
+
+  .mobile-nav__link:hover,
+  .mobile-nav__link:focus-visible {
+    background: rgba(244, 196, 48, 0.16);
+    color: #fff;
+  }
+
+  .mobile-nav__cta {
+    color: #111;
+  }
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle__bar,
+  .nav-overlay,
+  .mobile-nav,
+  .mobile-nav__list li,
+  .desktop-nav__link::after,
+  .mobile-nav__link,
+  .mobile-nav__cta,
+  .brand-title {
+    transition: none !important;
+  }
+
+  .mobile-nav.is-open .mobile-nav__list li {
+    transition-delay: 0s !important;
   }
 }
 </style>
-
-<script>
-const menuToggle = document.getElementById('menuToggle');
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-});
-</script>
