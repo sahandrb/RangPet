@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var MEASUREMENT_ID = 'G-9VJZMGSMFP';
+  var MEASUREMENT_ID = 'G-GHZB36CMJ7';
 
   window.dataLayer = window.dataLayer || [];
   function gtag() {
